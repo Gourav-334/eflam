@@ -138,8 +138,7 @@ bool dfa_str_verif(
 3. Move to the end of the file, and check the size of it.
 4. Allocate a string with size equivalent to size of file `+1` for `\0`.
 5. Load the file stream into it.
-5. Now start reading it and implement DFA accordingly.
-6. Then follow steps as given in section `4.1`.
+5. Now start reading it and implement DFA accordingly using steps from `4.1`.
 
 
 ### 4.3 <u>Embedding DFA Rules</u>:
