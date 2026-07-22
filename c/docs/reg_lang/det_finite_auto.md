@@ -26,13 +26,14 @@
 ### 3.1 <u>DFA State</u>:
 
 ```c
+// dfa_units.h
 /* Structure from which created instances represent unit state. */
 
 struct dfa_state {
-    _Bool type[2];              // Tells if the state is accept state or not
-    char **symbols;             // Array of symbols from where this state transists
-    char **states;              // States where the current state makes transition to
-    struct *transitions[];      // Corresponding transitions for given symbols
+    bool type[2];                          // Tells if the state is accept state or not
+    char **symbols;                         // Array of symbols from where this state transists
+    char **states;                          // States where the current state makes transition to
+    struct dfa_state *transitions[];        // Corresponding transitions for given symbols
 };
 ```
 
@@ -40,11 +41,12 @@ struct dfa_state {
 ### 3.2 <u>DFA</u>:
 
 ```c
+// dfa_units.h
 /* Structure representing whole DFA, enclosing its states. */
 
 struct dfa {
-    struct *start_state;        // Initial/start state of the DFA
-    struct *states[];           // Array of states that DFA encloses
+    struct dfa_state *start_state;          // Initial/start state of the DFA
+    struct dfa_state *states[];             // Array of states that DFA encloses
 };
 ```
 
@@ -52,11 +54,13 @@ struct dfa {
 ### 3.3 <u>Loading DFA Rules</u>:
 
 ```c
+// dfa_rules_load.h
 /* Loads the rules given by users and creates the DFA. */
 
-_Bool dfa_rules_load(
-    FILE *dfa_rules,        // Pointer to file containing DFA rules
-    struct *target_dfa      // Address to target DFA structure
+bool dfa_rules_load(
+    char dfa_rules[],                   // Pointer to file containing DFA rules
+    struct dfa_state *target_dfa,       // Address to target DFA structure
+    bool debug                          // Tells if debugging logs are required
 );
 ```
 
@@ -64,11 +68,13 @@ _Bool dfa_rules_load(
 ### 3.4 <u>Embedding DFA Rules</u>:
 
 ```c
+// embed_dfa_rules.h
 /* Same as previous, but rules are directly embedded in the function. */
 
-_Bool dfa_rules_embed(
-    char *dfa_rules[],      // Array of transition rules
-    struct *target_dfa      // Address to target DFA structure
+bool dfa_rules_embed(
+    char *dfa_rules[],          // Array of transition rules
+    struct *target_dfa,         // Address to target DFA structure
+    bool debug                  // Tells if debugging logs are required
 );
 ```
 
@@ -76,11 +82,13 @@ _Bool dfa_rules_embed(
 ### 3.5 <u>DFA String Verifier</u>:
 
 ```c
-// DFA string verifier, that tells if it stops at accept state or not.
+// dfa_str_verif.h
+/* DFA string verifier, that tells if it stops at accept state or not. */
 
-_Bool dfa_str_verif(
-    char *sym_seq[],        // Sequence of symbols in input string
-    struct *target_dfa      // Address to target DFA
+bool dfa_str_verif(
+    char *sym_seq[],            // Sequence of symbols in input string
+    struct *target_dfa,         // Address to target DFA
+    bool debug                  // Tells if debugging logs are required
 );
 ```
 
@@ -125,9 +133,13 @@ _Bool dfa_str_verif(
 
 ### 4.2 <u>Loading DFA Rules</u>:
 
-1. Move to the end of the file, and check the size of it.
-2. Allocate a string with size equivalent to size of file `+1` for `\0`.
-3. Now start reading it and implement DFA accordingly.
+1. Check if the file exists or not.
+2. If not, return error, else open the file in read mode.
+3. Move to the end of the file, and check the size of it.
+4. Allocate a string with size equivalent to size of file `+1` for `\0`.
+5. Load the file stream into it.
+5. Now start reading it and implement DFA accordingly.
+6. Then follow steps as given in section `4.1`.
 
 
 ### 4.3 <u>Embedding DFA Rules</u>:
