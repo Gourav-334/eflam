@@ -11,12 +11,12 @@
 - Doesn't have its own memory, all it can tell is whether a string will be accepted or not.
 
 
-## 2. Implementation Idea
+## 2. Implementation
 
 
-- First implementation idea was about writing every state and their respective transitions on a text file which is read, and strings can be passed based on that.
-- However, it posed a risk on exposing grammar rules which implementers might want to keep closed-source. And with decoders, the program would suffer with performance.
-- Better would be to combine it with graph model, where each *graph* contains at least one *state*, and each *state* has a *type* and *transitions*. Each transition is defined with a *symbol* and *state*.
+- Implementation of the automata machine is made in form of graph using structures.
+- Users can use it in two forms, one by importing/loading the EFLAM file with written state transitions for the grammar of DFA.
+- And second method is by embedding the grammar or transition within the function itself.
 
 
 
@@ -59,7 +59,7 @@ struct dfa {
 
 bool dfa_rules_load(
     char dfa_rules[],                   // Pointer to file containing DFA rules
-    struct dfa_state *target_dfa,       // Address to target DFA structure
+    struct dfa *target_dfa,       // Address to target DFA structure
     bool debug                          // Tells if debugging logs are required
 );
 ```
@@ -73,7 +73,7 @@ bool dfa_rules_load(
 
 bool dfa_rules_embed(
     char *dfa_rules[],          // Array of transition rules
-    struct *target_dfa,         // Address to target DFA structure
+    struct dfa *target_dfa,     // Address to target DFA structure
     bool debug                  // Tells if debugging logs are required
 );
 ```
@@ -118,8 +118,8 @@ bool dfa_str_verif(
 11 | ( )11, (\t)11, (\n)11, ($))10, (@)-5;
 12 | (@)12, ($$)13, ( )14, (\t)14, (\n)14;
 13 | (@)14;
-14 | ( )14, (\t)14, (\n)14, ($;)15, (@);
-15(A) | ( )0, (\t)0, (\n)0, (#)16, (@)1;
+14 | ( )14, (\t)14, (\n)14, ($;)15, (@)-1;
+15(A) | ( )0, (\t)0, (\n)0, ($#)16, (@)1;
 16(A) | (@)16, (\n)0;
 ```
 
@@ -144,6 +144,7 @@ bool dfa_str_verif(
 ### 4.3 <u>Embedding DFA Rules</u>:
 
 1. Read each string sequentially and implement the DFA accordingly.
+2. Read the steps from section `4.1`.
 
 
 ### 4.4 <u>DFA String Verifier</u>:
@@ -171,7 +172,6 @@ q3 | ($")q4, (@)q3
 q4 | ($))q5, ( )q0, (@)q7
 q5 | (;)q7, ( )q0, (@)q7
 q6(A) | ( )q0, (@)q7
-q7(D)
 ```
 
 ---
