@@ -3,6 +3,10 @@
 #ifndef DFA_UNITS_H
     #define DFA_UNITS_H
 
+#define START_STATE 0           // Index for START state configuration.
+#define ACCEPT_STATE 1          // Index for ACCEPT state configuration.
+#define TOTAL_TYPES 2           // Total types of states.
+
 
 
 
@@ -24,7 +28,7 @@
 
 typedef struct dfa_state {
     char *name;                             // States where the current state makes transition to
-    bool type[2];                           // Tells if the state is accept state or not
+    bool type[TOTAL_TYPES];                 // Tells if the state is accept state or not
     char **symbols;                         // Array of symbols from where this state transists
     struct dfa_state **transitions;         // Corresponding transitions for given symbols
     int total_trans;                        // Number of transitions current state makes
