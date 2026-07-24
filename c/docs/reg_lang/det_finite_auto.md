@@ -104,31 +104,67 @@ bool dfa_str_verif(
 ```eflam
 # For this representation, consider \n as endlines & \t as tabspaces.
 
-0(S,A) | ( )0, (\t)0, (\n)0, ($$)2, (@)1, (#)16;
-1(A) | (@)1, ($$)2, ( )3, (\t)3, (\n)3, ($()4;
+0(S,A) | ( ,\t,\n)0, ($$)2, (#)17, (@)1;
+1(A) | ( ,\t,\n)3, ($()4, (@)1;
 2 | (@)1;
-3 | ($()4, ( )3, (\t)3, (\n)3, (@)-1;
-4 | ( )4, (\t)4, (\n)4, (S)5, (A)5, ($))6, (@)-2;
-5 | ($,)4, ( )5, (\t)5, (\n)5, ($))6, (@)-2;
-6(A) | ( )6, (\t)6, (\n)6, ($|)7, (@)-3;
-7 | ( )7, (\t)7, (\n)7, ($()8, (@)-4;
-8 | ($$)9, (@)8, ($))11, ($@)11, (\n)-1;
-9 | (@)8;
-10 | ( )10, (\t)10, (\n)10, (@)12;
-11 | ( )11, (\t)11, (\n)11, ($))10, (@)-5;
-12 | (@)12, ($$)13, ( )14, (\t)14, (\n)14;
-13 | (@)14;
-14 | ( )14, (\t)14, (\n)14, ($;)15, (@)-1;
-15(A) | ( )0, (\t)0, (\n)0, ($#)16, (@)1;
-16(A) | (@)16, (\n)0;
+3 | ( ,\t,\n)3, ($()4, (@)-1;
+4 | ( ,\t,\n)4, (S,A)5, (@)-2;
+5 | ($,)4, ( ,\t,\n)5, ($))6, (@)-2;
+6(A) | ( ,\t,\n)6, ($|)7, (@)-3;
+7 | ( ,\t,\n)7, ($()8;
+8 | ($$)10, ($@)12, ($,)-4, (@)9;
+9 | ($,)8, ($$)10, ($))11, (@)9;
+10 | (@)9;
+11 | ( ,\t,\n)11, ($$)14, (@)13;
+12 | ($()11, (@)-5
+13 | ($,)7, ($$)14, ( ,\t,\n)15, ($;)16, (@)13;
+14 | (@)13;
+15 | ($,)7, ( ,\t,\n)15, ($;)16;
+16(A) | ($#)17, ( ,\t,\n)0, (@)1;
+17(A) | (\n)0, ( ,\t,\n)17;
 ```
 
-1. Keep reading the line and column number in order to produce coherent errors and warnings.
-2. For multiple start states, throw error.
-3. When reading the symbols or state names, don't add those `$` which are written as escape characters.
-4. For fetched current state name, check if it already exists. If yes, throw error. Else save it.
-5. For written types of state, set flag if valid type and throw error if invalid. Also throw error if they are repeated.
-6. When reading transitioning state names, if they don't exist, create them.
+#### **STATE `0`:**
+1. Do nothing if `#`, ` `, `\t`, or `\n` comes up.
+2. Else if something else is encountered, allocate `1` byte for string & push the character into it.
+
+#### **STATE `1`:**
+1. Do nothing if `$`, ` `, `\t`, or `\n` comes up.
+2. If `(` comes up, expand string memory by `1` byte & assign `\0` to it, then check if state already exists or not. If yes, else throw error. Else add this as a new state.
+3. Else if something else is encountered, expand string memory by `1` byte & push the character into it.
+
+#### **STATE `2`:**
+1. No matter what appears, do nothing.
+
+#### **STATE `3`:**
+1. If `(` comes up, expand string memory by `1` byte & assign `\0` to it, then check if state already exists or not. If not, add, else throw error.
+2. Else throw error for ` `, `\t`, `\n` in state name.
+
+#### **STATE `4`:**
+1. Do nothing if ` `, `\t`, or `\n` comes up.
+2. If `S` or `A` comes up, if its already set for same state then throw error. Else set it. But if its `S`, which already exists in DFA, then throw error.
+
+#### **STATE `5`:**
+1. Do nothing if `)`, ` `, `\t`, or `\n` comes up.
+2. Else throw error for unknown state type being encountered.
+
+#### **STATE `6`:**
+1. Do nothing if `|`, ` `, `\t`, or `\n` comes up.
+2. Else throw error for unnecessary string being encountered.
+
+#### **STATE `7`:**
+1. Do nothing if `(`, ` `, `\t`, or `\n` comes up.
+2. Else throw error for unknown state type being encountered.
+
+#### *STATE `8`:**
+1. If `(` comes up, expand string memory by `1` byte & assign `\0` to it, then check if transition (string) already exists or not. If yes, else throw error. Else add this as a new state.
+2. Else expand the memory under string by `1` and add the current character to it.
+
+#### **STATE `9`:**
+1. No matter what appears, do nothing.
+
+#### **STATE `10`:**
+1. No matter what appears, do nothing.
 
 
 ### 4.2 <u>Loading DFA Rules</u>:

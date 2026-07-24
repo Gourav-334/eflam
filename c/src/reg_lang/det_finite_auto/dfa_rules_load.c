@@ -652,7 +652,7 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
 
 
 
-            /*********************** STATE-4 ************************/
+            /*********************** STATE-7 ************************/
 
             case 7:
                 if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 7; accept = false;}
@@ -670,11 +670,20 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
 
 
 
-            /*********************** STATE-4 ************************/
+            /*********************** STATE-8 ************************/
 
             case 8:
                 if (fstream[i]=='$') {state = 9; accept = false;}
-                else if (fstream[i]==')') {state = 10; accept = true;}
+                else if (fstream[i]==')')
+                {
+                    state = 10; accept = true;          // Next state as per input
+
+
+
+
+
+                    /*  */
+                }
                 else if (fstream[i]=='@') {state = 11; accept = true;}
                 else
                 {
@@ -860,6 +869,7 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             case 12:
                 if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 14; accept = false;}
                 else if (fstream[i]=='$') {state = 13; accept = false;}
+                else if (fstream[i]==',') {state = 7; accept = false;}
                 else {state = 12; accept = false;}
                 
                 break;
