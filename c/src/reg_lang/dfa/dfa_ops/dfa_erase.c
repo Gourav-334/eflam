@@ -1,6 +1,7 @@
 /* List of included headers. */
 
-#include "../../../include/reg_lang/det_finite_auto/dfa_erase.h"
+#include "../../../include/reg_lang/dfa/dfa_ops/dfa_erase.h"
+#include <stdio.h>          // For using NULL
 
 
 
@@ -26,13 +27,17 @@ void dfa_erase(dfa *target_dfa, char *str)
 
         for (int i2=0; i2<(target_dfa->states+i)->total_trans; i2++)
         {
+            free(((target_dfa->states+i)->name));
             free(((target_dfa->states+i)->symbols+i2));
-            free(((target_dfa->states+i)->transitions+i2));
+            free(((target_dfa->states+i)->trans+i2));
+            free(((target_dfa->states+i)->else_trans));
         }
     }
 
 
     /* Freeing the string and array of pointers to state. */
 
-    free(target_dfa->states); free(str);
+    if (target_dfa->start_state!=NULL) {free(target_dfa->start_state);}
+    else if (target_dfa->states!=NULL) {free(target_dfa->states);}
+    else if (str!=NULL) {free(str);}
 }

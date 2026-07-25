@@ -9,7 +9,6 @@
 
 /* List of included headers. */
 
-#include <stdio.h>          // For using `FILE` pointer.
 #include <stdbool.h>        // For using `bool` keyword.
 #include "dfa_units.h"      // For using DFA state and machine.
 

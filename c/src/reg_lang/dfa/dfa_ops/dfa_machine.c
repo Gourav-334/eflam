@@ -1,20 +1,6 @@
 /* List of included headers. */
 
-#include "../../../include/reg_lang/det_finite_auto/dfa_rules_load.h"
-#include "../../../include/reg_lang/det_finite_auto/dfa_erase.h"
-#include <stdlib.h>         // For allocating memory.
-#include <string.h>         // To know length of a string.
-#include <stdbool.h>        // To use `bool` keyword.
-
-
-
-
-
-
-
-
-
-
+#include "../../../include/reg_lang/dfa/dfa_ops/dfa_machine.h"
 
 
 
@@ -27,86 +13,8 @@
 
 /* Loads the rules given by users and creates the DFA. */
 
-bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
+bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
 {
-    /* Variables & constants */
-
-    FILE *fptr = fopen(dfa_rules, "r");         // Pointer to file with DFA rules.
-    char *fstream = NULL;                       // String to load file content into.
-    int state = 0;                              // Current state for the hardcoded DFA.
-    bool accept;                                // Tells whether current state is A/non-A.
-    int row=0, column=0;                        // Recording row & column count for error feedback.
-    char *str=NULL;                             // Buffer string to read and store names.
-    int str_size = 0;                           // Size of the string `str`.
-    void *alloc_ret=NULL;                       // Allocator return type catcher.
-
-
-
-
-
-
-
-
-
-
-    /* Making sure the file with DFA rules exists. */
-
-    if (fptr==NULL)         // What if rule file doesn't exist or didn't open?
-    {
-        fprintf(stderr, "ERROR: File \"%s\" doesn\'t exist!\n", dfa_rules);
-        return false;
-    }
-    else                    // Otherwise...
-    {
-        if (debug==false) {}
-        else if (debug==true) {fprintf(stdout, "OK: File \"%s\" exists.\n", dfa_rules);}
-    }
-
-
-
-
-
-    /* Allocating memory for the written rules. */
-
-    fseek(fptr, 0, SEEK_END);                               // Reach EOF to calculate total bytes
-    fstream = malloc(sizeof(char)*(ftell(fptr)+1));         // Allocate 1 byte extra for `\0`
-
-    if (debug==false){}
-    else if (debug==true) {fprintf(stdout, "STAT: File size is of %ld bytes.\n", ftell(fptr));}
-
-
-
-
-
-    /* Loading filestream into the allocated string. */
-
-    fseek(fptr, 0, SEEK_SET);                       // Moving file cursor back to start of file
-    fgets(fstream, strlen(fstream), fptr);          // Loading filestream into the string
-
-    if (debug==false){}
-    else if (debug==true) {fprintf(stdout, "STAT: Loaded rule file is \"%s\".\n", fstream);}
-
-    fclose(fptr);           // Closing file pointer after use
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /* Memory-based hardcoded DFA implementation. */
 
     for (int i=0; i<strlen(fstream); i++)
@@ -262,6 +170,7 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
                         }
 
                         strcpy(target_dfa->states->name, str);          // Assigning state its name
+                        str_size = 0;                                   // String size reset after transfer
                     }
 
 
@@ -292,6 +201,8 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
                         alloc_ret = realloc(target_dfa->states, sizeof(dfa_state)*((target_dfa->total_states) + 1));
                         (target_dfa -> states + (target_dfa->total_states)) -> name = malloc((size_t)str_size);
                         strcpy((target_dfa->states + (target_dfa->total_states))->name, str);
+
+                        str_size = 0;           // String size reset after transfer
                     }
 
 
@@ -370,52 +281,56 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             /*********************** STATE-2 ************************/
 
             case 2:
-                state = 1; accept = true;       // Next state as per input.
-
-
-
-
-
-                /* STATE-2 :: Allocating first byte to string */
-
-                if (str==NULL)          // What if the allocation failed?
+                if (fstream[i]==' ' || fstream[i]=='\t' || fstream[i]=='\n') {state = -1; accept = false;}
+                else
                 {
-                    str = malloc(sizeof(char)*1);
+                    state = 1; accept = true;       // Next state as per input.
 
-                    if (str==NULL) {perror("ERROR"); return false;}
-                    else if (str!=NULL && debug==true)
+
+
+
+
+                    /* STATE-2 :: Allocating first byte to string */
+
+                    if (str==NULL)          // What if the allocation failed?
                     {
-                        fprintf(stdout, "OK: Memory of %d bytes allocated to `str`.\n", ++str_size);
-                    }
+                        str = malloc(sizeof(char)*1);
 
-                    *str = fstream[i];
-                }
+                        if (str==NULL) {perror("ERROR"); return false;}
+                        else if (str!=NULL && debug==true)
+                        {
+                            fprintf(stdout, "OK: Memory of %d bytes allocated to `str`.\n", ++str_size);
+                        }
 
-
-
-
-
-                /* STATE-2 :: Allocating first byte to string */
-
-                else if (str!=NULL)         // What if allocation was successful?
-                {
-                    alloc_ret = realloc(str, sizeof(char)*(++str_size));    // Expanding size of string
-
-
-
-                    if (alloc_ret==NULL)        // What if reallocation to string failed?
-                    {
-                        fprintf(stderr, "ERROR: Memory reallocation issue with string buffer!\n");
-                        return false;
-                    }
-                    else if (alloc_ret!=NULL && debug==true)        // What if allocation succeded but debug is ON?
-                    {
-                        fprintf(stdout, "OK: Memory reallocated for string buffer.\n");
+                        *str = fstream[i];
                     }
 
 
 
-                    *(str + str_size-1) = fstream[i];       // Assigning last char of string as current char
+
+
+                    /* STATE-2 :: Allocating first byte to string */
+
+                    else if (str!=NULL)         // What if allocation was successful?
+                    {
+                        alloc_ret = realloc(str, sizeof(char)*(++str_size));    // Expanding size of string
+
+
+
+                        if (alloc_ret==NULL)        // What if reallocation to string failed?
+                        {
+                            fprintf(stderr, "ERROR: Memory reallocation issue with string buffer!\n");
+                            return false;
+                        }
+                        else if (alloc_ret!=NULL && debug==true)        // What if allocation succeded but debug is ON?
+                        {
+                            fprintf(stdout, "OK: Memory reallocated for string buffer.\n");
+                        }
+
+
+
+                        *(str + str_size-1) = fstream[i];       // Assigning last char of string as current char
+                    }
                 }
                 
 
@@ -503,7 +418,65 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
 
 
                         strcpy(target_dfa->states->name, str);          // Assigning state its name
+                        str_size = 0;                                   // String size reset after transfer
                     }
+
+
+
+
+
+                    /* STATE-3 :: `(` appears :: Transferring address */
+
+                    else if (target_dfa->total_states>0)        //  What if the DFA already contains at least one state?
+                    {
+                        /* Checking if the state already exists. */
+
+                        for (int i2=0; i2<(target_dfa->total_states); i2++)         // Iterating over each state in DFA
+                        {
+                            if (!strcmp((target_dfa -> states + i2), str))          // What if state already exists?
+                            {
+                                fprintf(stderr, "ERROR: State already exists at index `%d`!\n", i2);
+                                dfa_erase(target_dfa, str);             // Erase every memory allocated under DFA
+
+                                return false;
+                            }
+                        }
+
+
+
+                        /* Continuing operations if the state doesn't exist. */
+
+                        alloc_ret = realloc(target_dfa->states, sizeof(dfa_state)*((target_dfa->total_states) + 1));
+                        (target_dfa -> states + (target_dfa->total_states)) -> name = malloc((size_t)str_size);
+                        strcpy((target_dfa->states + (target_dfa->total_states))->name, str);
+
+                        str_size = 0;           // String size reset after transfer
+                    }
+
+
+
+
+
+                    /* STATE-3 :: `(` appears  :: Transferring address */
+
+                    else        // Otherwise...
+                    {
+                        fprintf(stderr, "ERROR: State data corruption, total states can\'t be negative!\n");
+                    }
+
+
+                    free(str); str_size = 0;                                    // Resetting string & string size
+                    target_dfa -> states -> type[START_STATE] = false;          // By default not start state
+                    target_dfa -> states -> type[ACCEPT_STATE] = false;         // By default not accept state
+
+                    (target_dfa -> total_states)++;         // Updating count of total states in DFA
+
+
+
+                    /* Debug info about the string buffer. */
+
+                    if (debug==false) {}
+                    else if (debug==true) {fprintf(stdout, "STAT: str=%s\n", str);}
                 }
                 else if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 3; accept = false;}
                 else {state = -1; accept = false;}
@@ -657,7 +630,7 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             case 7:
                 if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 7; accept = false;}
                 else if (fstream[i]=='(') {state = 8; accept = false;}
-                else {state = -4; accept = false;}
+                else {state = -3; accept = false;}
                 
                 break;
 
@@ -673,79 +646,32 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             /*********************** STATE-8 ************************/
 
             case 8:
-                if (fstream[i]=='$') {state = 9; accept = false;}
-                else if (fstream[i]==')')
-                {
-                    state = 10; accept = true;          // Next state as per input
-
-
-
-
-
-                    /*  */
-                }
-                else if (fstream[i]=='@') {state = 11; accept = true;}
+                if (fstream[i]=='$') {state = 10; accept = false;}
+                else if (fstream[i]==',') {state = -4; accept = true;}
+                else if (fstream[i]=='@') {state = 12; accept = true;}
                 else
                 {
-                    state = 8; accept = false;          // Next state as per input
+                    state = 9; accept = false;          // Next state as per input
 
 
 
+                    /* STATE-8 :: Push first character */
+
+                    str = malloc(sizeof(char)*1);           // Getting first character in string name
 
 
-                    /* STATE-8 :: Allocating byte */
-
-                    if (str==NULL)          // What if string is empty?
+                    if (str==NULL) {perror("ERROR"); return false;}     // What if string wasn't allocated?
+                    else if (str!=NULL && debug==true)                  // What if string was allocated & debug mode is ON?
                     {
-                        str = malloc(sizeof(char)*1);       // Allocating first byte
-
-
-
-                        if (str==NULL)          // What if allocation failed?
-                        {
-                            perror("ERROR");
-                            return false;
-                        }
-                        else if (str!=NULL && debug==true)      // What if allocation succeeded but debug is ON?
-                        {
-                            fprintf(stdout, "OK: Memory of %d bytes allocated to `str`.\n", ++str_size);
-                        }
-
-
-
-                        *str = fstream[i];          // Assigning first char of string as current char
+                        fprintf(stdout, "OK: Memory of %d bytes allocated to `str`.\n", ++str_size);
                     }
 
 
-
-
-
-                    /* STATE-8 :: Allocating byte */
-
-                    else if (str!=NULL)             // What if string isn't empty?
-                    {
-                        alloc_ret = realloc(str, sizeof(char)*(++str_size));        // Reallocating string
-
-
-
-                        if (alloc_ret==NULL)        // What if allocation failed?
-                        {
-                            fprintf(stderr, "ERROR: Memory reallocation issue with string buffer!\n");
-                            return false;
-                        }
-                        else if (alloc_ret!=NULL && debug==true)        // What if allocation succeeded but debug is ON?
-                        {
-                            fprintf(stdout, "OK: Memory reallocated for string buffer.\n");
-                        }
-
-
-
-                        *(str + str_size-1) = fstream[i];       // Assigning last char of string as current char
-                    }
+                    *str = fstream[i];          // Assigning currect char to string's first char
                 }
-
-
                 
+
+
                 break;
 
 
@@ -760,61 +686,10 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             /*********************** STATE-9 ************************/
 
             case 9:
-                state = 8; accept = false;          // Next state as per input
-
-
-
-                /* STATE-9 :: Allocating byte */
-
-                if (str==NULL)          // What if string is empty?
-                {
-                    str = malloc(sizeof(char)*1);           // Allocating first byte for string
-
-
-
-                    if (str==NULL)              // What if allocation failed?
-                    {
-                        perror("ERROR");
-                        return false;
-                    }
-                    else if (str!=NULL && debug==true)          // What if allocation succeded but debug is ON?
-                    {
-                        fprintf(stdout, "OK: Memory of %d bytes allocated to `str`.\n", ++str_size);
-                    }
-
-
-
-                    *str = fstream[i];          // Assigning first char of string as current char
-                }
-
-
-
-
-
-                /* STATE-9 :: Allocating byte */
-
-                else if (str!=NULL)             // What if string isn't empty?
-                {
-                    alloc_ret = realloc(str, sizeof(char)*(++str_size));        // Reallocating string
-
-
-
-                    if (alloc_ret==NULL)        // What if the allocation failed?
-                    {
-                        perror("ERROR");
-                        return false;
-                    }
-                    else if (alloc_ret!=NULL && debug==true)        // What if allocation succeded but debug is ON?
-                    {
-                        fprintf(stdout, "OK: Memory reallocated for string buffer.\n");
-                    }
-
-
-
-                    *(str + str_size-1) = fstream[i];       // Assigning last char of string as current char
-                }
-                
-
+                if (fstream[i]==',') {state = 8; accept = false;}
+                else if (fstream[i]=='$') {state = 10; accept = false;}
+                else if (fstream[i]==')') {state = 11; accept = false;}
+                else {state = 9; accept = false;}
 
                 break;
 
@@ -830,9 +705,7 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             /*********************** STATE-10 ************************/
 
             case 10:
-                if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 10; accept = false;}
-                else if (fstream[i]==',') {state = 7; accept = false;}
-                else {state = 12; accept = false;}
+                state = 9; accept = false;
                 
                 break;
 
@@ -849,9 +722,8 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             
             case 11:
                 if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 11; accept = false;}
-                else if (fstream[i]==')') {state = 10; accept = false;}
-                else if (fstream[i]==',') {state = 7; accept = false;}
-                else {state = -5; accept = false;}
+                else if (fstream[i]=='$') {state = 14; accept = false;}
+                else {state = 13; accept = false;}
                 
                 break;
 
@@ -867,10 +739,8 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             /*********************** STATE-12 ************************/
 
             case 12:
-                if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 14; accept = false;}
-                else if (fstream[i]=='$') {state = 13; accept = false;}
-                else if (fstream[i]==',') {state = 7; accept = false;}
-                else {state = 12; accept = false;}
+                if (fstream[i]=='(') {state = 11; accept = false;}
+                else {state = -5; accept = false;}
                 
                 break;
 
@@ -886,7 +756,11 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             /*********************** STATE-13 ************************/
 
             case 13:
-                state = 14; accept = false;
+                if (fstream[i]==',') {state = 7; accept = false;}
+                else if (fstream[i]=='$') {state = 14; accept = false;}
+                else if (fstream[i]==' ' || fstream[i]=='\t' || fstream[i]=='\n') {state = 15; accept = false;}
+                else if (fstream[i]==';') {state = 0; accept = true;}
+                else {state = 13; accept = false;}
                 
                 break;
 
@@ -902,9 +776,8 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             /*********************** STATE-14 ************************/
 
             case 14:
-                if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 14; accept = false;}
-                else if (fstream[i]==';') {state = 15; accept = true;}
-                else {state = -1; accept = false;}
+                if (fstream[i]==' ' || fstream[i]=='\t' || fstream[i]=='\n') {state = -1; accept = false;}
+                else {state = 13; accept = false;}
                 
                 break;
 
@@ -920,9 +793,10 @@ bool dfa_rules_load(char dfa_rules[], dfa *target_dfa, bool debug)
             /*********************** STATE-15 ************************/
 
             case 15:
-                if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 0; accept = true;}
-                else if (fstream[i]=='#') {state = 16; accept = true;}
-                else {state = 1; accept = true;}
+                if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 15; accept = false;}
+                else if (fstream[i]==',') {state = 7; accept = true;}
+                else if (fstream[i]==';') {state = 0; accept = true;}
+                else {state = -1; accept = false;}
                 
                 break;
 
