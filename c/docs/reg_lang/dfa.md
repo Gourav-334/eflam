@@ -92,13 +92,13 @@ bool dfa_rules_embed(
 2. Now start implementing the DFA.
 
 
-### 3.6 <u>DFA String Verifier (Function)</u>:
+### 3.6 <u>DFA Machine (Function)</u>:
 
 ```c
-// det_finite_auto/dfa_str_verif.h
-/* DFA string verifier, that tells if it stops at accept state or not. */
+// det_finite_auto/dfa_machine.h
+/* DFA machine, that tells if it stops at accept state or not. */
 
-bool dfa_str_verif(
+bool dfa_machine(
     char *sym_seq[],            // Sequence of symbols in input string
     struct *target_dfa,         // Address to target DFA
     bool debug                  // Tells if debugging logs are required
@@ -110,6 +110,18 @@ bool dfa_str_verif(
 3. From current state, if transition is possible for the current symbol, then move to to next state.
 4. If not, return false.
 5. If symbols exhaust, then check if the current state is an accept state or not. Return true if it is, else false.
+
+
+### 3.7 <u>DFA Current State First Letter</u>:
+
+```c
+// det_finite_auto/dfa_cur_state_l1.c
+/* Used for fetching first letter in name of current state, with precautions. */
+
+bool dfa_cur_state_l1(
+    //
+);
+```
 
 
 
