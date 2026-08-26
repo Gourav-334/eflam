@@ -119,9 +119,13 @@ bool dfa_machine(
 /* Used for fetching first letter in name of current state, with precautions. */
 
 bool dfa_cur_state_l1(
-    //
+    char *str,          // Target string to be updated
+    char c,             // Character to be appended with
+    bool debug          // Debugging mode (ON/OFF)
 );
 ```
+
+1. Allocate memory for a character & push the encountered character to string buffer.
 
 
 

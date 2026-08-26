@@ -1,6 +1,6 @@
 /* List of included headers. */
 
-#include "../../../include/reg_lang/dfa/dfa_ops/dfa_machine.h"
+#include "../../../../include/reg_lang/dfa/dfa_ops/dfa_machine.h"
 #include <stdio.h>
 
 
@@ -50,7 +50,7 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]==' ' || fstream[i]=='\t' || fstream[i]=='\n') {state = 0; accept = true;}
                 else if (fstream[i]=='$') {state = 2; accept = false;}
                 else if (fstream[i]=='#') {state = 16; accept = true;}
-                else {state = 1; accept = true; /* FUNCTION REQUIRED */}
+                else {state = 1; accept = true; dfa_cur_state_l1(str, fstream[i], debug);}
 
                 break;
 

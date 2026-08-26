@@ -1,6 +1,6 @@
 /* List of included headers. */
 
-#include "../../../include/reg_lang/dfa/dfa_ops/dfa_erase.h"
+#include "../../../../include/reg_lang/dfa/dfa_ops/dfa_erase.h"
 #include <stdio.h>          // For using NULL
 
 
