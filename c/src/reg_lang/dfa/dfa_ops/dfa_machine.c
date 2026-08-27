@@ -23,7 +23,6 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
     int row=0, column=0;                        // Recording row & column count for error feedback.
     char *str=NULL;                             // Buffer string to read and store names.
     int str_size = 0;                           // Size of the string `str`.
-    void *alloc_ret=NULL;                       // Allocator return type catcher.
 
 
 
@@ -50,7 +49,7 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]==' ' || fstream[i]=='\t' || fstream[i]=='\n') {state = 0; accept = true;}
                 else if (fstream[i]=='$') {state = 2; accept = false;}
                 else if (fstream[i]=='#') {state = 16; accept = true;}
-                else {state = 1; accept = true; dfa_cur_state_l1(str, fstream[i], debug);}
+                else {state = 1; accept = true; dfa_cur_state_l(str, fstream[i], &str_size, debug);}
 
                 break;
 
@@ -60,7 +59,7 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]=='$') {state = 2; accept = false;}
                 else if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 3; accept = false;}
                 else if (fstream[i]=='(') {state = 4; accept = false; /* FUNCTION REQUIRED */}
-                else {state = 1; accept = true; /* FUNCTION REQUIRED */}
+                else {state = 1; accept = true; dfa_cur_state_l(str, fstream[i], &str_size, debug);}
 
                 break;
 

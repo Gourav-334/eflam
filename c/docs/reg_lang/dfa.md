@@ -112,20 +112,22 @@ bool dfa_machine(
 5. If symbols exhaust, then check if the current state is an accept state or not. Return true if it is, else false.
 
 
-### 3.7 <u>DFA Current State First Letter</u>:
+### 3.7 <u>DFA Current State Letter</u>:
 
 ```c
 // det_finite_auto/dfa_cur_state_l1.c
-/* Used for fetching first letter in name of current state, with precautions. */
+/* Used for fetching next letter in name of current state, with precautions. */
 
-bool dfa_cur_state_l1(
+bool dfa_cur_state_l(
     char *str,          // Target string to be updated
     char c,             // Character to be appended with
+    int *str_size,      // Current size of string
     bool debug          // Debugging mode (ON/OFF)
 );
 ```
 
-1. Allocate memory for a character & push the encountered character to string buffer.
+1. If string's size is zero, allocate memory for a character & push the encountered character to string buffer.
+2. Else if size isn't zero, reallocate memory by extending with another character & push the encountered character to string buffer.
 
 
 

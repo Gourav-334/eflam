@@ -10,7 +10,7 @@
 /* List of included headers. */
 
 #include "dfa_units.h"      // For using DFA state and machine.
-#include "../../../../include/reg_lang/dfa/dfa_ops/dfa_cur_state_l1.h"
+#include "../../../../include/reg_lang/dfa/dfa_ops/dfa_cur_state_l.h"
 
 #include <stdbool.h>        // For using `bool` keyword.
 
