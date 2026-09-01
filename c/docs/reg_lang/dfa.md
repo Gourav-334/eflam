@@ -26,7 +26,7 @@ Implementation of the automata machine is made in form of graph using structures
 ### 2.2 <u>DFA State (Structure)</u>:
 
 ```c
-// det_finite_auto/dfa_units.h
+// dfa/dfa_ops/dfa_units.h
 /* Structure from which created instances represent unit state. */
 
 typedef struct dfa_state {
@@ -43,7 +43,7 @@ typedef struct dfa_state {
 ### 2.3 <u>DFA (Structure)</u>:
 
 ```c
-// det_finite_auto/dfa_units.h
+// dfa/dfa_ops/dfa_units.h
 /* Structure representing whole DFA, enclosing its states. */
 
 typedef struct dfa {
@@ -54,10 +54,10 @@ typedef struct dfa {
 ```
 
 
-### 3.4 <u>Loading DFA Rules (Function)</u>:
+### 2.4 <u>Loading DFA Rules (Function)</u>:
 
 ```c
-// det_finite_auto/dfa_rules_load.h
+// dfa/dfa_ops/dfa_rules_load.h
 /* Loads the rules given by users and creates the DFA. */
 
 bool dfa_rules_load(
@@ -75,10 +75,10 @@ bool dfa_rules_load(
 5. Now start reading it and implement DFA.
 
 
-### 3.5 <u>Embedding DFA Rules (Function)</u>:
+### 2.5 <u>Embedding DFA Rules (Function)</u>:
 
 ```c
-// det_finite_auto/embed_dfa_rules.h
+// dfa/dfa_ops/embed_dfa_rules.h
 /* Same as previous, but rules are directly embedded in the function. */
 
 bool dfa_rules_embed(
@@ -92,10 +92,10 @@ bool dfa_rules_embed(
 2. Now start implementing the DFA.
 
 
-### 3.6 <u>DFA Machine (Function)</u>:
+### 2.6 <u>DFA Machine (Function)</u>:
 
 ```c
-// det_finite_auto/dfa_machine.h
+// dfa/dfa_ops/dfa_machine.h
 /* DFA machine, that tells if it stops at accept state or not. */
 
 bool dfa_machine(
@@ -112,29 +112,34 @@ bool dfa_machine(
 5. If symbols exhaust, then check if the current state is an accept state or not. Return true if it is, else false.
 
 
-### 3.7 <u>DFA Current State Letter</u>:
+### 2.7 <u>DFA Create Current State</u>:
 
 ```c
-// det_finite_auto/dfa_cur_state_l1.c
-/* Used for fetching next letter in name of current state, with precautions. */
+// dfa/dfa_ops/dfa_cur_create_state.c
+/* Used for creating a state if it doesn't exist yet. */
 
-bool dfa_cur_state_l(
-    char *str,          // Target string to be updated
-    char c,             // Character to be appended with
-    int *str_size,      // Current size of string
-    bool debug          // Debugging mode (ON/OFF)
+bool dfa_create_cur_state(
+    dfa *target_dfa,        // Target DFA machine
+    char *name,             // Name of state to be created
+    int *name_size,         // Length of state's name
+    bool debug              // Debugging mode (ON/OFF)
 );
 ```
 
-1. If string's size is zero, allocate memory for a character & push the encountered character to string buffer.
-2. Else if size isn't zero, reallocate memory by extending with another character & push the encountered character to string buffer.
+- Check if the current state already exists in DFA.
+- If existing:
+    - Don't make a new state & continue with existing one.
+    - Store the properties/type of current state.
+- Else if not existing:
+    - Create it & add to the record of DFA.
+    - Set all the initial attributes to this new state.
 
 
 
-## 4. Test Cases & Benchmarks
+## 3. Test Cases & Benchmarks
 
 
-### 4.1 <u>Print</u>:
+### 3.1 <u>Print</u>:
 
 ```eflam
 # A basic DFA that accepts `print("STRING");` codes.
@@ -150,10 +155,27 @@ q6(A) | ( )q0, (@)q7;
 
 
 
-## 5. Special Notes
+## 4. Special Notes
 
 
-### 3.1 <u>Bootstrapped EFLAM DFA</u>:
+### 4.1 <u>Syntax Rules</u>:
+
+1. Every line either starts with comment or a state definition.
+2. Comments start with `#`.
+3. States might be followed by round brackets mentioning their type.
+4. After that there is OR operator `|` which means now transitions will be written.
+5. Transisiton symbols are written with symbols inside round bracket & then its equivalent state name outside.
+6. If a transition symbol is `@`, then it is meant to be the transitions for rest of the symbols.
+7. Transition states of right of `|` are separated by commas.
+8. Finally, a `;` is added at the end.
+9. A whole state definition could be broken down into multiple lines, and might include a comment at the end.
+10. Symbols or state names which might include special bytes critical to EFLAM syntax, need to be followed by `$`.
+11. Using `$` before an ordinary byte will add the byte without inclusion of `$`.
+12. Transition definitions and states could be defined multiple times.
+13. Multiple definitions must however mustn't have differing types & symbol transitions.
+
+
+### 4.2 <u>Bootstrapped EFLAM DFA</u>:
 
 - Special characters (`|`, `(`, `)`, `,`, `@`, `$`, `#`, `;`) must use `$` before themselves if intended to be used literally.
 

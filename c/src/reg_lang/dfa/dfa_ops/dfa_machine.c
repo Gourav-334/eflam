@@ -20,9 +20,20 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
 
     int state = 0;                              // Current state for the hardcoded DFA.
     bool accept;                                // Tells whether current state is A/non-A.
+    bool resume = true;                         // Tells if state machine needs to resume.
     int row=0, column=0;                        // Recording row & column count for error feedback.
-    char *str=NULL;                             // Buffer string to read and store names.
-    int str_size = 0;                           // Size of the string `str`.
+
+    char *cur_state_name=NULL;                  // Current state name
+    int cur_state_size = 0;                     // Size of current state name
+    dfa_state *cur_state_addr=NULL;             // Address of current state
+    bool cur_state_type[TOTAL_TYPES];           // Properties of current state
+
+    char *trans_state_name=NULL;                // Transition state name
+    int trans_state_size = 0;                   // Size of transition state name
+    dfa_state *trans_state_addr=NULL;           // Address of transition state
+
+    char *sym_arr=NULL;                         // Transition symbols array
+    int sym_arr_size = 0;                       // Size of transition symbols array
 
 
 
@@ -49,7 +60,11 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]==' ' || fstream[i]=='\t' || fstream[i]=='\n') {state = 0; accept = true;}
                 else if (fstream[i]=='$') {state = 2; accept = false;}
                 else if (fstream[i]=='#') {state = 16; accept = true;}
-                else {state = 1; accept = true; dfa_cur_state_l(str, fstream[i], &str_size, debug);}
+                else
+                {
+                    state = 1; accept = true;
+                    resume = char_append(cur_state_name, fstream[i], &cur_state_size, debug);
+                }
 
                 break;
 
@@ -59,7 +74,11 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]=='$') {state = 2; accept = false;}
                 else if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 3; accept = false;}
                 else if (fstream[i]=='(') {state = 4; accept = false; /* FUNCTION REQUIRED */}
-                else {state = 1; accept = true; dfa_cur_state_l(str, fstream[i], &str_size, debug);}
+                else
+                {
+                    state = 1; accept = true;
+                    resume = char_append(cur_state_name, fstream[i], &cur_state_size, debug);
+                }
 
                 break;
 
@@ -198,6 +217,23 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 else {state = 16; accept = true;}
                 
                 break;
+        }
+
+
+
+
+
+        /* Providing user feedback about next step. */
+
+        if (char_append(cur_state_name, fstream[i], &cur_state_size, debug)==false)
+        {
+            if (debug==false) {}
+            else if (debug==true) {printf("STAT (%s): Exiting state machine...\n", __FILE__);}
+        }
+        else if (char_append(cur_state_name, fstream[i], &cur_state_size, debug)==true)
+        {
+            if (debug==false) {}
+            else if (debug==true) {printf("STAT (%s): Continuing with remaining symbols...\n", __FILE__);}
         }
 
 

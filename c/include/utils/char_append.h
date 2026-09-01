@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef DFA_CUR_STATE_L_H
-    #define DFA_CUR_STATE_L_H
+#ifndef CHAR_APPEND_H
+    #define CHAR_APPEND_H
 
 
 
@@ -22,7 +22,7 @@
 
 /* Used for fetching first letter in name of current state, with precautions. */
 
-bool dfa_cur_state_l(
+bool char_append(
     char *str,          // Target string to be updated
     char c,             // Character to be appended with
     int *str_size,      // Current size of string

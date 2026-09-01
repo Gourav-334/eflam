@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../../../include/reg_lang/dfa/dfa_ops/dfa_cur_state_l.h"
+#include "../../include/utils/char_append.h"
 
 #include <stdlib.h>         // For supporting memory management operations.
 
@@ -15,7 +15,7 @@
 
 /* Used for fetching first letter in name of current state, with precautions. */
 
-bool dfa_cur_state_l1(char *str, char c, int *str_size, bool debug)
+bool char_append(char *str, char c, int *str_size, bool debug)
 {
     /* Checking if the allocation required is for first character or other. */
 
