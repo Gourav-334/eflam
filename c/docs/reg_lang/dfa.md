@@ -118,7 +118,7 @@ bool dfa_machine(
 // dfa/dfa_ops/dfa_cur_create_state.c
 /* Used for creating a state if it doesn't exist yet. */
 
-bool dfa_create_cur_state(
+bool dfa_fix_cur_state(
     dfa *target_dfa,        // Target DFA machine
     char *name,             // Name of state to be created
     int *name_size,         // Length of state's name
