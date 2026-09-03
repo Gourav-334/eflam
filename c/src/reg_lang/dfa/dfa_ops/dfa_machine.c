@@ -22,7 +22,7 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
     bool accept;                                // Tells whether current state is A/non-A.
     bool resume = true;                         // Tells if state machine needs to resume.
     int row=0, column=0;                        // Recording row & column count for error feedback.
-    /* RECONSIDER IN COMMON STORAGE */
+    
     char *cur_state_name=NULL;                  // Current state name
     int cur_state_size = 0;                     // Size of current state name
     dfa_state *cur_state_addr=NULL;             // Address of current state
