@@ -1,0 +1,106 @@
+digraph EFLAM_DFA
+{
+    rankdir = LR;               # Left to right arrangement
+    node[shape=circle];
+
+
+
+
+
+    /* Nodes */
+
+    q0 [label="q0", shape=doublecircle, fillcolor=white];
+    q1 [label="q1", shape=doublecircle, fillcolor=white];
+    q2 [label="q2", shape=circle, fillcolor=white];
+    q3 [label="q3", shape=circle, fillcolor=white];
+    q4 [label="q4", shape=circle, fillcolor=white];
+    q5 [label="q5", shape=circle, fillcolor=white];
+    q6 [label="q6", shape=circle, fillcolor=white];
+    q7 [label="q7", shape=circle, fillcolor=white];
+    q8 [label="q8", shape=circle, fillcolor=white];
+    q9 [label="q9", shape=circle, fillcolor=white];
+    q10 [label="q10", shape=circle, fillcolor=white];
+    q11 [label="q11", shape=circle, fillcolor=white];
+    q12 [label="q12", shape=circle, fillcolor=white];
+    q13 [label="q13", shape=circle, fillcolor=white];
+    q14 [label="q14", shape=circle, fillcolor=white];
+    q15 [label="q15", shape=circle, fillcolor=white];
+    q16 [label="q16", shape=circle, fillcolor=white];
+    q17 [label="q17", shape=circle, fillcolor=white];
+    q18 [label="q18", shape=circle, fillcolor=white];
+    q19 [label="q19", shape=circle, fillcolor=white];
+    q20 [label="q20", shape=circle, fillcolor=white];
+    q21 [label="q21", shape=circle, fillcolor=white];
+    q22 [label="q22", shape=circle, fillcolor=white];
+    q23 [label="q23", shape=circle, fillcolor=white];
+    q24 [label="q24", shape=circle, fillcolor=white];
+
+
+
+
+
+    /* Transitions */
+
+    q0 -> q0 [label=" ,\\n,\\t", fontcolor=black];
+    q0 -> q1 [label="#", fontcolor=black];
+    q0 -> q2 [label="$", fontcolor=black];
+    q1 -> q0 [label="\\n", fontcolor=black];
+    q1 -> q1 [label="ELSE", fontcolor=black];
+    q2 -> q3 [label="ELSE", fontcolor=black];
+    q2 -> q4 [label="\\", fontcolor=black];
+    q3 -> q3 [label="ELSE", fontcolor=black];
+    q3 -> q4 [label="\\", fontcolor=black];
+    q3 -> q5 [label="$", fontcolor=black];
+    q4 -> q3 [label="ELSE", fontcolor=black];
+    q4 -> q5 [label="$", fontcolor=black];
+    q5 -> q0 [label=";", fontcolor=black];
+    q5 -> q5 [label=" ,\\n,\\t", fontcolor=black];
+    q5 -> q6 [label="{", fontcolor=black];
+    q5 -> q13 [label="|", fontcolor=black];
+    q6 -> q6 [label=" ,\\n,\\t", fontcolor=black];
+    q6 -> q7 [label="'", fontcolor=black];
+    q6 -> q11 [label="}", fontcolor=black];
+    q7 -> q8 [label="ELSE", fontcolor=black];
+    q7 -> q9 [label="\\", fontcolor=black];
+    q8 -> q8 [label="ELSE", fontcolor=black];
+    q8 -> q9 [label="\\", fontcolor=black];
+    q8 -> q10 [label="'", fontcolor=black];
+    q9 -> q8 [label="ELSE", fontcolor=black];
+    q9 -> q10 [label="'", fontcolor=black];
+    q10 -> q6 [label=",", fontcolor=black];
+    q10 -> q10 [label=" ,\\n,\\t", fontcolor=black];
+    q10 -> q11 [label="}", fontcolor=black];
+    q11 -> q0 [label=";", fontcolor=black];
+    q11 -> q11 [label=" ,\\n,\\t", fontcolor=black];
+    q11 -> q13 [label="|", fontcolor=black];
+    q12 -> q12 [label=" ,\\n,\\t", fontcolor=black];
+    q12 -> q20 [label=")", fontcolor=black];
+    q13 -> q13 [label=" ,\\n,\\t", fontcolor=black];
+    q13 -> q14 [label="(", fontcolor=black];
+    q14 -> q14 [label=" ,\\n,\\t", fontcolor=black];
+    q14 -> q15 [label="'", fontcolor=black];
+    q14 -> q12 [label="@", fontcolor=black];
+    q15 -> q16 [label="ELSE", fontcolor=black];
+    q15 -> q17 [label="\\", fontcolor=black];
+    q16 -> q16 [label="ELSE", fontcolor=black];
+    q16 -> q17 [label="\\", fontcolor=black];
+    q16 -> q18 [label="'", fontcolor=black];
+    q17 -> q16 [label="ELSE", fontcolor=black];
+    q17 -> q18 [label="'", fontcolor=black];
+    q18 -> q18 [label=" ,\\n,\\t", fontcolor=black];
+    q18 -> q19 [label=",", fontcolor=black];
+    q18 -> q20 [label=")", fontcolor=black];
+    q19 -> q15 [label="'", fontcolor=black];
+    q19 -> q19 [label=" ,\\n,\\t", fontcolor=black];
+    q20 -> q20 [label=" ,\\n,\\t", fontcolor=black];
+    q20 -> q21 [label="$", fontcolor=black];
+    q21 -> q22 [label="ELSE", fontcolor=black];
+    q21 -> q23 [label="\\", fontcolor=black];
+    q22 -> q22 [label="ELSE", fontcolor=black];
+    q22 -> q23 [label="\\", fontcolor=black];
+    q22 -> q24 [label="$", fontcolor=black];
+    q23 -> q22 [label="ELSE", fontcolor=black];
+    q23 -> q24 [label="$", fontcolor=black];
+    q24 -> q0 [label=";", fontcolor=black];
+    q24 -> q24 [label=" ,\\n,\\t", fontcolor=black];
+}
