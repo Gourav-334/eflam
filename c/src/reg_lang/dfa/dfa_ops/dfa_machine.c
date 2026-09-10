@@ -14,7 +14,7 @@
 
 /* Loads the rules given by users and creates the DFA. */
 
-bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
+int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
 {
     /* Variables & constants */
 
@@ -57,166 +57,171 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
         switch (state)
         {
             case 0:
-                if (fstream[i]==' ' || fstream[i]=='\t' || fstream[i]=='\n') {state = 0; accept = true;}
-                else if (fstream[i]=='$') {state = 2; accept = false;}
-                else if (fstream[i]=='#') {state = 16; accept = true;}
-                else
-                {
-                    state = 1; accept = true;
-                    resume = char_append(cur_state_name, fstream[i], &cur_state_size, debug);
-                }
-
-                break;
-
+                if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 0;}
+                else if (fstream[i]=='#') {state = 1;}
+                else if (fstream[i]=='$') {state = 2;}
+                else {state = -1;}
+            
 
 
             case 1:
-                if (fstream[i]=='$') {state = 2; accept = false;}
-                else if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 3; accept = false;}
-                else if (fstream[i]=='(') {state = 4; accept = false; /* FUNCTION REQUIRED */}
-                else
-                {
-                    state = 1; accept = true;
-                    resume = char_append(cur_state_name, fstream[i], &cur_state_size, debug);
-                }
-
-                break;
-
-
-
-            case 2:
-                if (fstream[i]==' ' || fstream[i]=='\t' || fstream[i]=='\n') {state = -1; accept = false;}
-                else {state = 1; accept = true; /* FUNCTION REQUIRED */}
-                
-                break;
-
-
-
-            case 3:
-                if (fstream[i]=='(') {state = 4; accept = false; /* FUNCTION REQUIRED */}
-                else if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 3; accept = false;}
-                else {state = -1; accept = false;}
-                
-                break;
-
-
-
-            case 4:
-                if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 4; accept = false;}
-                else if (fstream[i]=='S' || fstream=='A') {state = 5; accept = false; /* FUNCTION REQUIRED */}
-                else if (fstream[i]==')') {state = 6; accept = true;}
-                else {state = -2; accept = false;}
-                
-                break;
-
-
-
-            case 5:
-                if (fstream[i]==',') {state = 4; accept = false;}
-                else if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 5; accept = false;}
-                else if (fstream[i]==')') {state = 6; accept = true;}
-                else {state = -2; accept = false;}
-                
-                break;
-
-
-
-            case 6:
-                if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 6; accept = true;}
-                else if (fstream[i]=='|') {state = 7; accept = false;}
-                else {state = -3; accept = false;}
-                
-                break;
-
-
-
-            case 7:
-                if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 7; accept = false;}
-                else if (fstream[i]=='(') {state = 8; accept = false;}
-                else {state = -3; accept = false;}
-                
-                break;
-
-
-
-            case 8:
-                if (fstream[i]=='$') {state = 10; accept = false;}
-                else if (fstream[i]==',') {state = -4; accept = true;}
-                else if (fstream[i]=='@') {state = 12; accept = true;}
-                else {state = 9; accept = false; /* FUNCTION REQUIRED */}
-
-                break;
-
-
-
-            case 9:
-                if (fstream[i]==',') {state = 8; accept = false;}
-                else if (fstream[i]=='$') {state = 10; accept = false;}
-                else if (fstream[i]==')') {state = 11; accept = false;}
-                else {state = 9; accept = false; /* FUNCTION REQUIRED */}
-
-                break;
-
-
-
-            case 10:
-                state = 9; accept = false;
-                
-                break;
+                if (fstream[i]=='\n') {state = 0;}
+                else {state = 1;}
 
 
             
-            case 11:
-                if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 11; accept = false;}
-                else if (fstream[i]=='$') {state = 14; accept = false;}
-                else {state = 13; accept = false;}
-                
-                break;
+            case 2:
+                if (fstream[i]=='\\') {state = 4;}
+                else if (fstream[i]=='$') {state = -2;}
+                else {state = 3;}
+            
 
+
+            case 4:
+                if (fstream[i]=='$') {state = 5;}
+                else {state = 3;}
+            
+
+
+            case 5:
+                if (fstream[i]==';') {state = 0;}
+                else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 5;}
+                else if (fstream[i]=='{') {state = 6;}
+                else if (fstream[i]=='|') {state = 13;}
+                else {state = -3;}
+            
+
+
+            case 6:
+                if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 6;}
+                else if (fstream[i]=='\'') {state = 7;}
+                else if (fstream[i]=='}') {state = 11;}
+                else {state = -4;}
+            
+
+
+            case 7:
+                if (fstream[i]=='\\') {state = 9;}
+                else if (fstream[i]=='\'') {state = -5;}
+                else {state = 8;}
+            
+
+
+            case 8:
+                if (fstream[i]=='\\') {state = 9;}
+                else if (fstream[i]=='\'') {state = 10;}
+                else {state = 8;}
+            
+
+
+            case 9:
+                if (fstream[i]=='\'') {state = 10;}
+                else {state = 8;}
+            
+
+
+            case 10:
+                if (fstream[i]==',') {state = 6;}
+                else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 10;}
+                else if (fstream[i]=='}') {state = 11;}
+                else {state = -6;}
+            
+
+
+            case 11:
+                if (fstream[i]==';') {state = 0;}
+                else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 11;}
+                else if (fstream[i]=='|') {state = 13;}
+                else {state = -7;}
+            
 
 
             case 12:
-                if (fstream[i]=='(') {state = 11; accept = false;}
-                else {state = -5; accept = false;}
-                
-                break;
-
+                if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 12;}
+                else if (fstream[i]==')') {state = 20;}
+                else {state = -8;}
+            
 
 
             case 13:
-                if (fstream[i]==',') {state = 7; accept = false;}
-                else if (fstream[i]=='$') {state = 14; accept = false;}
-                else if (fstream[i]==' ' || fstream[i]=='\t' || fstream[i]=='\n') {state = 15; accept = false;}
-                else if (fstream[i]==';') {state = 0; accept = true;}
-                else {state = 13; accept = false;}
-                
-                break;
-
+                if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 13;}
+                else if (fstream[i]=='(') {state = 14;}
+                else {state = -9;}
+            
 
 
             case 14:
-                if (fstream[i]==' ' || fstream[i]=='\t' || fstream[i]=='\n') {state = -1; accept = false;}
-                else {state = 13; accept = false;}
-                
-                break;
-
+                if (fstream[i]=='@') {state = 12;}
+                else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 14;}
+                else if (fstream[i]=='\'') {state = 15;}
+                else {state = -10;}
+            
 
 
             case 15:
-                if (fstream[i]==' ' || fstream=='\t' || fstream=='\n') {state = 15; accept = false;}
-                else if (fstream[i]==',') {state = 7; accept = true;}
-                else if (fstream[i]==';') {state = 0; accept = true;}
-                else {state = -1; accept = false;}
-                
-                break;
-
+                if (fstream[i]=='\\') {state = 17;}
+                else {state = 16;}
+            
 
 
             case 16:
-                if (fstream=='\n') {state = 0; accept = true;}
-                else {state = 16; accept = true;}
-                
-                break;
+                if (fstream[i]=='\\') {state = 17;}
+                else if (fstream[i]=='\'') {state = 18;}
+                else {state = 16;}
+            
+
+
+            case 17:
+                if (fstream[i]=='\'') {state = 18;}
+                else {state = 17;}
+            
+
+
+            case 18:
+                if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 18;}
+                else if (fstream[i]==',') {state = 19;}
+                else if (fstream[i]==')') {state = 20;}
+                else {state = -11;}
+            
+
+
+            case 19:
+                if (fstream[i]=='\'') {state = 15;}
+                else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 19;}
+                else {state = -12;}
+            
+
+
+            case 20:
+                if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 20;}
+                else if (fstream[i]=='$') {state = 21;}
+                else {state = -13;}
+            
+
+
+            case 21:
+                if (fstream[i]=='\\') {state = 23;}
+                else {state = 22;}
+            
+
+
+            case 22:
+                if (fstream[i]=='\\') {state = 23;}
+                else if (fstream[i]=='$') {state = 24;}
+                else {state = 22;}
+            
+
+
+            case 23:
+                if (fstream[i]=='$') {state = 24;}
+                else {state = 22;}
+            
+
+
+            case 24:
+                if (fstream[i]==';') {state = 0;}
+                else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 24;}
+                else {state = -14;}
         }
 
 
@@ -225,15 +230,13 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
 
         /* Providing user feedback about next step. */
 
-        if (char_append(cur_state_name, fstream[i], &cur_state_size, debug)==false)
+        if (char_append(cur_state_name, fstream[i], &cur_state_size, debug)==false && debug==true)
         {
-            if (debug==false) {}
-            else if (debug==true) {printf("STAT (%s): Exiting state machine...\n", __FILE__);}
+            printf("STAT (%s): Exiting state machine...\n", __FILE__);
         }
-        else if (char_append(cur_state_name, fstream[i], &cur_state_size, debug)==true)
+        else if (char_append(cur_state_name, fstream[i], &cur_state_size, debug)==true && debug==true)
         {
-            if (debug==false) {}
-            else if (debug==true) {printf("STAT (%s): Continuing with remaining symbols...\n", __FILE__);}
+            printf("STAT (%s): Continuing with remaining symbols...\n", __FILE__);
         }
 
 
@@ -257,10 +260,17 @@ bool dfa_machine(char *fstream, dfa *target_dfa, bool debug)
 
         /* Returning local status (if debugging mode is on). */
 
-        if (debug==false) {}
-        else if (debug==true)
+        if (debug==true)
         {
             fprintf(stdout, "STAT: fstream[i]=%c, state=%d, row=%d, column=%d\n", fstream[i], state, row, column);
         }
+
+
+
+
+
+        /* Returning the value of final state. */
+
+        return state;
     }
 }

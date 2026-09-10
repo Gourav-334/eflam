@@ -98,7 +98,7 @@ bool dfa_rules_embed(
 // dfa/dfa_ops/dfa_machine.h
 /* DFA machine, that tells if it stops at accept state or not. */
 
-bool dfa_machine(
+int dfa_machine(
     char *sym_seq[],            // Sequence of symbols in input string
     struct *target_dfa,         // Address to target DFA
     bool debug                  // Tells if debugging logs are required
@@ -108,8 +108,7 @@ bool dfa_machine(
 1. Initialize from start state.
 2. Read each symbol one-by-one in sequence.
 3. From current state, if transition is possible for the current symbol, then move to to next state.
-4. If not, return false.
-5. If symbols exhaust, then check if the current state is an accept state or not. Return true if it is, else false.
+4. If not, return `-1`.
 
 
 ### 2.7 <u>DFA Create Current State</u>:
