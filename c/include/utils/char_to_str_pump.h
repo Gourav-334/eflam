@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef CHAR_APPEND_H
-    #define CHAR_APPEND_H
+#ifndef CHAR_TO_STR_PUMP_H
+    #define CHAR_TO_STR_PUMP_H
 
 
 
@@ -22,7 +22,7 @@
 
 /* Used for fetching first letter in name of current state, with precautions. */
 
-bool char_append(
+bool char_to_str_pump(
     char *str,          // Target string to be updated
     char c,             // Character to be appended with
     int *str_size,      // Current size of string

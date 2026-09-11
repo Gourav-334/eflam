@@ -12,13 +12,13 @@ Basic utility box, which provides custom functions to ease with repetitive writi
 ## 2. Implementation
 
 
-### 2.1 <u>Character Append</u>:
+### 2.1 <u>Character To String Pump</u>:
 
 ```c
-// utils/char_append.c
+// utils/char_to_str_pump.c
 /* Used for appending a character to target string. */
 
-bool char_append(
+bool char_to_str_pump(
     char *str,          // Target string to be updated
     char c,             // Character to be appended with
     int *str_size,      // Current size of string
@@ -36,3 +36,5 @@ bool char_append(
 
 
 ## 4. Special Notes
+
+---

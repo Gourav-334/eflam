@@ -13,7 +13,6 @@ EFLAM (*Embeddable Formal Language & Automata Models*) is an embeddable library 
 |
 ├── dfa/
 |   ├── dfa_code/
-|   |   ├── dfa_file_load
 |   |   ├── dfa_str_test
 |   |   └── dfa_loc_valid
 |   |
@@ -49,6 +48,7 @@ EFLAM (*Embeddable Formal Language & Automata Models*) is an embeddable library 
 ├── turing/
 │
 ├── utils/
+|   ├── file_load
 |   ├── char_to_str_pump
 |   └── str_to_arr_pump
 |

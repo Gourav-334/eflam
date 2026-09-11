@@ -14,13 +14,7 @@ Implementation of the automata machine is made in form of graph using structures
 ## 2. Implementation
 
 
-### 2.1 <u>Key Elements</u>:
-
-- `str` string buffer
-- `str_size` integer
-- Members of `target_dfa`
-- Members of `target_dfa -> states`
-- `else_exists` flag
+### 2.1 <u>File Loader</u>
 
 
 ### 2.2 <u>DFA State (Structure)</u>:
@@ -52,44 +46,6 @@ typedef struct dfa {
     struct dfa_state *states;               // Array of states that DFA encloses
 } dfa;
 ```
-
-
-### 2.4 <u>Loading DFA Rules (Function)</u>:
-
-```c
-// dfa/dfa_ops/dfa_rules_load.h
-/* Loads the rules given by users and creates the DFA. */
-
-bool dfa_rules_load(
-    char dfa_rules[],                   // Pointer to file containing DFA rules
-    struct dfa *target_dfa,       // Address to target DFA structure
-    bool debug                          // Tells if debugging logs are required
-);
-```
-
-1. Check if the file exists or not.
-2. If not, return error, else open the file in read mode.
-3. Move to the end of the file, and check the size of it.
-4. Allocate a string with size equivalent to size of file `+1` for `\0`.
-5. Load the file stream into it.
-5. Now start reading it and implement DFA.
-
-
-### 2.5 <u>Embedding DFA Rules (Function)</u>:
-
-```c
-// dfa/dfa_ops/embed_dfa_rules.h
-/* Same as previous, but rules are directly embedded in the function. */
-
-bool dfa_rules_embed(
-    char *dfa_rules[],          // Array of transition rules
-    struct dfa *target_dfa,     // Address to target DFA structure
-    bool debug                  // Tells if debugging logs are required
-);
-```
-
-1. Read each string sequentially and implement the DFA accordingly.
-2. Now start implementing the DFA.
 
 
 ### 2.6 <u>DFA Machine (Function)</u>:
