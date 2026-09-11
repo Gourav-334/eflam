@@ -16,7 +16,7 @@ EFLAM (*Embeddable Formal Language & Automata Models*) is an embeddable library 
 |   |   ├── dfa_str_test
 |   |   └── dfa_loc_valid
 |   |
-│   ├── dfa_elements/
+│   ├── dfa_elem/
 |   |   ├── dfa_state
 |   |   └── dfa_unit
 |   |

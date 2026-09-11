@@ -31,6 +31,42 @@ bool char_to_str_pump(
 
 
 
+### 2.2 <u>String To Array Pump</u>
+
+```c
+// utils/str_to_arr_pump.c
+/* Used for pushing strings to array of strings. */
+
+bool str_to_arr_pump(
+    char *str,              // String to be pushed to array
+    char ***str_arr,        // Array that contains strings
+    int *str_count,         // Number of strings currently in array
+    bool debug              // Debugging option for getting runtime information.
+);
+```
+
+1. Check if `str` is NULL, and return error if so.
+2. Check the `str_count` and allocate space for placing pointer to `str` in `str_arr`.
+3. Now add pointer of `str` to allocated memory `str_arr`.
+
+
+
+### 2.3 <u>File Loader</u>:
+
+```c
+// utils/file_load.c
+/* Used for loading contents of target EFLAM files into buffer. */
+
+int file_load(
+    char *conn_file,        // Connector file containing addresses of EFLAM files.
+    char ***filenames,      // Array of filenames arranged linearly.
+    int *file_count,        // Total number of files connected to connector file.
+    bool debug              // Debugging option for getting runtime information.
+);
+```
+
+
+
 ## 3. Test Cases & Benchmarks
 
 
