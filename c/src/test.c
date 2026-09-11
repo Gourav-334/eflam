@@ -19,20 +19,21 @@ int main(int argc, char *argv[])
     char c = 'T';
     int i = 0;
 
-    char_to_str_pump(str, c, &i, true);
-    char_to_str_pump(str, 'y', &i, true);
-    char_to_str_pump(str, 'p', &i, true);
-    char_to_str_pump(str, 'o', &i, true);
+    char_to_str_pump(&str, c, &i, true);
+    char_to_str_pump(&str, 'y', &i, true);
+    char_to_str_pump(&str, 'p', &i, true);
+    char_to_str_pump(&str, 'o', &i, true);
 
     char c2 = 'l';
 
-    char_to_str_pump(str, 'o', &i, true);
+    char_to_str_pump(&str, c2, &i, true);
+    char_to_str_pump(&str, 'o', &i, true);
 
-    free(str);
+    free(str); i = 0;
 
-    char_to_str_pump(str, 'A', &i, true);
-    char_to_str_pump(str, 't', &i, true);
-    char_to_str_pump(str, 'l', &i, true);
+    char_to_str_pump(&str, 'A', &i, true);
+    char_to_str_pump(&str, 't', &i, true);
+    char_to_str_pump(&str, 'l', &i, true);
 
     printf("str=%s, i=%d\n", str, i);
 

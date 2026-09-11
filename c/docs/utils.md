@@ -19,7 +19,7 @@ Basic utility box, which provides custom functions to ease with repetitive writi
 /* Used for appending a character to target string. */
 
 bool char_to_str_pump(
-    char *str,          // Target string to be updated
+    char **str,         // Target string to be updated
     char c,             // Character to be appended with
     int *str_size,      // Current size of string
     bool debug          // Debugging mode (ON/OFF)
