@@ -3,7 +3,7 @@
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o
  /home/gouraarav/myProjects/eflam/c/src/test.c
- /home/gouraarav/myProjects/eflam/c/include/utils/char_to_str_pump.h
+ /home/gouraarav/myProjects/eflam/c/include/utils/str_to_arr_pump.h
  /usr/include/alloca.h
  /usr/include/endian.h
  /usr/include/features-time64.h
@@ -60,9 +60,9 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o
- /home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c
- /home/gouraarav/myProjects/eflam/c/include/utils/char_to_str_pump.h
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o
+ /home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c
+ /home/gouraarav/myProjects/eflam/c/include/utils/str_to_arr_pump.h
  /usr/include/alloca.h
  /usr/include/endian.h
  /usr/include/features-time64.h

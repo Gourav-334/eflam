@@ -69,19 +69,19 @@ include CMakeFiles/test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test.dir/flags.make
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o: /home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o -c /home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o: /home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o -c /home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: /home/gouraarav/myProjects/eflam/c/src/test.c
@@ -99,13 +99,13 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.s: cmake_force
 
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt

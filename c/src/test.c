@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../include/utils/char_to_str_pump.h"
+#include "../include/utils/str_to_arr_pump.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,27 +15,18 @@ int main(int argc, char *argv[])
 {
     /* Code to be tested. */
 
-    char *str = NULL;
-    char c = 'T';
-    int i = 0;
+    char *str="Typology\0", *str2="rocks!\0";
+    char **str_arr = NULL;
+    int str_count = 0;
 
-    char_to_str_pump(&str, c, &i, true);
-    char_to_str_pump(&str, 'y', &i, true);
-    char_to_str_pump(&str, 'p', &i, true);
-    char_to_str_pump(&str, 'o', &i, true);
+    str_to_arr_pump(str, &str_arr, &str_count, true);
+    str_to_arr_pump("Atlas", &str_arr, &str_count, true);
+    str_to_arr_pump(str2, &str_arr, &str_count, true);
 
-    char c2 = 'l';
-
-    char_to_str_pump(&str, c2, &i, true);
-    char_to_str_pump(&str, 'o', &i, true);
-
-    free(str); i = 0;
-
-    char_to_str_pump(&str, 'A', &i, true);
-    char_to_str_pump(&str, 't', &i, true);
-    char_to_str_pump(&str, 'l', &i, true);
-
-    printf("str=%s, i=%d\n", str, i);
+    for (int i=0; i<str_count; i++)
+    {
+        printf("str_arr[%d]=\"%s\"\n", i, *(str_arr + i));
+    }
 
 
 

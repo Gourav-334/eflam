@@ -77,6 +77,7 @@ bool char_to_str_pump(char **str, char c, int *str_size, bool debug)
             }
         }
     }
+    else {printf("ERROR (%s):%d :: String size data corrupted!\n", file, __LINE__);}
 
 
 
