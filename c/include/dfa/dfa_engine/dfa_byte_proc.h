@@ -9,8 +9,7 @@
 
 /* List of included headers. */
 
-#include "dfa_units.h"      // For using DFA state and machine.
-#include "../../../utils/char_append.h"
+#include "../dfa_elem/dfa_unit.h"
 
 #include <stdbool.h>        // For using `bool` keyword.
 

@@ -1,7 +1,7 @@
-/* Including guard macros to avoid multiple inclusion. */
+/* Guard macros to avoid multiple inclusion. */
 
-#ifndef STR_TO_ARR_PUMP
-    #define STR_TO_ARR_PUMP
+#ifndef STR_TO_ARR_PUMP_H
+    #define STR_TO_ARR_PUMP_H
 
 
 

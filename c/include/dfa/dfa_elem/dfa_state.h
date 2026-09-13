@@ -1,7 +1,7 @@
 /* Setting guards to avoid multiple inclusions. */
 
-#ifndef DFA_UNITS_H
-    #define DFA_UNITS_H
+#ifndef DFA_STATE_H
+    #define DFA_STATE_H
 
 #define START_STATE 0           // Index for START state configuration.
 #define ACCEPT_STATE 1          // Index for ACCEPT state configuration.
@@ -34,18 +34,6 @@ typedef struct dfa_state {
     struct dfa_state *else_trans;           // Address to state for transistion to remaining symbols
     int total_trans;                        // Number of transitions current state makes
 } dfa_state;
-
-
-
-
-
-/* Structure representing whole DFA, enclosing its states. */
-
-typedef struct dfa {
-    struct dfa_state *start_state;          // Initial/start state of the DFA
-    int total_states;                       // Number of states that the DFA contains
-    struct dfa_state *states;               // Array of states that DFA encloses
-} dfa;
 
 
 

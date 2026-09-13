@@ -20,7 +20,7 @@ bool char_to_str_pump(char **str, char c, int *str_size, bool debug)
 {
     /* Checking if the allocation required is for first character or other. */
 
-    char *file = "char_to_str_pump.c";
+    char *file = "char_to_str_pump.c\0";
     void *alloc_ret = NULL;
 
 

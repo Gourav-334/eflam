@@ -1,7 +1,10 @@
 /* List of included headers. */
 
-#include "../../../../include/reg_lang/dfa/dfa_ops/dfa_machine.h"
-#include <stdio.h>
+#include "../../../include/dfa/dfa_engine/dfa_byte_proc.h"
+#include "../../../include/utils/char_to_str_pump.h"
+#include "../../../include/dfa/dfa_elem/dfa_state.h"
+
+#include <stdio.h>          // For using basic I/O services from C
 
 
 
@@ -32,7 +35,7 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
     int trans_state_size = 0;                   // Size of transition state name
     dfa_state *trans_state_addr=NULL;           // Address of transition state
 
-    char *sym_arr=NULL;                         // Transition symbols array
+    char **sym_arr=NULL;                        // Transition symbols array
     int sym_arr_size = 0;                       // Size of transition symbols array
 
 
@@ -61,6 +64,8 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 else if (fstream[i]=='#') {state = 1;}
                 else if (fstream[i]=='$') {state = 2;}
                 else {state = -1;}
+
+                break;
             
 
 
@@ -68,18 +73,24 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]=='\n') {state = 0;}
                 else {state = 1;}
 
+                break;
+
 
             
             case 2:
                 if (fstream[i]=='\\') {state = 4;}
                 else if (fstream[i]=='$') {state = -2;}
                 else {state = 3;}
+
+                break;
             
 
 
             case 4:
                 if (fstream[i]=='$') {state = 5;}
                 else {state = 3;}
+
+                break;
             
 
 
@@ -89,6 +100,8 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 else if (fstream[i]=='{') {state = 6;}
                 else if (fstream[i]=='|') {state = 13;}
                 else {state = -3;}
+
+                break;
             
 
 
@@ -97,6 +110,8 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 else if (fstream[i]=='\'') {state = 7;}
                 else if (fstream[i]=='}') {state = 11;}
                 else {state = -4;}
+
+                break;
             
 
 
@@ -104,6 +119,8 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]=='\\') {state = 9;}
                 else if (fstream[i]=='\'') {state = -5;}
                 else {state = 8;}
+
+                break;
             
 
 
@@ -111,12 +128,16 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]=='\\') {state = 9;}
                 else if (fstream[i]=='\'') {state = 10;}
                 else {state = 8;}
+
+                break;
             
 
 
             case 9:
                 if (fstream[i]=='\'') {state = 10;}
                 else {state = 8;}
+
+                break;
             
 
 
@@ -125,6 +146,8 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 10;}
                 else if (fstream[i]=='}') {state = 11;}
                 else {state = -6;}
+
+                break;
             
 
 
@@ -133,6 +156,8 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 11;}
                 else if (fstream[i]=='|') {state = 13;}
                 else {state = -7;}
+
+                break;
             
 
 
@@ -140,6 +165,8 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 12;}
                 else if (fstream[i]==')') {state = 20;}
                 else {state = -8;}
+
+                break;
             
 
 
@@ -147,6 +174,8 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 13;}
                 else if (fstream[i]=='(') {state = 14;}
                 else {state = -9;}
+
+                break;
             
 
 
@@ -155,12 +184,16 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 14;}
                 else if (fstream[i]=='\'') {state = 15;}
                 else {state = -10;}
+
+                break;
             
 
 
             case 15:
                 if (fstream[i]=='\\') {state = 17;}
                 else {state = 16;}
+
+                break;
             
 
 
@@ -168,12 +201,16 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]=='\\') {state = 17;}
                 else if (fstream[i]=='\'') {state = 18;}
                 else {state = 16;}
+
+                break;
             
 
 
             case 17:
                 if (fstream[i]=='\'') {state = 18;}
                 else {state = 17;}
+
+                break;
             
 
 
@@ -182,6 +219,8 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 else if (fstream[i]==',') {state = 19;}
                 else if (fstream[i]==')') {state = 20;}
                 else {state = -11;}
+
+                break;
             
 
 
@@ -189,6 +228,8 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]=='\'') {state = 15;}
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 19;}
                 else {state = -12;}
+
+                break;
             
 
 
@@ -196,12 +237,16 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 20;}
                 else if (fstream[i]=='$') {state = 21;}
                 else {state = -13;}
+
+                break;
             
 
 
             case 21:
                 if (fstream[i]=='\\') {state = 23;}
                 else {state = 22;}
+
+                break;
             
 
 
@@ -209,12 +254,16 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]=='\\') {state = 23;}
                 else if (fstream[i]=='$') {state = 24;}
                 else {state = 22;}
+
+                break;
             
 
 
             case 23:
                 if (fstream[i]=='$') {state = 24;}
                 else {state = 22;}
+
+                break;
             
 
 
@@ -222,37 +271,9 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
                 if (fstream[i]==';') {state = 0;}
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 24;}
                 else {state = -14;}
+
+                break;
         }
-
-
-
-
-
-        /* Providing user feedback about next step. */
-
-        if (char_append(cur_state_name, fstream[i], &cur_state_size, debug)==false && debug==true)
-        {
-            printf("STAT (%s): Exiting state machine...\n", __FILE__);
-        }
-        else if (char_append(cur_state_name, fstream[i], &cur_state_size, debug)==true && debug==true)
-        {
-            printf("STAT (%s): Continuing with remaining symbols...\n", __FILE__);
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

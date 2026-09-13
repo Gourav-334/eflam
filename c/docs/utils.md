@@ -48,6 +48,7 @@ bool str_to_arr_pump(
 1. Check if `str` is NULL, and return error if so.
 2. Check the `str_count` and allocate space for placing pointer to `str` in `str_arr`.
 3. Now add pointer of `str` to allocated memory `str_arr`.
+4. And then increment `str_count`.
 
 
 
@@ -57,13 +58,25 @@ bool str_to_arr_pump(
 // utils/file_load.c
 /* Used for loading contents of target EFLAM files into buffer. */
 
-int file_load(
+bool file_load(
     char *conn_file,        // Connector file containing addresses of EFLAM files.
     char ***filenames,      // Array of filenames arranged linearly.
+    char ***filestreams,    // Array of filestreams from filenames.
     int *file_count,        // Total number of files connected to connector file.
     bool debug              // Debugging option for getting runtime information.
 );
 ```
+
+1. Check if `conn_file` is NULL, and display error if so.
+2. Also make sure that `filenames` is empty, else continue but display warning.
+3. Copy `conn_file` to a buffer representing path.
+4. Read it backwards until either `/` is read or nothing is left.
+    - If `/` was read, resize it accordingly (but including `/`).
+    - Else free the path buffer with just a `\0`.
+5. Now append whole string to `filenames`.
+6. Append the stream in `conn_file` file to same string until `\n` or EOF appears.
+7. Then increment the `file_count`.
+8. Then move to next name and continue.
 
 
 
