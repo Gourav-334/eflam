@@ -23,8 +23,8 @@
 /* Used for pushing strings to array of strings. */
 
 bool str_to_arr_pump(
-    char *str,              // String to be pushed to array
     char ***str_arr,        // Array that contains strings
+    char *str,              // String to be pushed to array
     int *str_count,         // Number of strings currently in array
     bool debug              // Debugging option for getting runtime information.
 );

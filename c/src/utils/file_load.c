@@ -95,7 +95,33 @@ bool file_load(char *conn_file, char ***filenames, int *file_count, bool debug)
         if (*(path + i)=='/')
         {
             ret_alloc = realloc(path, sizeof(char)*cur_path_len);
+
+
+            if (ret_alloc==NULL) {printf("ERROR (%s):%d :: Path buffer resizing failed!\n", file, __LINE__);}
+            else if (debug==true) {printf("OK (%s):%d :: Path buffer resizing successful.\n", file, __LINE__);}
+
+
             char_to_str_pump(&path, '\0', &cur_path_len, true);
+
+            break;
         }
     }
+
+
+
+    /* If the path to EFLAM file in connector was local. */
+
+    if (cur_path_len==1 && *path!='/')
+    {
+        free(path);
+        char_to_str_pump(&path, '\0', &cur_path_len, true);
+    }
+
+
+
+
+
+    /* Appending the path to filename. */
+
+    str_to_arr_pump(filenames, path, &cur_path_len, true);
 }

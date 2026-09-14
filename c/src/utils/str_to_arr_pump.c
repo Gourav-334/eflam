@@ -16,7 +16,7 @@
 
 /* Used for pushing strings to array of strings. */
 
-bool str_to_arr_pump(char *str, char ***str_arr, int *str_count, bool debug)
+bool str_to_arr_pump(char ***str_arr, char *str, int *str_count, bool debug)
 {
     /* Variables & constants */
 

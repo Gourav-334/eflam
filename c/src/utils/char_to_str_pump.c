@@ -29,7 +29,37 @@ bool char_to_str_pump(char **str, char c, int *str_size, bool debug)
 
     /* Memory allocation process */
 
-    if (*str_size==0)
+    if (*str_size==0 && c=='\0')
+    {
+        *str = malloc(sizeof(char)*1);         // Allocating memory for first character
+
+
+
+        /* Sending debug feedback to user */
+
+        if (*str==NULL)
+        {
+            printf("ERROR (%s):%d :: Memory allocation failed for first character.\n", file, __LINE__);
+            return false;
+        }
+        else
+        {
+            (*str_size)++;              // Incrementing the size of string
+
+
+            if (debug==true)
+            {
+                printf("OK (%s):%d :: Memory allocated successfully for first character.\n", file, __LINE__);
+            }
+        }
+
+
+
+        /* Character assignation process */
+
+        *(*str + (*str_size - 1)) = '\0';
+    }
+    else if (*str_size==0 && c!='\0')
     {
         *str = malloc(sizeof(char)*2);         // Allocating memory for first character
 
@@ -52,10 +82,26 @@ bool char_to_str_pump(char **str, char c, int *str_size, bool debug)
                 printf("OK (%s):%d :: Memory allocated successfully for first character.\n", file, __LINE__);
             }
         }
+
+
+
+        /* Character assignation process */
+
+        *(*str + (*str_size - 2)) = c;
+        *(*str + (*str_size - 1)) = '\0';
     }
-    else if (*str_size>0)
+    else if (*str_size>0 && c=='\0')
     {
-        alloc_ret = realloc(*str, ((size_t)(*str_size + 1))*sizeof(char));      // Reallocate memory for next character
+        /* Checking if the string contains a terminator or not. */
+
+        if (*(*str + *str_size - 1)=='\0')          // If string already contains terminator
+        {
+            return true;
+        }
+        else if (*(*str + *str_size - 1)!='\0')     // If there is no terminator in string
+        {
+            alloc_ret = realloc(*str, ((size_t)(*str_size + 1))*sizeof(char));
+        }
 
 
 
@@ -76,6 +122,53 @@ bool char_to_str_pump(char **str, char c, int *str_size, bool debug)
                 printf("OK (%s):%d :: Memory allocated successfully for new character.\n", file, __LINE__);
             }
         }
+
+
+
+        /* Character assignation process */
+
+        *(*str + (*str_size - 2)) = c;
+        *(*str + (*str_size - 1)) = '\0';
+    }
+    else if (*str_size>0 && c!='\0')
+    {
+        /* Checking if the string contains a terminator or not. */
+
+        if (*(*str + *str_size - 1)=='\0')          // If string already contains terminator
+        {
+            alloc_ret = realloc(*str, ((size_t)(*str_size + 1))*sizeof(char));
+        }
+        else if (*(*str + *str_size - 1)!='\0')     // If there is no terminator in string
+        {
+            alloc_ret = realloc(*str, ((size_t)(*str_size + 2))*sizeof(char));
+        }
+
+
+
+        /* Sending debug feedback to user */
+
+        if (alloc_ret==NULL)
+        {
+            printf("ERROR (%s):%d :: Memory allocation failed for new character.\n", file, __LINE__);
+            return false;
+        }
+        else
+        {
+            (*str_size)++;            // Incrementing the size of string
+
+
+            if (debug==true)
+            {
+                printf("OK (%s):%d :: Memory allocated successfully for new character.\n", file, __LINE__);
+            }
+        }
+
+
+
+        /* Character assignation process */
+
+        *(*str + (*str_size - 2)) = c;
+        *(*str + (*str_size - 1)) = '\0';
     }
     else {printf("ERROR (%s):%d :: String size data corrupted!\n", file, __LINE__);}
 
@@ -83,10 +176,7 @@ bool char_to_str_pump(char **str, char c, int *str_size, bool debug)
 
 
 
-    /* Character assignation process */
-
-    *(*str + (*str_size - 2)) = c;           // Assigning character to the first index in string.
-    *(*str + (*str_size - 1)) = '\0';
+    /* Debugging feedback */
 
     if (debug==true)
     {
