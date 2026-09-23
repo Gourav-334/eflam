@@ -26,7 +26,7 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
     int state = 0;                              // Current state for the hardcoded DFA.
     bool accept;                                // Tells whether current state is A/non-A.
     bool resume = true;                         // Tells if state machine needs to resume.
-    int row=0, column=0;                        // Recording row & column count for error feedback.
+    int row=1, column=0;                        // Recording row & column count for error feedback.
     long fstream_len = strlen(fstream);         // Length of the file stream.
     
     char *cur_state_name=NULL;                  // Current state name
@@ -83,6 +83,15 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
             case 2:
                 if (fstream[i]=='\\') {state = 4;}
                 else if (fstream[i]=='$') {state = -2;}
+                else {state = 3;}
+
+                break;
+            
+
+
+            case 3:
+                if (fstream[i]=='\\') {state = 4;}
+                else if (fstream[i]=='$') {state = 5;}
                 else {state = 3;}
 
                 break;
@@ -272,6 +281,7 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
 
             case 24:
                 if (fstream[i]==';') {state = 0;}
+                else if (fstream[i]==',') {state = 13;}
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 24;}
                 else {state = -14;}
 

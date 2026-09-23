@@ -64,10 +64,10 @@ bool dfa_create(
 3. Repeat.
 
 
-### 2.4 <u>DFA Machine (Function)</u>:
+### 2.4 <u>DFA Byte Processor (Function)</u>:
 
 ```c
-// dfa/dfa_ops/dfa_byte_proc.h
+// dfa/dfa_engine/dfa_byte_proc.h
 /* DFA machine, that tells if it stops at accept state or not. */
 
 int dfa_byte_proc(
@@ -83,7 +83,49 @@ int dfa_byte_proc(
 4. If not, return `-1`.
 
 
-### 2.5 <u>DFA Create Current State</u>:
+### 2.5 <u>DFA Special State Character Decoder</u>:
+
+```c
+// dfa/dfa_func/spl_state_char.c
+/* Used for decoding certain special characters in strings. */
+
+char dfa_spl_state_char(
+    char spl_char,          // Special character found
+    bool debug              // Debugging mode (ON/OFF)
+);
+```
+
+1. If special character is `\\`, return `\\`.
+2. Else if special character is `'`, return `\'`.
+3. Else if special character is `n`, return `\n`.
+4. Else if special character is `t`, return `\t`.
+5. Else if special character is `b`, return `\b`.
+6. Else if special character is `a`, return `\a`.
+7. Else return whatever the character is.
+
+
+### 2.6 <u>DFA Special Symbol Character Decoder</u>:
+
+```c
+// dfa/dfa_func/spl_sym_char.c
+/* Used for decoding certain special characters in symbols. */
+
+char dfa_spl_sym_char(
+    char spl_char,          // Special character found
+    bool debug              // Debugging mode (ON/OFF)
+);
+```
+
+1. If special character is `\\`, return `\\`.
+2. Else if special character is `$`, return `$`.
+3. Else if special character is `n`, return `\n`.
+4. Else if special character is `t`, return `\t`.
+5. Else if special character is `b`, return `\b`.
+6. Else if special character is `a`, return `\a`.
+7. Else return whatever the character is.
+
+
+### 2.7 <u>DFA Create Current State</u>:
 
 ```c
 // dfa/dfa_ops/dfa_cur_create_state.c

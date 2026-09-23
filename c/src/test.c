@@ -1,9 +1,8 @@
 /* Including required headers. */
 
-#include "../include/dfa/dfa_create.h"
+#include "../include/dfa/dfa_func/dfa_spl_sym_char.h"
 
 #include <stdio.h>
-#include <stdlib.h>
 
 
 
@@ -15,15 +14,28 @@ int main(int argc, char *argv[])
 {
     /* Code to be tested. */
 
-    dfa simple_lang = {
-        .start_state = NULL,
-        .states = NULL,
-        .total_states = 0
-    };
+    char c;
 
-    char *filepaths[] = {"eflam_codes/print.eflam", "eflam_codes/operations.eflam"};
-
-    dfa_create(&simple_lang, filepaths, 2, true);
+    c = dfa_spl_sym_char('\'', true);
+    printf("c=\'%c\'\n", c);
+    c = dfa_spl_sym_char('$', true);
+    printf("c=\'%c\'\n", c);
+    c = dfa_spl_sym_char('\\', true);
+    printf("c=\'%c\'\n", c);
+    c = dfa_spl_sym_char('n', true);
+    printf("c=\'%c\'\n", c);
+    c = dfa_spl_sym_char('t', true);
+    printf("c=\'%c\'\n", c);
+    c = dfa_spl_sym_char('b', true);
+    printf("c=\'%c\'\n", c);
+    c = dfa_spl_sym_char('a', true);
+    printf("c=\'%c\'\n", c);
+    c = dfa_spl_sym_char('q', true);
+    printf("c=\'%c\'\n", c);
+    c = dfa_spl_sym_char('w', true);
+    printf("c=\'%c\'\n", c);
+    c = dfa_spl_sym_char('e', true);
+    printf("c=\'%c\'\n", c);
 
 
 
