@@ -5,6 +5,7 @@
 #include "../../../include/dfa/dfa_elem/dfa_state.h"
 
 #include <stdio.h>          // For using basic I/O services from C
+#include <string.h>         // For using functions related to strings
 
 
 
@@ -17,14 +18,16 @@
 
 /* Loads the rules given by users and creates the DFA. */
 
-int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
+int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
 {
     /* Variables & constants */
 
+    char *file = "dfa_byte_proc.c\0";
     int state = 0;                              // Current state for the hardcoded DFA.
     bool accept;                                // Tells whether current state is A/non-A.
     bool resume = true;                         // Tells if state machine needs to resume.
     int row=0, column=0;                        // Recording row & column count for error feedback.
+    long fstream_len = strlen(fstream);         // Length of the file stream.
     
     char *cur_state_name=NULL;                  // Current state name
     int cur_state_size = 0;                     // Size of current state name
@@ -44,7 +47,7 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
 
     /* Memory-based hardcoded DFA implementation. */
 
-    for (int i=0; i<strlen(fstream); i++)
+    for (int i=0; i<fstream_len; i++)
     {
         /* Checking and modifying row & column numbers. */
 
@@ -283,15 +286,18 @@ int dfa_machine(char *fstream, dfa *target_dfa, bool debug)
 
         if (debug==true)
         {
-            fprintf(stdout, "STAT: fstream[i]=%c, state=%d, row=%d, column=%d\n", fstream[i], state, row, column);
+            fprintf(
+                stdout, "STAT (%s):%d :: fstream[i]=%c, state=%d, row=%d, column=%d, fstream_len=%ld\n",
+                file, __LINE__, fstream[i], state, row, column, fstream_len
+            );
         }
-
-
-
-
-
-        /* Returning the value of final state. */
-
-        return state;
     }
+
+
+
+
+
+    /* Returning the value of final state. */
+
+    return state;
 }

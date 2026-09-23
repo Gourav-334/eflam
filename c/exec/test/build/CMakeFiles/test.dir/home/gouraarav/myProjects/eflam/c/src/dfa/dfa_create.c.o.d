@@ -1,9 +1,13 @@
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: \
- /home/gouraarav/myProjects/eflam/c/src/test.c /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_create.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/stdio.h \
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.o: \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c \
+ /usr/include/stdc-predef.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_create.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_elem/dfa_unit.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_elem/dfa_unit.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_engine/dfa_byte_proc.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_engine/../dfa_elem/dfa_unit.h \
+ /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

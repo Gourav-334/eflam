@@ -24,9 +24,9 @@
 
 /* Checks the DFA as per user given rules. */
 
-int dfa_machine(
-    char *fstream,              // Pointer to fstream containing DFA rules
+int dfa_byte_proc(
     dfa *target_dfa,            // Address to target DFA structure
+    char *fstream,              // Pointer to fstream containing DFA rules
     bool debug                  // Tells if debugging logs are required
 );
 

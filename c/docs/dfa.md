@@ -14,10 +14,7 @@ Implementation of the automata machine is made in form of graph using structures
 ## 2. Implementation
 
 
-### 2.1 <u>File Loader</u>
-
-
-### 2.2 <u>DFA State (Structure)</u>:
+### 2.1 <u>DFA State (Structure)</u>:
 
 ```c
 // dfa/dfa_ops/dfa_units.h
@@ -34,7 +31,7 @@ typedef struct dfa_state {
 ```
 
 
-### 2.3 <u>DFA (Structure)</u>:
+### 2.2 <u>DFA (Structure)</u>:
 
 ```c
 // dfa/dfa_ops/dfa_units.h
@@ -48,13 +45,32 @@ typedef struct dfa {
 ```
 
 
-### 2.6 <u>DFA Machine (Function)</u>:
+### 2.3 <u>Create DFA</u>:
 
 ```c
-// dfa/dfa_ops/dfa_machine.h
+// utils/dfa_create.c
+/* Used for loading contents of target EFLAM files into the buffer. */
+
+bool dfa_create(
+    dfa *target_dfa,        // Target DFA for loading the language.
+    char *filepaths[],      // Array of file paths passed linearly.
+    int file_count,         // Total number of files connected to connector file.
+    bool debug              // Debugging option for getting runtime information.
+);
+```
+
+1. As per the number of files, in loop, load a filestream into buffer.
+2. Pass the buffer & target DFA into the DFA state machine.
+3. Repeat.
+
+
+### 2.4 <u>DFA Machine (Function)</u>:
+
+```c
+// dfa/dfa_ops/dfa_byte_proc.h
 /* DFA machine, that tells if it stops at accept state or not. */
 
-int dfa_machine(
+int dfa_byte_proc(
     char *sym_seq[],            // Sequence of symbols in input string
     struct *target_dfa,         // Address to target DFA
     bool debug                  // Tells if debugging logs are required
@@ -63,11 +79,11 @@ int dfa_machine(
 
 1. Initialize from start state.
 2. Read each symbol one-by-one in sequence.
-3. From current state, if transition is possible for the current symbol, then move to to next state.
+3. From current state, if transition is possible for the current symbol, then move to the next state.
 4. If not, return `-1`.
 
 
-### 2.7 <u>DFA Create Current State</u>:
+### 2.5 <u>DFA Create Current State</u>:
 
 ```c
 // dfa/dfa_ops/dfa_cur_create_state.c
