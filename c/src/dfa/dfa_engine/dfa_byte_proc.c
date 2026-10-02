@@ -29,13 +29,10 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
     int row=1, column=0;                        // Recording row & column count for error feedback.
     long fstream_len = strlen(fstream);         // Length of the file stream.
     
-    char *cur_state_name=NULL;                  // Current state name
-    int cur_state_size = 0;                     // Size of current state name
-    dfa_state *cur_state_addr=NULL;             // Address of current state
-    bool cur_state_type[TOTAL_TYPES];           // Properties of current state
+    char *cur_state_name = NULL;                // Current state name
+    dfa_state *cur_state_addr = NULL;           // Address of current state
 
     char *trans_state_name=NULL;                // Transition state name
-    int trans_state_size = 0;                   // Size of transition state name
     dfa_state *trans_state_addr=NULL;           // Address of transition state
 
     char **sym_arr=NULL;                        // Transition symbols array

@@ -129,6 +129,102 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.o
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.i: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.i
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.s: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.s
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.o
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.i: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.i
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.s: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.s
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.o
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.i: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.i
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.s: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.s
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.o
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.i: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.i
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.s: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.s
+
 home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.c.o
 .PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.o
 
@@ -177,6 +273,54 @@ home/gouraarav/myProjects/eflam/c/src/test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/test.c.s
 
+home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.o: home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o
+
+home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.i: home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.i
+
+home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.s: home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.s
+
+home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.o: home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o
+
+home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.i: home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i
+
+home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.s: home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +330,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.s"
 .PHONY : help
 
 

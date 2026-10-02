@@ -125,19 +125,16 @@ char dfa_spl_sym_char(
 7. Else return whatever the character is.
 
 
-### 2.7 <u>DFA Create Current State</u>:
+### 2.7 <u>DFA Current State Inspector</u>:
 
 ```c
-// dfa/dfa_ops/dfa_cur_create_state.c
+// dfa/dfa_ops/dfa_cur_state_insp.c
 /* Used for creating a state if it doesn't exist yet. */
 
-bool dfa_fix_cur_state(
+bool dfa_cur_state_insp(
     dfa *target_dfa,                            // Target DFA machine
-    char *name,                                 // Name of state to be created
-    int *name_size,                             // Length of state's name
     char *cur_state_name,                       // Current state name
-    int *cur_state_size,                        // Size of current state name
-    dfa_state *cur_state_addr,                  // Address of current state
+    dfa_state **cur_state_addr,                 // Address of current state
     bool debug                                  // Debugging mode (ON/OFF)
 );
 ```
@@ -145,10 +142,9 @@ bool dfa_fix_cur_state(
 1. Check if the current state already exists in DFA.
 2. If existing:
     3. Don't make a new state & continue with existing one.
-    4. Store the properties/type of current state.
-5. Else if not existing:
-    6. Create it & add to the record of DFA.
-    7. Set all the initial attributes to this new state.
+4. Else if not existing:
+    5. Create it & add to the record of DFA.
+    6. Set all the initial attributes to this new state.
 
 
 
