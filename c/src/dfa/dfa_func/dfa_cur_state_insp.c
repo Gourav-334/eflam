@@ -36,9 +36,12 @@ bool dfa_cur_state_insp(
 
     for (int i=0; i<target_dfa->total_states; i++)
     {
+        printf("((target_dfa->states)+%d)->name=%p\n", i, ((target_dfa->states)+i)->name);
+
+
         /* If state is found already existing in DFA. */
 
-        if (!strcmp(((target_dfa->states)+i)->name,cur_state_name))
+        if (!strcmp(((target_dfa->states)+i)->name,cur_state_name))////////////////
         {
             if (debug==true)
             {
@@ -66,7 +69,7 @@ bool dfa_cur_state_insp(
         {
             /* Creating the first state. */
 
-            target_dfa -> states = malloc(sizeof(dfa_state*));
+            target_dfa -> states = malloc(sizeof(dfa_state));
 
 
             /* Sending debugging information. */
@@ -86,7 +89,7 @@ bool dfa_cur_state_insp(
 
             alloc_ret = realloc(
                 target_dfa->states,
-                (size_t)((target_dfa->total_states)+1)*sizeof(dfa_state*)
+                (size_t)((target_dfa->total_states)+1)*sizeof(dfa_state)
             );
 
 
@@ -124,7 +127,7 @@ bool dfa_cur_state_insp(
             printf("OK (%s):%d :: Memory allocation successful for state name \"%s\".\n", file, __LINE__, cur_state_name);
         }
 
-        strcpy((*cur_state_addr)->name, cur_state_name);
+        strncpy((*cur_state_addr)->name, cur_state_name, (size_t)(strlen(cur_state_name)+1));
 
 
 
@@ -141,5 +144,23 @@ bool dfa_cur_state_insp(
         (*cur_state_addr) -> trans = NULL;
         (*cur_state_addr) -> else_trans = NULL;
         (*cur_state_addr) -> total_trans = 0;
+
+
+
+
+
+        /* Final debugging information. */
+
+        printf(
+            "STAT (%s):%d :: name=%s, symbols=%p, trans=%p, else_trans=%p, total_trans=%d\n",
+            file, __LINE__,
+            (*cur_state_addr)->name, (*cur_state_addr)->symbols, (*cur_state_addr)->trans, (*cur_state_addr)->else_trans, (*cur_state_addr)->total_trans
+        );
+
+        printf(
+            "STAT (%s):%d :: start_state=%p, total_states=%d, states=%p\n",
+            file, __LINE__,
+            target_dfa->start_state, target_dfa->total_states, target_dfa->states
+        );
     }
 }
