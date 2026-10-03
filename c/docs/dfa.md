@@ -166,6 +166,25 @@ bool dfa_state_type_insp(
     4. Otherwise throw error.
 
 
+### 2.9 <u>DFA Symbol Pump Inspector</u>:
+
+```c
+// dfa/dfa_func/dfa_sym_insp.c
+/* Used for checking if a supplied symbol already exists & adding if not. */
+
+bool dfa_sym_insp(
+    dfa_state *cur_state_addr,              // Address of current state
+    char *sym,                              // String representing symbol
+    int *total_sym,                         // Count of total symbols for the transition
+    bool debug                              // Debugging mode (ON/OFF)
+);
+```
+
+1. Check from the array of symbols of current state if it contains the supplied symbol.
+2. If yes, give user error that the symbol is already mentioned for the state.
+3. If not, pump it to the array of symbols for the state.
+
+
 
 ## 3. Test Cases & Benchmarks
 

@@ -20,7 +20,7 @@ bool dfa_state_type_insp(dfa_state *cur_state_addr, char *type, bool debug)
 {
     /* Variables & constants. */
 
-    char *file = "dfa_state_type_insp.c\0";             // Current file name
+    char *file = "dfa_state_type_insp.c";               // Current file name
     char *start_state = "S";                            // Start state string
     char *accept_state = "A";                           // Accept state string
     bool match = false;                                 // Tells if it matches
