@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c.o.d"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.c.o"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.c.o.d"
+  "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.o"
+  "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.o.d"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o.d"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o"

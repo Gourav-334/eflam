@@ -1,7 +1,8 @@
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: \
- /home/gouraarav/myProjects/eflam/c/src/test.c /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_state_type_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../dfa_elem/dfa_state.h \
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.o: \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c \
+ /usr/include/stdc-predef.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/../../../include/dfa/dfa_func/dfa_state_type_insp.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/../../../include/dfa/dfa_func/../dfa_elem/dfa_state.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -25,4 +26,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h

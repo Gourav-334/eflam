@@ -249,6 +249,30 @@ home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.c.s
 
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.o
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.i: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.i
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.s: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.s
+
 home/gouraarav/myProjects/eflam/c/src/test.o: home/gouraarav/myProjects/eflam/c/src/test.c.o
 .PHONY : home/gouraarav/myProjects/eflam/c/src/test.o
 
@@ -345,6 +369,9 @@ help:
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.s"

@@ -36,12 +36,9 @@ bool dfa_cur_state_insp(
 
     for (int i=0; i<target_dfa->total_states; i++)
     {
-        printf("((target_dfa->states)+%d)->name=%p\n", i, ((target_dfa->states)+i)->name);
-
-
         /* If state is found already existing in DFA. */
 
-        if (!strcmp(((target_dfa->states)+i)->name,cur_state_name))////////////////
+        if (!strcmp(((target_dfa->states)+i)->name,cur_state_name))
         {
             if (debug==true)
             {
@@ -99,9 +96,17 @@ bool dfa_cur_state_insp(
             {
                 printf("ERROR (%s):%d :: Memory allocation failed for new state \"%s\"!\n", file, __LINE__, cur_state_name);
             }
-            else if (debug==true)
+            else
             {
-                printf("OK (%s):%d :: Memory allocation successful for new state \"%s\".\n", file, __LINE__, cur_state_name);
+                /* Making sure that `target_dfa->states` reflects new address. */
+
+                target_dfa -> states = alloc_ret;       // Ultimate NIGHTMARE!
+
+
+                if (debug==true)
+                {
+                    printf("OK (%s):%d :: Memory allocation successful for new state \"%s\".\n", file, __LINE__, cur_state_name);
+                }
             }
         }
 
@@ -110,13 +115,13 @@ bool dfa_cur_state_insp(
         /* Setting up the state with attributes. */
 
         (target_dfa -> total_states)++;     // Incrementing total state counts
-        *cur_state_addr = (target_dfa -> states) + (target_dfa -> total_states - 1);
+        *cur_state_addr = (target_dfa -> states) + ((target_dfa -> total_states) - 1);
 
 
 
         /* Giving name to the new state. */
 
-        (*cur_state_addr) -> name = malloc(sizeof(char)*(size_t)strlen(cur_state_name));
+        (*cur_state_addr) -> name = malloc(sizeof(char)*(size_t)(strlen(cur_state_name)+1));
 
         if ((*cur_state_addr)->name==NULL)
         {

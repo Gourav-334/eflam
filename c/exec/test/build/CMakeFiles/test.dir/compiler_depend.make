@@ -223,10 +223,29 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_s
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_state_type_insp.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
+
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: /home/gouraarav/myProjects/eflam/c/src/test.c \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_cur_state_insp.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_state_type_insp.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/stdc-predef.h \
@@ -376,9 +395,13 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.
 
 /home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c:
 
+/home/gouraarav/myProjects/eflam/c/src/test.c:
+
 /home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c:
 
-/home/gouraarav/myProjects/eflam/c/src/test.c:
+/home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_state_type_insp.h:
+
+/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c:
 

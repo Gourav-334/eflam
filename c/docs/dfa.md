@@ -128,7 +128,7 @@ char dfa_spl_sym_char(
 ### 2.7 <u>DFA Current State Inspector</u>:
 
 ```c
-// dfa/dfa_ops/dfa_cur_state_insp.c
+// dfa/dfa_func/dfa_cur_state_insp.c
 /* Used for creating a state if it doesn't exist yet. */
 
 bool dfa_cur_state_insp(
@@ -145,6 +145,25 @@ bool dfa_cur_state_insp(
 4. Else if not existing:
     5. Create it & add to the record of DFA.
     6. Set all the initial attributes to this new state.
+
+
+### 2.8 <u>DFA State Type Inspector</u>:
+
+```c
+// dfa/dfa_func/dfa_state_type_insp.c
+/* Used for checking if the state types are valid, and add valid ones. */
+
+bool dfa_state_type_insp(
+    dfa_state *cur_state_addr,              // Address of current state
+    char *type,                             // String showing state type
+    bool debug                              // Debugging mode (ON/OFF)
+);
+```
+
+1. Check the passed string through series of state types:
+    2. Check against `S` (meaning ACCEPT).
+    3. Check against `A` (meaning ACCEPT).
+    4. Otherwise throw error.
 
 
 

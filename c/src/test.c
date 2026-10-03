@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../include/dfa/dfa_func/dfa_cur_state_insp.h"
+#include "../include/dfa/dfa_func/dfa_state_type_insp.h"
 
 #include <stdio.h>
 
@@ -14,27 +14,20 @@ int main(int argc, char *argv[])
 {
     /* Code to be tested. */
 
-    /*
-        bool dfa_cur_state_insp(
-            dfa *target_dfa,                            // Target DFA machine
-            char *cur_state_name,                       // Current state name
-            dfa_state **cur_state_addr,                 // Address of current state
-            bool debug                                  // Debugging mode (ON/OFF)
-        );
-    */
-
-    dfa target_dfa = {
-        .start_state = NULL,
-        .total_states = 0,
-        .states = NULL
+    dfa_state my_state = {
+        .name = NULL,
+        .type[0] = 0,
+        .type[1] = 1,
+        .symbols = NULL,
+        .trans = NULL,
+        .else_trans = NULL,
+        .total_trans = 0
     };
 
-    dfa_state *cur_state_addr = NULL;
-    
-    dfa_cur_state_insp(&target_dfa, "Gourav", &cur_state_addr, true);
-    dfa_cur_state_insp(&target_dfa, "Kumar", &cur_state_addr, true);
-    dfa_cur_state_insp(&target_dfa, "Mallick", &cur_state_addr, true);
-    dfa_cur_state_insp(&target_dfa, "Kumar", &cur_state_addr, true);
+    dfa_state_type_insp(&my_state, "accept", true);
+    dfa_state_type_insp(&my_state, "A", true);
+    dfa_state_type_insp(&my_state, "start", true);
+    dfa_state_type_insp(&my_state, "S", true);
 
 
 
