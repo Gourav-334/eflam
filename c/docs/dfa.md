@@ -172,7 +172,7 @@ bool dfa_state_type_insp(
 // dfa/dfa_func/dfa_sym_insp.c
 /* Used for checking if a supplied symbol already exists & adding if not. */
 
-bool dfa_sym_insp(
+bool dfa_sym_pump_insp(
     dfa_state *cur_state_addr,              // Address of current state
     char *sym,                              // String representing symbol
     int *total_sym,                         // Count of total symbols for the transition

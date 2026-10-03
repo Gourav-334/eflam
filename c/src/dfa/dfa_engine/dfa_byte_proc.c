@@ -35,8 +35,7 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
     char *trans_state_name=NULL;                // Transition state name
     dfa_state *trans_state_addr=NULL;           // Address of transition state
 
-    char **sym_arr=NULL;                        // Transition symbols array
-    int sym_arr_size = 0;                       // Size of transition symbols array
+    int total_sym = 0;                          // Size of transition symbols array
 
 
 
