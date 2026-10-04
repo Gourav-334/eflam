@@ -74,6 +74,8 @@ bool dfa_cur_state_insp(
             if (target_dfa->states==NULL)
             {
                 printf("ERROR (%s):%d :: Memory allocation failed for first state \"%s\"!\n", file, __LINE__, cur_state_name);
+                
+                return false;
             }
             else if (debug==true)
             {
@@ -95,6 +97,8 @@ bool dfa_cur_state_insp(
             if (alloc_ret==NULL)
             {
                 printf("ERROR (%s):%d :: Memory allocation failed for new state \"%s\"!\n", file, __LINE__, cur_state_name);
+
+                return false;
             }
             else
             {
@@ -126,6 +130,8 @@ bool dfa_cur_state_insp(
         if ((*cur_state_addr)->name==NULL)
         {
             printf("ERROR (%s):%d :: Memory allocation failed for state name \"%s\"!\n", file, __LINE__, cur_state_name);
+
+            return false;
         }
         else if (debug==true)
         {
@@ -168,4 +174,10 @@ bool dfa_cur_state_insp(
             target_dfa->start_state, target_dfa->total_states, target_dfa->states
         );
     }
+
+
+
+    /* Returning if operation was successful in boolean. */
+
+    return true;
 }

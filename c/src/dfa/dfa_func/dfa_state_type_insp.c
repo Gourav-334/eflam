@@ -1,6 +1,7 @@
 /* Including required functions. */
 
 #include "../../../include/dfa/dfa_func/dfa_state_type_insp.h"
+#include "../../../include/dfa/dfa_elem/dfa_unit.h"
 
 #include <stdio.h>          // To be able to use I/O functions.
 #include <string.h>         // To specifically compare strings.
@@ -16,7 +17,7 @@
 
 /* Used for checking if the state types are valid, and add valid ones. */
 
-bool dfa_state_type_insp(dfa_state *cur_state_addr, char *type, bool debug)
+bool dfa_state_type_insp(dfa *target_dfa, dfa_state *cur_state_addr, char *type, bool debug)
 {
     /* Variables & constants. */
 
@@ -34,7 +35,19 @@ bool dfa_state_type_insp(dfa_state *cur_state_addr, char *type, bool debug)
     if (!strcmp(type, start_state))
     {
         match = true;
-        cur_state_addr -> type[START_STATE] = 1;
+
+
+        if (target_dfa->start_state==NULL)
+        {
+            cur_state_addr -> type[START_STATE] = 1;
+            target_dfa -> start_state = cur_state_addr;
+        }
+        else
+        {
+            printf("ERROR (%s):%d :: Start state already exists for \"%s\"!\n", file, __LINE__, target_dfa->start_state->name);
+
+            return false;
+        }
     }
     else if (!strcmp(type, accept_state))
     {

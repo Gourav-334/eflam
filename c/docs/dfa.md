@@ -154,6 +154,7 @@ bool dfa_cur_state_insp(
 /* Used for checking if the state types are valid, and add valid ones. */
 
 bool dfa_state_type_insp(
+    dfa *target_dfa,                        // Target DFA
     dfa_state *cur_state_addr,              // Address of current state
     char *type,                             // String showing state type
     bool debug                              // Debugging mode (ON/OFF)
@@ -169,7 +170,7 @@ bool dfa_state_type_insp(
 ### 2.9 <u>DFA Symbol Pump Inspector</u>:
 
 ```c
-// dfa/dfa_func/dfa_sym_insp.c
+// dfa/dfa_func/dfa_sym_pump_insp.c
 /* Used for checking if a supplied symbol already exists & adding if not. */
 
 bool dfa_sym_pump_insp(
@@ -183,6 +184,65 @@ bool dfa_sym_pump_insp(
 1. Check from the array of symbols of current state if it contains the supplied symbol.
 2. If yes, give user error that the symbol is already mentioned for the state.
 3. If not, pump it to the array of symbols for the state.
+
+
+### 2.10 <u>DFA Transition State Inspector</u>:
+
+```c
+// dfa/dfa_func/dfa_trans_state_insp.c
+/* Checks if a transition state exists or need to be created. */
+
+bool dfa_trans_state_insp(
+    dfa *target_dfa,                    // Target DFA
+    dfa_state *cur_state_addr,          // Current state's address
+    char *trans_state_name,             // Name of transition state
+    int *total_sym,                     // Total symbols to be pushed
+    bool debug                          // Debugging mode (ON/OFF)
+);
+```
+
+1. Check if the transition state already exists or not in DFA.
+2. If yes, just take its address as reference for modifications.
+3. Else if not, create it and fill its details accordingly.
+4. And then connect it to the current state's transition list as per number of symbols supplied.
+
+
+### 2.11 <u>DFA Other Symbol Inspector</u>:
+
+```c
+// dfa/dfa_func/dfa_other_sym_insp.c
+/* Sets transition to a state for the remaining symbols. */
+
+bool dfa_other_sym_insp (
+    dfa *target_dfa,                    // Target DFA
+    dfa_state *cur_state_addr,          // Current state's address
+    char *trans_state_name,             // Name of transition state
+    bool debug                          // Debugging mode (ON/OFF)
+);
+```
+
+1. Check if an ELSE transition already exists.
+    2. If yes, throw error stating that there can't be multiple ELSE transitions.
+    3. Else if not, check if the state already exists.
+        4. If not existing, create it.
+        5. And then add its address as ELSE transition for current state.
+
+
+### 2.12 <u>DFA Stop State Feedback</u>:
+
+```c
+// dfa/dfa_func/dfa_stop_state_feed.c
+/* Tells at which state the byte processor stopped. */
+
+void dfa_stop_state_feed(
+    int stop_state,             // Stop state for byte processor
+    char *filepath,             // File path for particular file
+    int row,                    // Row value of the file
+    int column                  // Column value of the file
+);
+```
+
+- NOTE: State feedbacks might vary as per EFLAM version.
 
 
 
