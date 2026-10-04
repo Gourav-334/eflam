@@ -1,8 +1,16 @@
 /* List of included headers. */
 
 #include "../../../include/dfa/dfa_engine/dfa_byte_proc.h"
+#include "../../../include/dfa/dfa_func/dfa_cur_state_insp.h"
+#include "../../../include/dfa/dfa_func/dfa_spl_state_char.h"
+#include "../../../include/dfa/dfa_func/dfa_spl_sym_char.h"
+#include "../../../include/dfa/dfa_func/dfa_state_type_insp.h"
+#include "../../../include/dfa/dfa_func/dfa_sym_pump_insp.h"
+#include "../../../include/dfa/dfa_func/dfa_trans_state_insp.h"
+#include "../../../include/dfa/dfa_func/dfa_other_sym_insp.h"
+#include "../../../include/dfa/dfa_create.h"
 #include "../../../include/utils/char_to_str_pump.h"
-#include "../../../include/dfa/dfa_elem/dfa_state.h"
+#include "../../../include/utils/str_to_arr_pump.h"
 
 #include <stdio.h>          // For using basic I/O services from C
 #include <string.h>         // For using functions related to strings
@@ -24,17 +32,24 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
 
     char *file = "dfa_byte_proc.c\0";
     int state = 0;                              // Current state for the hardcoded DFA.
-    bool accept;                                // Tells whether current state is A/non-A.
+    bool fine = true;                           // Tells whether byte processor is still running fine.
     bool resume = true;                         // Tells if state machine needs to resume.
     int row=1, column=0;                        // Recording row & column count for error feedback.
     long fstream_len = strlen(fstream);         // Length of the file stream.
     
     char *cur_state_name = NULL;                // Current state name
+    int cur_state_name_len = 0;                 // Current state name length
     dfa_state *cur_state_addr = NULL;           // Address of current state
 
+    char *state_type_name = NULL;               // State type name string
+    int state_type_name_len = 0;                // State type name length
+
     char *trans_state_name=NULL;                // Transition state name
+    int trans_state_name_len = 0;               // Transition state name length
     dfa_state *trans_state_addr=NULL;           // Address of transition state
 
+    char *sym = NULL;                           // Symbol name string
+    int sym_len = 0;                            // Symbol name length
     int total_sym = 0;                          // Size of transition symbols array
 
 
@@ -79,7 +94,12 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
             case 2:
                 if (fstream[i]=='\\') {state = 4;}
                 else if (fstream[i]=='$') {state = -2;}
-                else {state = 3;}
+                else
+                {
+                    state = 3;
+
+                    fine = char_to_str_pump(&cur_state_name, fstream[i], &cur_state_name_len, debug);
+                }
 
                 break;
             
@@ -87,16 +107,40 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
 
             case 3:
                 if (fstream[i]=='\\') {state = 4;}
-                else if (fstream[i]=='$') {state = 5;}
-                else {state = 3;}
+                else if (fstream[i]=='$')
+                {
+                    state = 5;
+
+                    fine = dfa_cur_state_insp(target_dfa, cur_state_name, &cur_state_addr, debug);
+                    free(cur_state_name);
+                    cur_state_name_len = 0;
+                }
+                else
+                {
+                    state = 3;
+
+                    fine = char_to_str_pump(&cur_state_name, fstream[i], &cur_state_name_len, debug);
+                }
 
                 break;
             
 
 
             case 4:
-                if (fstream[i]=='$') {state = 5;}
-                else {state = 3;}
+                if (fstream[i]=='$')
+                {
+                    state = 5;
+
+                    fine = dfa_cur_state_insp(target_dfa, cur_state_name, &cur_state_addr, debug);
+                    free(cur_state_name);
+                    cur_state_name_len = 0;
+                }
+                else
+                {
+                    state = 3;
+
+                    fine = dfa_spl_state_char(fstream[i], debug);
+                }
 
                 break;
             
@@ -126,7 +170,12 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
             case 7:
                 if (fstream[i]=='\\') {state = 9;}
                 else if (fstream[i]=='\'') {state = -5;}
-                else {state = 8;}
+                else
+                {
+                    state = 8;
+
+                    fine = char_to_str_pump(&state_type_name, fstream[i], &state_type_name_len, debug);
+                }
 
                 break;
             
@@ -134,16 +183,40 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
 
             case 8:
                 if (fstream[i]=='\\') {state = 9;}
-                else if (fstream[i]=='\'') {state = 10;}
-                else {state = 8;}
+                else if (fstream[i]=='\'')
+                {
+                    state = 10;
+
+                    fine = dfa_state_type_insp(target_dfa, cur_state_addr, state_type_name, debug);
+                    free(state_type_name);
+                    state_type_name_len = 0;
+                }
+                else
+                {
+                    state = 8;
+
+                    fine = char_to_str_pump(&state_type_name, fstream[i], &state_type_name_len, debug);
+                }
 
                 break;
             
 
 
             case 9:
-                if (fstream[i]=='\'') {state = 10;}
-                else {state = 8;}
+                if (fstream[i]=='\'')
+                {
+                    state = 10;
+
+                    fine = dfa_state_type_insp(target_dfa, cur_state_addr, state_type_name, debug);
+                    free(state_type_name);
+                    state_type_name_len = 0;
+                }
+                else
+                {
+                    state = 8;
+
+                    fine = dfa_spl_state_char(fstream[i], debug);
+                }
 
                 break;
             
@@ -199,7 +272,12 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
 
             case 15:
                 if (fstream[i]=='\\') {state = 17;}
-                else {state = 16;}
+                else
+                {
+                    state = 16;
+
+                    char_to_str_pump(&sym, fstream[i], &sym_len, debug);
+                }
 
                 break;
             
@@ -207,12 +285,24 @@ int dfa_byte_proc(dfa *target_dfa, char *fstream, bool debug)
 
             case 16:
                 if (fstream[i]=='\\') {state = 17;}
-                else if (fstream[i]=='\'') {state = 18;}
-                else {state = 16;}
+                else if (fstream[i]=='\'')
+                {
+                    state = 18;
+
+                    dfa_sym_pump_insp(cur_state_addr, sym, &total_sym, debug);
+                    free(sym);
+                    sym_len = 0;
+                }
+                else
+                {
+                    state = 16;
+
+                    char_to_str_pump(&sym, fstream[i], &sym_len, debug);
+                }
 
                 break;
             
-
+//////////////////////////////////// UNTIL * HERE ////////////////////////////////////
 
             case 17:
                 if (fstream[i]=='\'') {state = 18;}
