@@ -27,7 +27,8 @@
 
 bool dfa_other_sym_insp (
     dfa *target_dfa,                    // Target DFA
-    dfa_state *cur_state_addr,          // Current state's address
+    dfa_state **cur_state_addr,         // Current state's address
+    int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     bool debug                          // Debugging mode (ON/OFF)
 );

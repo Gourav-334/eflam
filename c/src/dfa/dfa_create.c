@@ -105,4 +105,12 @@ bool dfa_create(dfa *target_dfa, char *filepaths[], int file_count, bool debug)
         free(buff);
         fclose(fptr);
     }
+
+
+
+
+
+    /* Returning TRUE for successful execution. */
+
+    return true;
 }

@@ -42,13 +42,13 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
     char *cur_state_name = NULL;                // Current state name
     int cur_state_name_len = 0;                 // Current state name length
     dfa_state *cur_state_addr = NULL;           // Address of current state
+    int cur_state_index;                        // Relative index of current state address
 
     char *state_type_name = NULL;               // State type name string
     int state_type_name_len = 0;                // State type name length
 
     char *trans_state_name=NULL;                // Transition state name
     int trans_state_name_len = 0;               // Transition state name length
-    dfa_state *trans_state_addr=NULL;           // Address of transition state
 
     char *sym = NULL;                           // Symbol name string
     int sym_len = 0;                            // Symbol name length
@@ -113,7 +113,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 5;
 
-                    fine = dfa_cur_state_insp(target_dfa, cur_state_name, &cur_state_addr, debug);
+                    fine = dfa_cur_state_insp(target_dfa, cur_state_name, &cur_state_addr, &cur_state_index, debug);
                     free(cur_state_name); cur_state_name = NULL;
                     cur_state_name_len = 0;
                 }
@@ -340,7 +340,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 24;
 
-                    fine = dfa_trans_state_insp(target_dfa, cur_state_addr, trans_state_name, &total_sym, debug);
+                    fine = dfa_trans_state_insp(target_dfa, &cur_state_addr, cur_state_index, trans_state_name, &total_sym, debug);
                     free(trans_state_name); trans_state_name = NULL;
                     trans_state_name_len = 0;
                 }
@@ -402,7 +402,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 29;
 
-                    fine = dfa_other_sym_insp(target_dfa, cur_state_addr, trans_state_name, debug);
+                    fine = dfa_other_sym_insp(target_dfa, &cur_state_addr, cur_state_index, trans_state_name, debug);
                     free(trans_state_name); trans_state_name = NULL;
                     trans_state_name_len = 0;
                 }
@@ -452,8 +452,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
 
 
         /* In case something goes wrong in processing. */
-if (cur_state_addr!=NULL) {if (cur_state_addr->name!=NULL) {printf("THIS -> \"%s\" <-\n", cur_state_addr->name);///////////////////////////////////////////////////////
-}}
+
         if (fine==false)
         {
             printf("ERROR (%s):%d :: Halting processing for an issue, keep debug mode ON to know it in details.\n", file, __LINE__);

@@ -18,7 +18,7 @@
 /* Checks if a transition state exists or need to be created. */
 
 bool dfa_trans_state_insp(
-    dfa *target_dfa, dfa_state *cur_state_addr,
+    dfa *target_dfa, dfa_state **cur_state_addr, int cur_state_index,
     char *trans_state_name, int *total_sym,
     bool debug
 )
@@ -42,7 +42,7 @@ bool dfa_trans_state_insp(
 
         if (!strcmp(((target_dfa->states)+i)->name,trans_state_name))
         {
-            trans_state_addr = (target_dfa->states)+i;
+            trans_state_addr = (target_dfa -> states) + i;
 
             if (debug==true)
             {
@@ -111,6 +111,7 @@ bool dfa_trans_state_insp(
                 /* Making sure that `target_dfa->states` reflects new address. */
 
                 target_dfa -> states = alloc_ret;       // Ultimate NIGHTMARE!
+                (*cur_state_addr) = (target_dfa -> states) + cur_state_index;
 
 
                 if (debug==true)
@@ -169,16 +170,16 @@ bool dfa_trans_state_insp(
 
     /* Allocating memory to append pointers to transitioning state. */
 
-    if (cur_state_addr->total_trans==0)
+    if ((*cur_state_addr)->total_trans==0)
     {
         /* Creating the first state. */
 
-        cur_state_addr -> trans = malloc((*total_sym)*sizeof(dfa_state*));
+        (*cur_state_addr) -> trans = malloc((*total_sym)*sizeof(dfa_state*));
 
 
         /* Sending debugging information. */
 
-        if (cur_state_addr->trans==NULL)
+        if ((*cur_state_addr)->trans==NULL)
         {
             printf("ERROR (%s):%d :: Memory allocation failed for first transition \"%s\"!\n", file, __LINE__, trans_state_name);
             
@@ -194,8 +195,8 @@ bool dfa_trans_state_insp(
         /* Extending the number of states. */
 
         alloc_ret = realloc(
-            cur_state_addr->trans,
-            (size_t)((cur_state_addr->total_trans)+(*total_sym))*sizeof(dfa_state*)
+            (*cur_state_addr)->trans,
+            (size_t)(((*cur_state_addr)->total_trans)+(*total_sym))*sizeof(dfa_state*)
         );
 
 
@@ -211,7 +212,7 @@ bool dfa_trans_state_insp(
         {
             /* Making sure that `target_dfa->states` reflects new address. */
 
-            cur_state_addr -> trans = alloc_ret;       // Ultimate NIGHTMARE!
+            (*cur_state_addr) -> trans = alloc_ret;       // Ultimate NIGHTMARE!
 
 
             if (debug==true)
@@ -229,7 +230,7 @@ bool dfa_trans_state_insp(
 
     for (int i=0; i<(*total_sym); i++)
     {
-        *((cur_state_addr -> trans) + (cur_state_addr -> total_trans) + i) = trans_state_addr;
+        *(((*cur_state_addr) -> trans) + ((*cur_state_addr) -> total_trans) + i) = trans_state_addr;
     }
 
 
@@ -243,10 +244,14 @@ bool dfa_trans_state_insp(
 
     if (debug==true)
     {
-        printf("STAT (%s):%d :: total_trans=%d\n", file, __LINE__, cur_state_addr->total_trans);
+        printf("STAT (%s):%d :: total_trans=%d\n", file, __LINE__, (*cur_state_addr)->total_trans);
     }
 
 
+
+    
+
+    /* Returning TRUE for successful execution. */
 
     return true;
 }

@@ -135,6 +135,7 @@ bool dfa_cur_state_insp(
     dfa *target_dfa,                            // Target DFA machine
     char *cur_state_name,                       // Current state name
     dfa_state **cur_state_addr,                 // Address of current state
+    int *cur_state_index,                       // Relative index of current state
     bool debug                                  // Debugging mode (ON/OFF)
 );
 ```
@@ -194,7 +195,8 @@ bool dfa_sym_pump_insp(
 
 bool dfa_trans_state_insp(
     dfa *target_dfa,                    // Target DFA
-    dfa_state *cur_state_addr,          // Current state's address
+    dfa_state **cur_state_addr,         // Current state's address
+    int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     int *total_sym,                     // Total symbols to be pushed
     bool debug                          // Debugging mode (ON/OFF)
@@ -215,7 +217,8 @@ bool dfa_trans_state_insp(
 
 bool dfa_other_sym_insp (
     dfa *target_dfa,                    // Target DFA
-    dfa_state *cur_state_addr,          // Current state's address
+    dfa_state **cur_state_addr,         // Current state's address
+    int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     bool debug                          // Debugging mode (ON/OFF)
 );

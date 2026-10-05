@@ -71,4 +71,12 @@ bool dfa_state_type_insp(dfa *target_dfa, dfa_state *cur_state_addr, char *type,
         printf("ERROR (%s):%d :: State type not matching to any type!\n", file, __LINE__);
         return false;
     }
+
+
+
+
+
+    /* Returning TRUE for successful execution. */
+
+    return true;
 }

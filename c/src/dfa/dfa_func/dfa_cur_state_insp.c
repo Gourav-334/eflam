@@ -18,13 +18,13 @@
 /* Used for creating a state if it doesn't exist yet. */
 
 bool dfa_cur_state_insp(
-    dfa *target_dfa, char *cur_state_name, dfa_state **cur_state_addr,
+    dfa *target_dfa, char *cur_state_name, dfa_state **cur_state_addr, int *cur_state_index,
     bool debug
 )
 {
     /* Variables & constants */
 
-    char *file = "dfa_cur_state_insp.c\0";
+    char *file = "dfa_cur_state_insp.c";
     bool exists = false;        // Indicates if a state already exists or not.
     void *alloc_ret = NULL;     // Allocation return value checker.
 
@@ -46,6 +46,7 @@ bool dfa_cur_state_insp(
             }
 
             *cur_state_addr = (target_dfa -> states) + i;
+            *cur_state_index = i;
 
             exists = true;
             break;
@@ -64,6 +65,12 @@ bool dfa_cur_state_insp(
 
     if (exists==false)
     {
+        /* Setting current state index if new. */
+
+        *cur_state_index = target_dfa -> total_states;
+
+
+
         /* Checking if its first state in DFA or not. */
 
         if (target_dfa->total_states==0)
@@ -109,6 +116,7 @@ bool dfa_cur_state_insp(
                 /* Making sure that `target_dfa->states` reflects new address. */
 
                 target_dfa -> states = alloc_ret;       // Ultimate NIGHTMARE!
+                (*cur_state_addr) = (target_dfa -> states) + (*cur_state_index);
 
 
                 if (debug==true)

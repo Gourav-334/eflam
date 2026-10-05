@@ -73,4 +73,12 @@ bool dfa_sym_pump_insp(dfa_state *cur_state_addr, char *sym, int *total_sym, boo
 
         return true;
     }
+
+
+
+
+
+    /* Returning TRUE for successful execution. */
+
+    return true;
 }

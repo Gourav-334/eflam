@@ -126,4 +126,12 @@ bool str_to_arr_pump(char ***str_arr, char *str, int *str_count, bool debug)
     {
         printf("STAT (%s):%d :: str=\"%s\", str_arr(NEW)=\"%s\", str_count=%d\n", file, __LINE__, str, *(*str_arr + *str_count - 1), *str_count);
     }
+
+
+
+
+
+    /* Returning TRUE for successful execution. */
+
+    return true;
 }
