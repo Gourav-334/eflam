@@ -90,10 +90,12 @@ void dfa_stop_state_feed(int stop_state, char *filepath, int row, int column)
 
 
         case 0:
+            printf("OK (%s) :: %d:%d :: This is an ACCEPT state.\n", filepath, row, column);
             break;
         
 
         case 1:
+            printf("OK (%s) :: %d:%d :: This is an ACCEPT state.\n", filepath, row, column);
             break;
         
 
@@ -208,6 +210,31 @@ void dfa_stop_state_feed(int stop_state, char *filepath, int row, int column)
         
 
         case 24:
+            printf("ERROR (%s) :: %d:%d :: End of declaration punctuation wasn't added!\n", filepath, row, column);
+            break;
+        
+
+        case 25:
+            printf("ERROR (%s) :: %d:%d :: Transitioning state name was never written!\n", filepath, row, column);
+            break;
+        
+
+        case 26:
+            printf("ERROR (%s) :: %d:%d :: Transitioning state name enclosures were not closed!\n", filepath, row, column);
+            break;
+        
+
+        case 27:
+            printf("ERROR (%s) :: %d:%d :: Transitioning state name enclosures were not closed!\n", filepath, row, column);
+            break;
+        
+
+        case 28:
+            printf("ERROR (%s) :: %d:%d :: Transitioning state name enclosures were not closed!\n", filepath, row, column);
+            break;
+        
+
+        case 29:
             printf("ERROR (%s) :: %d:%d :: End of declaration punctuation wasn't added!\n", filepath, row, column);
             break;
     }

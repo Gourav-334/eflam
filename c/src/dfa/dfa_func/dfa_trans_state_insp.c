@@ -25,7 +25,7 @@ bool dfa_trans_state_insp(
 {
     /* Variables & constants */
 
-    char *file = "dfa_trans_state_insp.c\0";
+    char *file = "dfa_trans_state_insp.c";
     bool exists = false;                // Indicates if a state already exists or not.
     void *alloc_ret = NULL;             // Allocation return value checker.
     dfa_state *trans_state_addr = NULL; // Address of transition state.
@@ -51,6 +51,10 @@ bool dfa_trans_state_insp(
 
             exists = true;
             break;
+        }
+        else if (debug==true)
+        {
+            printf("OK (%s):%d :: State \"%s\" not found yet.\n", file, __LINE__, trans_state_name);
         }
     }
 
@@ -241,4 +245,8 @@ bool dfa_trans_state_insp(
     {
         printf("STAT (%s):%d :: total_trans=%d\n", file, __LINE__, cur_state_addr->total_trans);
     }
+
+
+
+    return true;
 }

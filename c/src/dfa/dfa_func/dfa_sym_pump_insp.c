@@ -37,13 +37,13 @@ bool dfa_sym_pump_insp(dfa_state *cur_state_addr, char *sym, int *total_sym, boo
         {
             exists = true;          // The symbol exists already
 
-            if (debug==true)
-            {
-                printf("ERROR (%s):%d :: Symbol \"%s\" already exists under state \"%s\"!\n", file, __LINE__, sym, cur_state_addr->name);
-            }
-
+            printf("ERROR (%s):%d :: Symbol \"%s\" already exists under state \"%s\" at index [%d]!\n", file, __LINE__, sym, cur_state_addr->name, i);
 
             return false;
+        }
+        else if (debug==true)
+        {
+            printf("OK (%s):%d :: Symbol \"%s\" does not exist under state \"%s\" at index [%d].\n", file, __LINE__, sym, cur_state_addr->name, i);
         }
     }
 
@@ -57,7 +57,7 @@ bool dfa_sym_pump_insp(dfa_state *cur_state_addr, char *sym, int *total_sym, boo
     {
         /* Pushing the new symbol to the transition list of state. */
 
-        str_to_arr_pump(&(cur_state_addr->symbols), sym, &(cur_state_addr -> total_trans), debug);
+        str_to_arr_pump(&(cur_state_addr->symbols), sym, &(cur_state_addr->total_trans), debug);
 
         (*total_sym)++;                     // Registering count of new symbols
 
@@ -66,7 +66,7 @@ bool dfa_sym_pump_insp(dfa_state *cur_state_addr, char *sym, int *total_sym, boo
         {
             printf(
                 "OK (%s):%d :: total_trans=%d | New symbol \"%s\" pushed to state \"%s\".\n",
-                file, __LINE__, cur_state_addr -> total_trans, sym, cur_state_addr->name
+                file, __LINE__, cur_state_addr->total_trans, sym, cur_state_addr->name
             );
         }
 

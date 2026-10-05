@@ -4,6 +4,7 @@
 
 #include <stdio.h>          // To enable standard I/O to programs.
 #include <stdlib.h>         // To manage dynamically allocated memories.
+#include <string.h>         // For copying & measuring string length.
 
 
 
@@ -20,7 +21,7 @@ bool str_to_arr_pump(char ***str_arr, char *str, int *str_count, bool debug)
 {
     /* Variables & constants */
 
-    char *file = "str_to_arr_pump.c\0";
+    char *file = "str_to_arr_pump.c";
     void *alloc_ret;
 
 
@@ -99,7 +100,23 @@ bool str_to_arr_pump(char ***str_arr, char *str, int *str_count, bool debug)
 
     /* Pushing the address of string to the array. */
 
-    *(*str_arr + *str_count - 1) = str;
+    *(*str_arr + *str_count - 1) = malloc(sizeof(char)*(size_t)(strlen(str)));
+
+
+    if (*(*str_arr + *str_count - 1)==NULL)
+    {
+        printf("ERROR (%s):%d :: Memory expansion failed for new string to array!\n", file, __LINE__);
+        return false;
+    }
+    else if (debug==true)
+    {
+        printf("OK (%s):%d :: Memory expansion successful for new string to array.\n", file, __LINE__);
+    }
+
+
+    strcpy(*(*str_arr + *str_count - 1), str);
+
+
 
 
 

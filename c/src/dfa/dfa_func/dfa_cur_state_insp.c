@@ -42,13 +42,17 @@ bool dfa_cur_state_insp(
         {
             if (debug==true)
             {
-                printf("STAT (%s):%d :: State \"%s\" already exists.\n", file, __LINE__, cur_state_name);
+                printf("STAT (%s):%d :: Current state \"%s\" already exists.\n", file, __LINE__, cur_state_name);
             }
 
             *cur_state_addr = (target_dfa -> states) + i;
 
             exists = true;
             break;
+        }
+        else if (debug==true)
+        {
+            printf("OK (%s):%d :: Current state \"%s\" not found yet.\n", file, __LINE__, cur_state_name);
         }
     }
 

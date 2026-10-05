@@ -34,6 +34,11 @@ digraph EFLAM_DFA
     q22 [label="q22", shape=circle, fillcolor=white];
     q23 [label="q23", shape=circle, fillcolor=white];
     q24 [label="q24", shape=circle, fillcolor=white];
+    q25 [label="q25", shape=circle, fillcolor=white];
+    q26 [label="q26", shape=circle, fillcolor=white];
+    q27 [label="q27", shape=circle, fillcolor=white];
+    q28 [label="q28", shape=circle, fillcolor=white];
+    q29 [label="q29", shape=circle, fillcolor=white];
 
 
 
@@ -52,7 +57,6 @@ digraph EFLAM_DFA
     q3 -> q4 [label="\\", fontcolor=black];
     q3 -> q5 [label="$", fontcolor=black];
     q4 -> q3 [label="ELSE", fontcolor=black];
-    q4 -> q5 [label="$", fontcolor=black];
     q5 -> q0 [label=";", fontcolor=black];
     q5 -> q5 [label=" ,\\n,\\t", fontcolor=black];
     q5 -> q6 [label="{", fontcolor=black];
@@ -66,7 +70,6 @@ digraph EFLAM_DFA
     q8 -> q9 [label="\\", fontcolor=black];
     q8 -> q10 [label="'", fontcolor=black];
     q9 -> q8 [label="ELSE", fontcolor=black];
-    q9 -> q10 [label="'", fontcolor=black];
     q10 -> q6 [label=",", fontcolor=black];
     q10 -> q10 [label=" ,\\n,\\t", fontcolor=black];
     q10 -> q11 [label="}", fontcolor=black];
@@ -74,7 +77,7 @@ digraph EFLAM_DFA
     q11 -> q11 [label=" ,\\n,\\t", fontcolor=black];
     q11 -> q13 [label="|", fontcolor=black];
     q12 -> q12 [label=" ,\\n,\\t", fontcolor=black];
-    q12 -> q20 [label=")", fontcolor=black];
+    q12 -> q25 [label=")", fontcolor=black];
     q13 -> q13 [label=" ,\\n,\\t", fontcolor=black];
     q13 -> q14 [label="(", fontcolor=black];
     q14 -> q14 [label=" ,\\n,\\t", fontcolor=black];
@@ -86,7 +89,6 @@ digraph EFLAM_DFA
     q16 -> q17 [label="\\", fontcolor=black];
     q16 -> q18 [label="'", fontcolor=black];
     q17 -> q16 [label="ELSE", fontcolor=black];
-    q17 -> q18 [label="'", fontcolor=black];
     q18 -> q18 [label=" ,\\n,\\t", fontcolor=black];
     q18 -> q19 [label=",", fontcolor=black];
     q18 -> q20 [label=")", fontcolor=black];
@@ -100,7 +102,18 @@ digraph EFLAM_DFA
     q22 -> q23 [label="\\", fontcolor=black];
     q22 -> q24 [label="$", fontcolor=black];
     q23 -> q22 [label="ELSE", fontcolor=black];
-    q23 -> q24 [label="$", fontcolor=black];
     q24 -> q0 [label=";", fontcolor=black];
+    q24 -> q13 [label=",", fontcolor=black];
     q24 -> q24 [label=" ,\\n,\\t", fontcolor=black];
+    q25 -> q25 [label=" ,\\n,\\t", fontcolor=black];
+    q25 -> q26 [label="$", fontcolor=black];
+    q26 -> q27 [label="ELSE", fontcolor=black];
+    q26 -> q28 [label="\\", fontcolor=black];
+    q27 -> q27 [label="ELSE", fontcolor=black];
+    q27 -> q28 [label="\\", fontcolor=black];
+    q27 -> q29 [label="$", fontcolor=black];
+    q28 -> q27 [label="ELSE", fontcolor=black];
+    q29 -> q29 [label=" ,\\n,\\t", fontcolor=black];
+    q29 -> q0 [label=";", fontcolor=black];
+    q29 -> q13 [label=",", fontcolor=black];
 }

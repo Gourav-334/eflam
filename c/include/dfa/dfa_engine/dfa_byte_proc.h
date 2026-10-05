@@ -26,6 +26,7 @@
 
 int dfa_byte_proc(
     dfa *target_dfa,            // Address to target DFA structure
+    char *filepath,             // Name of the particular file/ its path
     char *fstream,              // Pointer to fstream containing DFA rules
     bool debug                  // Tells if debugging logs are required
 );

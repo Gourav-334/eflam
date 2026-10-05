@@ -37,7 +37,7 @@ char dfa_spl_sym_char(char spl_char, bool debug)
     /* Returning the intended character. */
 
     if (spl_char=='\\') {return '\\';}
-    else if (spl_char=='$') {return '$';}
+    else if (spl_char=='\'') {return '\'';}
     else if (spl_char=='n') {return '\n';}
     else if (spl_char=='t') {return '\t';}
     else if (spl_char=='b') {return '\b';}

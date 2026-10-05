@@ -94,7 +94,7 @@ bool dfa_create(dfa *target_dfa, char *filepaths[], int file_count, bool debug)
 
         /* Passing the stream in buffer to the DFA machine. */
 
-        final_state = dfa_byte_proc(target_dfa, buff, debug);
+        final_state = dfa_byte_proc(target_dfa, filepaths[i], buff, debug);
 
         if (debug==true) {printf("STAT (%s):%d :: bytes=%ld, final_state=%d\n", file, __LINE__, bytes, final_state);}
 
