@@ -1,6 +1,7 @@
 /* Including required headers. */
 
 #include "../include/dfa/dfa_create.h"
+#include "../include/dfa/dfa_str_test.h"
 #include "../include/dfa/dfa_elem/dfa_unit.h"
 #include "../include/dfa/dfa_elem/dfa_state.h"
 
@@ -16,24 +17,27 @@ int main(int argc, char *argv[])
 {
     /* Code to be tested. */
 
-    dfa_state my_state = {
-        .name = "Duniya Ka Papa!",
-        .type[0] = 0,
-        .type[1] = 0,
-        .symbols = NULL,
-        .trans = NULL,
-        .else_trans = NULL,
-        .total_trans = 0
-    };
-
     dfa my_dfa = {
         .start_state = NULL,
         .total_states = 0,
-        .states = &my_state
+        .states = NULL
     };
 
     char *filepaths[] = {"eflam_codes/print.eflam"};
+
+    char *symbols[] = {"print", "(", "\"", "GOURAV", "\"", ")"};
+    char *symbols2[] = {"print", "\"", "KUMAR", "\"", ")"};
+    char *symbols3[] = {"print", "(", "\"", "GOURAV", "\"", ")", ";"};
+    char *symbols4[] = {"print", "(", "\"", "\"", ")"};
+    char *symbols5[] = {"print", "(", "\"", "GOURAV", "\"", "\t", ")"};
+
     dfa_create(&my_dfa, filepaths, 1, true);
+
+    dfa_str_test(my_dfa, symbols, 6, true);
+    dfa_str_test(my_dfa, symbols2, 5, true);
+    dfa_str_test(my_dfa, symbols3, 7, true);
+    dfa_str_test(my_dfa, symbols4, 5, true);
+    dfa_str_test(my_dfa, symbols5, 7, true);
 
 
 

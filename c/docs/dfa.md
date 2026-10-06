@@ -24,8 +24,8 @@ typedef struct dfa_state {
     char *name;                             // States where the current state makes transition to
     bool type[TOTAL_TYPES];                 // Tells if the state is accept state or not
     char **symbols;                         // Array of symbols from where this state transists
-    struct dfa_state **trans;               // Corresponding transitions for given symbols
-    struct dfa_state *else_trans;
+    int *trans;                             // Corresponding transitions for given symbols
+    int *else_trans;                        // Index of ELSE transition symbol
     int total_trans;                        // Number of transitions current state makes
 } dfa_state;
 ```
@@ -246,6 +246,28 @@ void dfa_stop_state_feed(
 ```
 
 - NOTE: State feedbacks might vary as per EFLAM version.
+
+
+### 2.13 <u>DFA String Tester</u>:
+
+```c
+// dfa/dfa_str_test.c
+/* Passes a string through DFA byte processor to check where it stops. */
+
+dfa_state *dfa_str_test(
+    dfa target_dfa,                 // Target DFA
+    char *symbols[],                // Array of strings
+    int total_sym,                  // Total number of strings
+    bool debug                      // Debugging mode (ON/OFF)
+);
+```
+
+1. Give an error if there is no START state for the DFA.
+2. Begin from the START state.
+3. Move from one state to another based on the corresponding address to the string in transition list.
+4. If none of the strings in transition list matches to current string & there is no ELSE transition, return this DUMP state.
+5. Keep doing it until exhaust of all the strings.
+6. Return the address of stop state at last.
 
 
 

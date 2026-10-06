@@ -369,6 +369,30 @@ home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c.s
 
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.i: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.i
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.s: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s
+
 home/gouraarav/myProjects/eflam/c/src/test.o: home/gouraarav/myProjects/eflam/c/src/test.c.o
 .PHONY : home/gouraarav/myProjects/eflam/c/src/test.o
 
@@ -480,6 +504,9 @@ help:
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.s"

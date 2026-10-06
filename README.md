@@ -25,13 +25,13 @@ EFLAM (*Embeddable Formal Language & Automata Models*) is an embeddable library 
 |   |   └── dfa_stop_feed
 |   |
 |   └── dfa_func/
-|       ├── spl_state_char
-|       ├── spl_sym_char
-|       ├── cur_state_insp
-|       ├── state_type_insp
-|       ├── sym_insp
-|       ├── trans_state_insp
-|       └── other_sym_insp
+|       ├── dfa_spl_state_char
+|       ├── dfa_spl_sym_char
+|       ├── dfa_cur_state_insp
+|       ├── dfa_state_type_insp
+|       ├── dfa_sym_insp
+|       ├── dfa_trans_state_insp
+|       └── dfa_other_sym_insp
 |
 ├── nfa/
 |
