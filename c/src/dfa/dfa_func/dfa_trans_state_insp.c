@@ -31,6 +31,7 @@ bool dfa_trans_state_insp(
     int trans_state_index;                  // Relative index of transition state.
     dfa_state *cur_state_addr = (target_dfa -> states) + cur_state_index;
     dfa_state *trans_state_addr = NULL;
+    int trans_backup[cur_state_addr->total_trans];
 
 
 
@@ -56,7 +57,7 @@ bool dfa_trans_state_insp(
         }
         else if (debug==true)
         {
-            printf("OK (%s):%d :: State \"%s\" not found yet.\n", file, __LINE__, trans_state_name);
+            printf("OK (%s):%d :: State \"%s\" not found yet on [%d] attempts.\n", file, __LINE__, trans_state_name, i);
         }
     }
 
@@ -163,7 +164,7 @@ bool dfa_trans_state_insp(
 
         trans_state_addr -> symbols = NULL;
         trans_state_addr -> trans = NULL;
-        trans_state_addr -> else_trans = NULL;
+        trans_state_addr -> else_trans = -1;
         trans_state_addr -> total_trans = 0;
     }
 
@@ -195,6 +196,17 @@ bool dfa_trans_state_insp(
     }
     else
     {
+        /* Copying transition index backups to buffer. */
+
+        for (int i=0; i<(cur_state_addr->total_trans)-(*total_sym); i++)
+        {
+            trans_backup[i] = *((cur_state_addr -> trans) + i);
+        }
+
+
+
+
+
         /* Extending the number of states. */
 
         alloc_ret = realloc(
@@ -216,7 +228,7 @@ bool dfa_trans_state_insp(
             /* Making sure that `target_dfa->states` reflects new address. */
 
             cur_state_addr -> trans = alloc_ret;       // Ultimate NIGHTMARE!
-            trans_state_addr = (target_dfa -> states) + *(cur_state_addr -> trans) + trans_state_index;
+            trans_state_addr = (target_dfa -> states) + trans_state_index;
 
 
             if (debug==true)
@@ -229,12 +241,24 @@ bool dfa_trans_state_insp(
 
 
 
+    /* Copying the transition index back. */
+
+    for (int i=0; i<(cur_state_addr->total_trans)-(*total_sym); i++)
+    {
+        *((cur_state_addr -> trans) + i) = trans_backup[i];
+    }
+
+
 
     /* Adding the transition state address to transition lists. */
 
-    for (int i=0; i<(*total_sym); i++)
+    for (
+        int i=(cur_state_addr->total_trans)-(*total_sym);
+        i<cur_state_addr->total_trans;
+        i++
+    )
     {
-        *((cur_state_addr -> trans) + (cur_state_addr -> total_trans) + i) = trans_state_index;
+        *((cur_state_addr -> trans) + i) = trans_state_index;
     }
 
 

@@ -451,7 +451,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             fprintf(
                 stdout, "STAT (%s):%d :: fstream[i]=\'%c\', state=%d, row=%d, column=%d, fstream_len=%ld\n",
                 file, __LINE__, fstream[i], state, row, column, fstream_len
-            );dfa_viewer(*target_dfa);/////////////////////////////////////////////
+            );
         }
 
 

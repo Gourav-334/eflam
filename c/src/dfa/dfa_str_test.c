@@ -80,7 +80,7 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
             {
                 /* Checking whether ELSE state is mentioned or not. */
 
-                if (cur_state_addr->else_trans==NULL)
+                if (cur_state_addr->else_trans<0)
                 {
                     if (debug==true)
                     {
@@ -91,7 +91,7 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
                 }
                 else
                 {
-                    cur_state_addr = (target_dfa.states) + (*(cur_state_addr -> else_trans));
+                    cur_state_addr = (target_dfa.states) + (cur_state_addr -> else_trans);
                 }
             }
         }

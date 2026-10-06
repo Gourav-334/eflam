@@ -166,7 +166,7 @@ bool dfa_cur_state_insp(
 
         cur_state_addr -> symbols = NULL;
         cur_state_addr -> trans = NULL;
-        cur_state_addr -> else_trans = NULL;
+        cur_state_addr -> else_trans = -1;
         cur_state_addr -> total_trans = 0;
 
 
@@ -175,17 +175,20 @@ bool dfa_cur_state_insp(
 
         /* Final debugging information. */
 
-        printf(
-            "STAT (%s):%d :: name=%s, symbols=%p, trans=%p, else_trans=%p, total_trans=%d\n",
-            file, __LINE__,
-            cur_state_addr->name, cur_state_addr->symbols, cur_state_addr->trans, cur_state_addr->else_trans, cur_state_addr->total_trans
-        );
+        if (debug==true)
+        {
+            printf(
+                "STAT (%s):%d :: name=%s, symbols=%p, trans=%p, else_trans=%d, total_trans=%d\n",
+                file, __LINE__,
+                cur_state_addr->name, cur_state_addr->symbols, cur_state_addr->trans, cur_state_addr->else_trans, cur_state_addr->total_trans
+            );
 
-        printf(
-            "STAT (%s):%d :: start_state=[%d], total_states=%d, states=%p\n",
-            file, __LINE__,
-            target_dfa->start_state, target_dfa->total_states, target_dfa->states
-        );
+            printf(
+                "STAT (%s):%d :: start_state=[%d], total_states=%d, states=%p\n",
+                file, __LINE__,
+                target_dfa->start_state, target_dfa->total_states, target_dfa->states
+            );
+        }
     }
 
 

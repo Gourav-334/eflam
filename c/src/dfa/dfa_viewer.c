@@ -58,16 +58,21 @@ void dfa_viewer(dfa target_dfa)
         cur_state_addr = target_dfa.states + i;
         printf("State name = \"%s\"\n", cur_state_addr->name);
         printf("Total transitions = %d\n", cur_state_addr->total_trans);
+        printf("ELSE transition = \"%s\"\n", ((target_dfa.states)+(cur_state_addr->else_trans))->name);
 
 
         /* Every transition that the state contains. */
 
         for (int j=0; j<cur_state_addr->total_trans; j++)
         {
+            // printf(
+            //     "[%d] \"%s\" -> \"%s\"\n",
+            //     j, *((cur_state_addr->symbols)+j),
+            //     ((target_dfa.states)+(*((cur_state_addr->trans)+j)))->name
+            // );
             printf(
-                "[%d] \"%s\" -> \"\"\n",
-                j, *((cur_state_addr->symbols)+j),
-                ((target_dfa.states)+(*((cur_state_addr->trans)+j)))->name
+                "[%d] -> \"%s\"\n",
+                j, ((target_dfa.states)+(*((cur_state_addr->trans)+j)))->name
             );
         }
     }

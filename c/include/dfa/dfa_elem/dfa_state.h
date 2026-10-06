@@ -31,7 +31,7 @@ typedef struct dfa_state {
     bool type[TOTAL_TYPES];                 // Tells if the state is accept state or not
     char **symbols;                         // Array of symbols from where this state transists
     int *trans;                             // Corresponding transitions for given symbols
-    int *else_trans;                        // Index of ELSE transition symbol
+    int else_trans;                         // Index of ELSE transition symbol
     int total_trans;                        // Number of transitions current state makes
 } dfa_state;
 

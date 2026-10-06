@@ -38,7 +38,7 @@ bool dfa_other_sym_insp (
 
     /* Checking if ELSE transition already exists. */
 
-    if (cur_state_addr->else_trans==NULL)
+    if (cur_state_addr->else_trans<0)
     {
         /* Copying data for future references. */
 
@@ -161,7 +161,7 @@ bool dfa_other_sym_insp (
 
             trans_state_addr -> symbols = NULL;
             trans_state_addr -> trans = NULL;
-            trans_state_addr -> else_trans = NULL;
+            trans_state_addr -> else_trans = -1;
             trans_state_addr -> total_trans = 0;
         }
 
@@ -171,7 +171,7 @@ bool dfa_other_sym_insp (
 
         /* Setting the state as ELSE transition of current state. */
 
-        *(cur_state_addr -> else_trans) = trans_state_index;
+        cur_state_addr -> else_trans = trans_state_index;
 
 
 

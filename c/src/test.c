@@ -33,7 +33,22 @@ int main(int argc, char *argv[])
     char *symbols5[] = {"print", "(", "\"", "GOURAV", "\"", "\t", ")"};
 
     dfa_create(&my_dfa, filepaths, 1, true);
-    dfa_viewer(my_dfa);
+    
+    for (int i=0; i<my_dfa.total_states; i++)
+    {
+        printf("(my_dfa.states + %d)->name = \"%s\"\n", i, (my_dfa.states + i)->name);
+    }
+
+    printf("\n");
+
+    for (int i=0; i<10; i++)
+    {
+        printf(
+            "*(((my_dfa.states + 8) -> trans) + %d) = \"%d\"\n",
+            i,
+            *(((my_dfa.states + 8) -> trans) + i)
+        );
+    }
 
     // dfa_str_test(my_dfa, symbols, 6, true);
     // dfa_str_test(my_dfa, symbols2, 5, true);
