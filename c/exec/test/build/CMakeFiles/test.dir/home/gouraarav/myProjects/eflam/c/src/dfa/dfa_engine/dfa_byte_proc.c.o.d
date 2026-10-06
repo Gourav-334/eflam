@@ -19,6 +19,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byt
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_other_sym_insp.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_create.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_elem/dfa_unit.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_viewer.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/utils/char_to_str_pump.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/utils/str_to_arr_pump.h \
  /usr/include/stdio.h \

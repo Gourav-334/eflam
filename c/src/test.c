@@ -2,6 +2,7 @@
 
 #include "../include/dfa/dfa_create.h"
 #include "../include/dfa/dfa_str_test.h"
+#include "../include/dfa/dfa_viewer.h"
 #include "../include/dfa/dfa_elem/dfa_unit.h"
 #include "../include/dfa/dfa_elem/dfa_state.h"
 
@@ -18,7 +19,7 @@ int main(int argc, char *argv[])
     /* Code to be tested. */
 
     dfa my_dfa = {
-        .start_state = NULL,
+        .start_state = -1,
         .total_states = 0,
         .states = NULL
     };
@@ -32,12 +33,13 @@ int main(int argc, char *argv[])
     char *symbols5[] = {"print", "(", "\"", "GOURAV", "\"", "\t", ")"};
 
     dfa_create(&my_dfa, filepaths, 1, true);
+    dfa_viewer(my_dfa);
 
-    dfa_str_test(my_dfa, symbols, 6, true);
-    dfa_str_test(my_dfa, symbols2, 5, true);
-    dfa_str_test(my_dfa, symbols3, 7, true);
-    dfa_str_test(my_dfa, symbols4, 5, true);
-    dfa_str_test(my_dfa, symbols5, 7, true);
+    // dfa_str_test(my_dfa, symbols, 6, true);
+    // dfa_str_test(my_dfa, symbols2, 5, true);
+    // dfa_str_test(my_dfa, symbols3, 7, true);
+    // dfa_str_test(my_dfa, symbols4, 5, true);
+    // dfa_str_test(my_dfa, symbols5, 7, true);
 
 
 

@@ -393,6 +393,30 @@ home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s
 
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.i: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.s: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s
+
 home/gouraarav/myProjects/eflam/c/src/test.o: home/gouraarav/myProjects/eflam/c/src/test.c.o
 .PHONY : home/gouraarav/myProjects/eflam/c/src/test.o
 
@@ -507,6 +531,9 @@ help:
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.s"

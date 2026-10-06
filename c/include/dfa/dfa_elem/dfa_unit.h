@@ -25,7 +25,7 @@
 /* Structure representing whole DFA, enclosing its states. */
 
 typedef struct dfa {
-    struct dfa_state *start_state;          // Initial/start state of the DFA
+    int start_state;                        // Index of initial/start state of the DFA
     int total_states;                       // Number of states that the DFA contains
     struct dfa_state *states;               // Array of states that DFA encloses
 } dfa;

@@ -27,7 +27,7 @@
 
 bool dfa_state_type_insp(
     dfa *target_dfa,                        // Target DFA
-    dfa_state *cur_state_addr,              // Address of current state
+    int cur_state_index,                    // Relative index of current state
     char *type,                             // String showing state type
     bool debug                              // Debugging mode (ON/OFF)
 );

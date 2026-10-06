@@ -6,6 +6,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_str_test.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_state.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_viewer.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_state.h \
  /usr/include/stdio.h \

@@ -18,7 +18,7 @@
 /* Sets transition to a state for the remaining symbols. */
 
 bool dfa_other_sym_insp (
-    dfa *target_dfa, dfa_state **cur_state_addr, int cur_state_index,
+    dfa *target_dfa, int cur_state_index,
     char *trans_state_name,
     bool debug
 )
@@ -28,7 +28,9 @@ bool dfa_other_sym_insp (
     char *file = "dfa_other_sym_insp.c";
     bool exists = false;                    // Indicates if a state already exists or not.
     void *alloc_ret = NULL;                 // Allocation return value checker.
-    dfa_state *trans_state_addr = NULL;     // Address of transition state.
+    int trans_state_index;                  // Relative index of transition state.
+    dfa_state *cur_state_addr = (target_dfa -> states) + cur_state_index;
+    dfa_state *trans_state_addr = NULL;
 
 
 
@@ -36,7 +38,7 @@ bool dfa_other_sym_insp (
 
     /* Checking if ELSE transition already exists. */
 
-    if ((*cur_state_addr)->else_trans==NULL)
+    if (cur_state_addr->else_trans==NULL)
     {
         /* Copying data for future references. */
 
@@ -44,9 +46,9 @@ bool dfa_other_sym_insp (
         {
             /* If state is found already existing in DFA. */
 
-            if (!strcmp(((target_dfa->states)+i)->name,trans_state_name))
+            if (!strcmp(((target_dfa->states)+i)->name, trans_state_name))
             {
-                trans_state_addr = (target_dfa->states)+i;
+                trans_state_index = i;
 
                 if (debug==true)
                 {
@@ -109,7 +111,7 @@ bool dfa_other_sym_insp (
                     /* Making sure that `target_dfa->states` reflects new address. */
 
                     target_dfa -> states = alloc_ret;       // Ultimate NIGHTMARE!
-                    (*cur_state_addr) = (target_dfa -> states) + cur_state_index;
+                    cur_state_addr = (target_dfa -> states) + cur_state_index;
 
 
                     if (debug==true)
@@ -124,7 +126,8 @@ bool dfa_other_sym_insp (
             /* Setting up the state with attributes. */
 
             (target_dfa -> total_states)++;     // Incrementing total state counts
-            trans_state_addr = (target_dfa -> states) + ((target_dfa -> total_states) - 1);
+            trans_state_index = (target_dfa -> total_states) - 1;
+            trans_state_addr = (target_dfa -> states) + trans_state_index;
 
 
 
@@ -168,7 +171,7 @@ bool dfa_other_sym_insp (
 
         /* Setting the state as ELSE transition of current state. */
 
-        (*cur_state_addr) -> else_trans = trans_state_addr;
+        *(cur_state_addr -> else_trans) = trans_state_index;
 
 
 
@@ -176,12 +179,12 @@ bool dfa_other_sym_insp (
 
         if (debug==true)
         {
-            printf("OK (%s):%d :: ELSE transition for state \"%s\" set up.\n", file, __LINE__, (*cur_state_addr)->name);
+            printf("OK (%s):%d :: ELSE transition for state \"%s\" set up.\n", file, __LINE__, cur_state_addr->name);
         }
     }
     else
     {
-        printf("ERROR (%s):%d :: ELSE transition for state \"%s\" already exists!\n", file, __LINE__, (*cur_state_addr)->name);
+        printf("ERROR (%s):%d :: ELSE transition for state \"%s\" already exists!\n", file, __LINE__, cur_state_addr->name);
 
         return false;
     }

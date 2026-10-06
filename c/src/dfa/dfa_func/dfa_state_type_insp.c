@@ -17,7 +17,7 @@
 
 /* Used for checking if the state types are valid, and add valid ones. */
 
-bool dfa_state_type_insp(dfa *target_dfa, dfa_state *cur_state_addr, char *type, bool debug)
+bool dfa_state_type_insp(dfa *target_dfa, int cur_state_index, char *type, bool debug)
 {
     /* Variables & constants. */
 
@@ -25,6 +25,7 @@ bool dfa_state_type_insp(dfa *target_dfa, dfa_state *cur_state_addr, char *type,
     char *start_state = "S";                            // Start state string
     char *accept_state = "A";                           // Accept state string
     bool match = false;                                 // Tells if it matches
+    dfa_state *cur_state_addr = (target_dfa -> states) + cur_state_index;
 
 
 
@@ -37,14 +38,14 @@ bool dfa_state_type_insp(dfa *target_dfa, dfa_state *cur_state_addr, char *type,
         match = true;
 
 
-        if (target_dfa->start_state==NULL)
+        if (target_dfa->start_state<0)
         {
             cur_state_addr -> type[START_STATE] = 1;
-            target_dfa -> start_state = cur_state_addr;
+            target_dfa -> start_state = cur_state_index;
         }
         else
         {
-            printf("ERROR (%s):%d :: Start state already exists for \"%s\"!\n", file, __LINE__, target_dfa->start_state->name);
+            printf("ERROR (%s):%d :: Start state already exists as \"%s\"!\n", file, __LINE__, ((target_dfa->states)+(target_dfa->start_state))->name);
 
             return false;
         }

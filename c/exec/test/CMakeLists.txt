@@ -16,6 +16,7 @@ add_executable(test
     ../../src/dfa/dfa_func/dfa_other_sym_insp.c
     ../../src/dfa/dfa_create.c
     ../../src/dfa/dfa_str_test.c
+    ../../src/dfa/dfa_viewer.c
     ../../src/utils/char_to_str_pump.c
     ../../src/utils/str_to_arr_pump.c
     ../../src/test.c

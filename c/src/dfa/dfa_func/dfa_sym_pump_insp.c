@@ -17,19 +17,20 @@
 
 /* Used for checking if a supplied symbol already exists & adding if not. */
 
-bool dfa_sym_pump_insp(dfa_state *cur_state_addr, char *sym, int *total_sym, bool debug)
+bool dfa_sym_pump_insp(dfa *target_dfa, int cur_state_index, char *sym, int *total_sym, bool debug)
 {
     /* Variables & constants */
 
     char *file = "dfa_sym_pump_insp.c";
     bool exists = false;        // Indicates if a state already exists or not.
     void *alloc_ret = NULL;     // Allocation return value checker.
+    dfa_state *cur_state_addr = (target_dfa -> states) + cur_state_index;
 
 
 
 
 
-    /* Checking if the state already exists. */
+    /* Checking if the symbol already exists. */
 
     for (int i=0; i<cur_state_addr->total_trans; i++)
     {

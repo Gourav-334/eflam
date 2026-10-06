@@ -38,7 +38,7 @@ typedef struct dfa_state {
 /* Structure representing whole DFA, enclosing its states. */
 
 typedef struct dfa {
-    struct dfa_state *start_state;          // Initial/start state of the DFA
+    int start_state;                        // Index of initial/start state of the DFA
     int total_states;                       // Number of states that the DFA contains
     struct dfa_state *states;               // Array of states that DFA encloses
 } dfa;
@@ -68,11 +68,12 @@ bool dfa_create(
 
 ```c
 // dfa/dfa_engine/dfa_byte_proc.h
-/* DFA machine, that tells if it stops at accept state or not. */
+/* Checks the DFA as per user given rules. */
 
 int dfa_byte_proc(
-    char *sym_seq[],            // Sequence of symbols in input string
-    struct *target_dfa,         // Address to target DFA
+    dfa *target_dfa,            // Address to target DFA structure
+    char *filepath,             // Name of the particular file/ its path
+    char *fstream,              // Pointer to fstream containing DFA rules
     bool debug                  // Tells if debugging logs are required
 );
 ```
@@ -134,7 +135,6 @@ char dfa_spl_sym_char(
 bool dfa_cur_state_insp(
     dfa *target_dfa,                            // Target DFA machine
     char *cur_state_name,                       // Current state name
-    dfa_state **cur_state_addr,                 // Address of current state
     int *cur_state_index,                       // Relative index of current state
     bool debug                                  // Debugging mode (ON/OFF)
 );
@@ -156,7 +156,7 @@ bool dfa_cur_state_insp(
 
 bool dfa_state_type_insp(
     dfa *target_dfa,                        // Target DFA
-    dfa_state *cur_state_addr,              // Address of current state
+    int cur_state_index,                    // Relative index of current state
     char *type,                             // String showing state type
     bool debug                              // Debugging mode (ON/OFF)
 );
@@ -175,7 +175,8 @@ bool dfa_state_type_insp(
 /* Used for checking if a supplied symbol already exists & adding if not. */
 
 bool dfa_sym_pump_insp(
-    dfa_state *cur_state_addr,              // Address of current state
+    dfa *target_dfa,                        // Target DFA
+    int cur_state_index,                    // Relative index of current state
     char *sym,                              // String representing symbol
     int *total_sym,                         // Count of total symbols for the transition
     bool debug                              // Debugging mode (ON/OFF)
@@ -191,11 +192,10 @@ bool dfa_sym_pump_insp(
 
 ```c
 // dfa/dfa_func/dfa_trans_state_insp.c
-/* Checks if a transition state exists or need to be created. */
+/* Checks if a transition state exists or needs to be created. */
 
 bool dfa_trans_state_insp(
     dfa *target_dfa,                    // Target DFA
-    dfa_state **cur_state_addr,         // Current state's address
     int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     int *total_sym,                     // Total symbols to be pushed
@@ -217,7 +217,6 @@ bool dfa_trans_state_insp(
 
 bool dfa_other_sym_insp (
     dfa *target_dfa,                    // Target DFA
-    dfa_state **cur_state_addr,         // Current state's address
     int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     bool debug                          // Debugging mode (ON/OFF)
@@ -268,6 +267,23 @@ dfa_state *dfa_str_test(
 4. If none of the strings in transition list matches to current string & there is no ELSE transition, return this DUMP state.
 5. Keep doing it until exhaust of all the strings.
 6. Return the address of stop state at last.
+
+
+### 2.14 <u>DFA Viewer</u>:
+
+```c
+// dfa/dfa_viewer.c
+/* Views the complete DFA at a given instant. */
+
+void dfa_viewer(
+    dfa target_dfa             // Target DFA
+);
+```
+
+1. First display the total number of transitions for DFA.
+2. Then display the name of START state.
+3. For every state of DFA, list the transitions in format of `[INDEX] SYMBOL -> STATE`.
+4. Then display the ELSE state transition.
 
 
 

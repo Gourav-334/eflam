@@ -26,7 +26,6 @@
 bool dfa_cur_state_insp(
     dfa *target_dfa,                            // Target DFA machine
     char *cur_state_name,                       // Current state name
-    dfa_state **cur_state_addr,                 // Address of current state
     int *cur_state_index,                       // Relative index of current state
     bool debug                                  // Debugging mode (ON/OFF)
 );

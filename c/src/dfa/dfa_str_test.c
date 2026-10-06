@@ -30,21 +30,21 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
 
     /* Checking if a START state even exists or not. */
 
-    if (target_dfa.start_state==NULL)
+    if (target_dfa.start_state<0)
     {
         printf("ERROR (%s):%d :: DFA at %p does not contain a start state!\n", file, __LINE__, (void*)&target_dfa);
         return NULL;
     }
     else if (debug==true)
     {
-        printf("OK (%s):%d :: For DFA at %p, start state \"%s\" exists.\n", file, __LINE__, (void*)&target_dfa, (target_dfa.start_state)->name);
+        printf("OK (%s):%d :: For DFA at %p, start state \"%s\" exists.\n", file, __LINE__, (void*)&target_dfa, (target_dfa.states + target_dfa.start_state)->name);
     }
 
 
 
     /* Setting start state as initial state. */
 
-    cur_state_addr = target_dfa.start_state;
+    cur_state_addr = (target_dfa.states) + (target_dfa.start_state);
 
 
 
@@ -62,7 +62,7 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
             {
                 /* Getting address of next state. */
 
-                next_state_addr = *((cur_state_addr -> trans) + j);
+                next_state_addr = (target_dfa.states) + (*(cur_state_addr -> trans)) + j;
 
 
                 if (debug==true)
@@ -89,7 +89,10 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
 
                     return cur_state_addr;
                 }
-                else {cur_state_addr = cur_state_addr -> else_trans;}
+                else
+                {
+                    cur_state_addr = (target_dfa.states) + (*(cur_state_addr -> else_trans));
+                }
             }
         }
     }

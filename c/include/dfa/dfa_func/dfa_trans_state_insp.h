@@ -27,7 +27,6 @@
 
 bool dfa_trans_state_insp(
     dfa *target_dfa,                    // Target DFA
-    dfa_state **cur_state_addr,         // Current state's address
     int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     int *total_sym,                     // Total symbols to be pushed

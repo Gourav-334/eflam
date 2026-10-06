@@ -10,6 +10,7 @@
 #include "../../../include/dfa/dfa_func/dfa_trans_state_insp.h"
 #include "../../../include/dfa/dfa_func/dfa_other_sym_insp.h"
 #include "../../../include/dfa/dfa_create.h"
+#include "../../../include/dfa/dfa_viewer.h"
 #include "../../../include/utils/char_to_str_pump.h"
 #include "../../../include/utils/str_to_arr_pump.h"
 
@@ -41,7 +42,6 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
     
     char *cur_state_name = NULL;                // Current state name
     int cur_state_name_len = 0;                 // Current state name length
-    dfa_state *cur_state_addr = NULL;           // Address of current state
     int cur_state_index;                        // Relative index of current state address
 
     char *state_type_name = NULL;               // State type name string
@@ -113,7 +113,8 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 5;
 
-                    fine = dfa_cur_state_insp(target_dfa, cur_state_name, &cur_state_addr, &cur_state_index, debug);
+                    fine = dfa_cur_state_insp(target_dfa, cur_state_name, &cur_state_index, debug);
+
                     free(cur_state_name); cur_state_name = NULL;
                     cur_state_name_len = 0;
                 }
@@ -178,7 +179,8 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 10;
 
-                    fine = dfa_state_type_insp(target_dfa, cur_state_addr, state_type_name, debug);
+                    fine = dfa_state_type_insp(target_dfa, cur_state_index, state_type_name, debug);
+
                     free(state_type_name); state_type_name = NULL;
                     state_type_name_len = 0;
                 }
@@ -269,7 +271,8 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 18;
 
-                    fine = dfa_sym_pump_insp(cur_state_addr, sym, &total_sym, debug);
+                    fine = dfa_sym_pump_insp(target_dfa, cur_state_index, sym, &total_sym, debug);
+
                     free(sym); sym = NULL;
                     sym_len = 0;
                 }
@@ -340,7 +343,8 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 24;
 
-                    fine = dfa_trans_state_insp(target_dfa, &cur_state_addr, cur_state_index, trans_state_name, &total_sym, debug);
+                    fine = dfa_trans_state_insp(target_dfa, cur_state_index, trans_state_name, &total_sym, debug);
+
                     free(trans_state_name); trans_state_name = NULL;
                     trans_state_name_len = 0;
                 }
@@ -402,7 +406,8 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 29;
 
-                    fine = dfa_other_sym_insp(target_dfa, &cur_state_addr, cur_state_index, trans_state_name, debug);
+                    fine = dfa_other_sym_insp(target_dfa, cur_state_index, trans_state_name, debug);
+
                     free(trans_state_name); trans_state_name = NULL;
                     trans_state_name_len = 0;
                 }
@@ -446,7 +451,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             fprintf(
                 stdout, "STAT (%s):%d :: fstream[i]=\'%c\', state=%d, row=%d, column=%d, fstream_len=%ld\n",
                 file, __LINE__, fstream[i], state, row, column, fstream_len
-            );
+            );dfa_viewer(*target_dfa);/////////////////////////////////////////////
         }
 
 

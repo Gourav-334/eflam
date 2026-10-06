@@ -18,15 +18,16 @@
 /* Used for creating a state if it doesn't exist yet. */
 
 bool dfa_cur_state_insp(
-    dfa *target_dfa, char *cur_state_name, dfa_state **cur_state_addr, int *cur_state_index,
+    dfa *target_dfa, char *cur_state_name, int *cur_state_index,
     bool debug
 )
 {
     /* Variables & constants */
 
     char *file = "dfa_cur_state_insp.c";
-    bool exists = false;        // Indicates if a state already exists or not.
-    void *alloc_ret = NULL;     // Allocation return value checker.
+    bool exists = false;                // Indicates if a state already exists or not.
+    void *alloc_ret = NULL;             // Allocation return value checker.
+    dfa_state *cur_state_addr = NULL;   // Current state's address
 
 
 
@@ -38,14 +39,14 @@ bool dfa_cur_state_insp(
     {
         /* If state is found already existing in DFA. */
 
-        if (!strcmp(((target_dfa->states)+i)->name,cur_state_name))
+        if (!strcmp(((target_dfa->states)+i)->name, cur_state_name))
         {
             if (debug==true)
             {
                 printf("STAT (%s):%d :: Current state \"%s\" already exists.\n", file, __LINE__, cur_state_name);
             }
 
-            *cur_state_addr = (target_dfa -> states) + i;
+            cur_state_addr = (target_dfa -> states) + i;
             *cur_state_index = i;
 
             exists = true;
@@ -116,7 +117,7 @@ bool dfa_cur_state_insp(
                 /* Making sure that `target_dfa->states` reflects new address. */
 
                 target_dfa -> states = alloc_ret;       // Ultimate NIGHTMARE!
-                (*cur_state_addr) = (target_dfa -> states) + (*cur_state_index);
+                cur_state_addr = (target_dfa -> states) + (*cur_state_index);
 
 
                 if (debug==true)
@@ -131,15 +132,15 @@ bool dfa_cur_state_insp(
         /* Setting up the state with attributes. */
 
         (target_dfa -> total_states)++;     // Incrementing total state counts
-        *cur_state_addr = (target_dfa -> states) + ((target_dfa -> total_states) - 1);
+        cur_state_addr = (target_dfa -> states) + ((target_dfa -> total_states) - 1);
 
 
 
         /* Giving name to the new state. */
 
-        (*cur_state_addr) -> name = malloc(sizeof(char)*(size_t)(strlen(cur_state_name)+1));
+        cur_state_addr -> name = malloc(sizeof(char)*(size_t)(strlen(cur_state_name)+1));
 
-        if ((*cur_state_addr)->name==NULL)
+        if (cur_state_addr->name==NULL)
         {
             printf("ERROR (%s):%d :: Memory allocation failed for state name \"%s\"!\n", file, __LINE__, cur_state_name);
 
@@ -150,23 +151,23 @@ bool dfa_cur_state_insp(
             printf("OK (%s):%d :: Memory allocation successful for state name \"%s\".\n", file, __LINE__, cur_state_name);
         }
 
-        strncpy((*cur_state_addr)->name, cur_state_name, (size_t)(strlen(cur_state_name)+1));
+        strncpy(cur_state_addr->name, cur_state_name, (size_t)(strlen(cur_state_name)+1));
 
 
 
         /* Setting up state type. */
 
-        (*cur_state_addr) -> type[START_STATE] = 0;
-        (*cur_state_addr) -> type[ACCEPT_STATE] = 0;
+        cur_state_addr -> type[START_STATE] = 0;
+        cur_state_addr -> type[ACCEPT_STATE] = 0;
 
 
 
         /* Setting pointers initially to NULL. */
 
-        (*cur_state_addr) -> symbols = NULL;
-        (*cur_state_addr) -> trans = NULL;
-        (*cur_state_addr) -> else_trans = NULL;
-        (*cur_state_addr) -> total_trans = 0;
+        cur_state_addr -> symbols = NULL;
+        cur_state_addr -> trans = NULL;
+        cur_state_addr -> else_trans = NULL;
+        cur_state_addr -> total_trans = 0;
 
 
 
@@ -177,11 +178,11 @@ bool dfa_cur_state_insp(
         printf(
             "STAT (%s):%d :: name=%s, symbols=%p, trans=%p, else_trans=%p, total_trans=%d\n",
             file, __LINE__,
-            (*cur_state_addr)->name, (*cur_state_addr)->symbols, (*cur_state_addr)->trans, (*cur_state_addr)->else_trans, (*cur_state_addr)->total_trans
+            cur_state_addr->name, cur_state_addr->symbols, cur_state_addr->trans, cur_state_addr->else_trans, cur_state_addr->total_trans
         );
 
         printf(
-            "STAT (%s):%d :: start_state=%p, total_states=%d, states=%p\n",
+            "STAT (%s):%d :: start_state=[%d], total_states=%d, states=%p\n",
             file, __LINE__,
             target_dfa->start_state, target_dfa->total_states, target_dfa->states
         );
