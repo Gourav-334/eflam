@@ -44,9 +44,9 @@ int main(int argc, char *argv[])
     for (int i=0; i<10; i++)
     {
         printf(
-            "*(((my_dfa.states + 8) -> trans) + %d) = \"%d\"\n",
+            "*(((my_dfa.states + 0) -> symbols) + %d) = \"%s\"\n",
             i,
-            *(((my_dfa.states + 8) -> trans) + i)
+            *(((my_dfa.states + 0) -> symbols) + i)
         );
     }
 

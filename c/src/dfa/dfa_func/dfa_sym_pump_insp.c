@@ -61,7 +61,7 @@ bool dfa_sym_pump_insp(dfa *target_dfa, int cur_state_index, char *sym, int *tot
         str_to_arr_pump(&(cur_state_addr->symbols), sym, &(cur_state_addr->total_trans), debug);
 
         (*total_sym)++;                     // Registering count of new symbols
-
+for (int i=0; i<(*total_sym); i++) {printf ("\n$$$$$$$$$$$$$$$$$$$$$$$$ name = \"%s\" $$$$$$$$$$$$$$$$$$$$$$$$\n\n", cur_state_addr->name);}
         
         if (debug==true)
         {
