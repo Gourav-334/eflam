@@ -22,7 +22,7 @@ bool str_to_arr_pump(char ***str_arr, char *str, int *str_count, bool debug)
     /* Variables & constants */
 
     char *file = "str_to_arr_pump.c";
-    void *alloc_ret;
+    void *alloc_ret = NULL;
 
 
 

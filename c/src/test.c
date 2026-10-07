@@ -41,14 +41,14 @@ int main(int argc, char *argv[])
 
     printf("\n");
 
-    for (int i=0; i<10; i++)
-    {
-        printf(
-            "*(((my_dfa.states + 0) -> symbols) + %d) = \"%s\"\n",
-            i,
-            *(((my_dfa.states + 0) -> symbols) + i)
-        );
-    }
+    // for (int i=0; i<10; i++)
+    // {
+    //     printf(
+    //         "*(((my_dfa.states + 0) -> symbols) + %d) = \"%s\"\n",
+    //         i,
+    //         *(((my_dfa.states + 0) -> symbols) + i)
+    //     );
+    // }
 
     // dfa_str_test(my_dfa, symbols, 6, true);
     // dfa_str_test(my_dfa, symbols2, 5, true);
