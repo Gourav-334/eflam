@@ -23,8 +23,7 @@ Implementation of the automata machine is made in form of graph using structures
 typedef struct dfa_state {
     char *name;                             // States where the current state makes transition to
     bool type[TOTAL_TYPES];                 // Tells if the state is accept state or not
-    char **symbols;                         // Array of symbols from where this state transists
-    int *trans;                             // Corresponding transitions for given symbols
+    dfa_map_ll map;                         // Symbols to state transition map
     int *else_trans;                        // Index of ELSE transition symbol
     int total_trans;                        // Number of transitions current state makes
 } dfa_state;
@@ -269,13 +268,13 @@ dfa_state *dfa_str_test(
 6. Return the address of stop state at last.
 
 
-### 2.14 <u>DFA Viewer</u>:
+### 2.14 <u>DFA Machine Viewer</u>:
 
 ```c
-// dfa/dfa_viewer.c
+// dfa/dfa_machine_viewer.c
 /* Views the complete DFA at a given instant. */
 
-void dfa_viewer(
+void dfa_machine_viewer(
     dfa target_dfa             // Target DFA
 );
 ```
@@ -284,6 +283,91 @@ void dfa_viewer(
 2. Then display the name of START state.
 3. For every state of DFA, list the transitions in format of `[INDEX] SYMBOL -> STATE`.
 4. Then display the ELSE state transition.
+
+
+### 2.15 <u>DFA Map Node (Structure)</u>:
+
+```c
+// dfa/dfa_map/dfa_map_node.h
+/* Node that contains a DFA mapping. */
+
+typedef struct dfa_map_node {
+    char *sym;                  // Symbol string
+    int trans;                  // Transition state index
+    dfa_map_node *next;         // Pointer to next node
+} dfa_map_node;
+```
+
+
+### 2.16 <u>DFA Map Linked List (Structure)</u>:
+
+```c
+// dfa/dfa_map/dfa_map_ll.h
+/* Linked list that maps DFA transitions. */
+
+typedef struct dfa_map_ll {
+    dfa_map_node *head;         // Pointer to head of linked list
+    dfa_map_node *tail;         // Pointer to tail of linked list
+    int total_nodes;            // Total count of nodes
+} dfa_map_ll;
+```
+
+
+### 2.17 <u>DFA Add Symbol</u>
+
+```c
+// dfa/dfa_map/dfa_add_sym.c
+/* Adds a node with symbol to the DFA map. */
+
+dfa_map_node *dfa_add_sym(
+    dfa_map_ll *map,            // Address to DFA map linked list
+    char *sym,                  // Symbol string to add
+    bool debug                  // Debugging mode (ON/OFF)
+);
+```
+
+1. Check if any node exists or not.
+    2. If not, create first node & place the symbol in it.
+    3. Else if existing, create a node and place symbol in it before connecting it to last node.
+4. Return the address to newly created node now.
+
+
+### 2.18 <u>DFA Map Viewer</u>:
+
+```c
+// dfa/dfa_map/dfa_map_view.c
+/* Used for viewing everything that the map contains. */
+
+bool dfa_map_view(
+    dfa_map_ll map              // The linked list map containing transitions
+);
+```
+
+1. Match the count, head, and tail to know if data was corrupted.
+2. If there are no nodes in the map, say it.
+3. Otherwise display the symbol and transition index that every node contains.
+
+
+### 2.19 <u>DFA Add Transition</u>:
+
+```c
+// dfa/dfa_map/dfa_add_trans.c
+/* Used for adding index of a transition state to map's node. */
+
+dfa_map_node *dfa_add_trans(
+    dfa_map_ll *map,            // The linked list map containing transitions
+    int trans,                  // Transition state index to fill nodes with
+    int trans_start,            // Start point to fill with transition state index
+    int trans_finish,           // Finish point to fill with transition state index
+    bool debug                  // Debugging mode (ON/OFF)
+);
+```
+
+1. Check if the start & finish point go out of bound as per available number of nodes, or mismatch in order.
+    2. If yes, display error.
+    3. If not, continue with flow.
+4. Traverse to the node from where to start.
+5. Fill every node from there to finish with the index.
 
 
 

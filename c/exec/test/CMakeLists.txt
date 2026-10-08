@@ -14,6 +14,9 @@ add_executable(test
     ../../src/dfa/dfa_func/dfa_sym_pump_insp.c
     ../../src/dfa/dfa_func/dfa_trans_state_insp.c
     ../../src/dfa/dfa_func/dfa_other_sym_insp.c
+    ../../src/dfa/dfa_map/dfa_add_sym.c
+    ../../src/dfa/dfa_map/dfa_map_view.c
+    ../../src/dfa/dfa_map/dfa_add_trans.c
     ../../src/dfa/dfa_create.c
     ../../src/dfa/dfa_str_test.c
     ../../src/dfa/dfa_viewer.c

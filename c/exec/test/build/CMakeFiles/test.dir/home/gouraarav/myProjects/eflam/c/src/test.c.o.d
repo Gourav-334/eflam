@@ -9,6 +9,11 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_viewer.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_state.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_add_sym.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_ll.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_node.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_view.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_add_trans.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
