@@ -19,7 +19,7 @@ add_executable(test
     ../../src/dfa/dfa_map/dfa_add_trans.c
     ../../src/dfa/dfa_create.c
     ../../src/dfa/dfa_str_test.c
-    ../../src/dfa/dfa_viewer.c
+    ../../src/dfa/dfa_machine_view.c
     ../../src/utils/char_to_str_pump.c
     ../../src/utils/str_to_arr_pump.c
     ../../src/test.c

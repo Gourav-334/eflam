@@ -369,6 +369,30 @@ home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c.s
 
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.i: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.i
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.s: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.s
+
 home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_sym.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_sym.c.o
 .PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_sym.o
 
@@ -464,30 +488,6 @@ home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.s: home/gouraarav/myProje
 home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s
-
-home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o
-.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.o
-
-# target to build an object file
-home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o
-.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o
-
-home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.i: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i
-.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.i
-
-# target to preprocess a source file
-home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i
-.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i
-
-home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.s: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s
-.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.s
-
-# target to generate assembly for a file
-home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s
-.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s
 
 home/gouraarav/myProjects/eflam/c/src/test.o: home/gouraarav/myProjects/eflam/c/src/test.c.o
 .PHONY : home/gouraarav/myProjects/eflam/c/src/test.o
@@ -600,6 +600,9 @@ help:
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_sym.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_sym.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_sym.s"
@@ -612,9 +615,6 @@ help:
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.s"
-	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.o"
-	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.i"
-	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.s"

@@ -89,7 +89,8 @@ dfa_map_node *dfa_add_sym(dfa_map_ll *map, char *sym, bool debug)
     }
 
 
-    strcpy(map->tail->sym, sym);        // Copying argument symbol to created node
+    strcpy(new_node->sym, sym);        // Copying argument symbol to created node
+    new_node -> trans = -1;            // -ve transition initially to avoid false +ve
 
 
     if (debug==true)

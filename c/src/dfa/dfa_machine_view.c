@@ -1,7 +1,9 @@
 /* Including required headers. */
 
-#include "../../include/dfa/dfa_viewer.h"
+#include "../../include/dfa/dfa_machine_view.h"
 #include "../../include/dfa/dfa_elem/dfa_state.h"
+#include "../../include/dfa/dfa_map/dfa_map_node.h"
+#include "../../include/dfa/dfa_map/dfa_map_ll.h"
 
 #include <stdio.h>              // To access basic I/O functions
 
@@ -16,13 +18,14 @@
 
 /* Views the complete DFA at a given instant. */
 
-void dfa_viewer(dfa target_dfa)
+void dfa_machine_view(dfa target_dfa)
 {
     /* Variables & constants */
 
     char *file = "dfa_viewer.c";
     char *model = "Deterministic Finite Automata (DFA)";
     dfa_state *cur_state_addr = NULL;
+    dfa_map_node *trav = NULL;
 
 
 
@@ -56,25 +59,28 @@ void dfa_viewer(dfa target_dfa)
     for (int i=0; i<target_dfa.total_states; i++)
     {
         cur_state_addr = target_dfa.states + i;
+        trav = cur_state_addr -> map.head;
+
+
         printf("State name = \"%s\"\n", cur_state_addr->name);
         printf("Total transitions = %d\n", cur_state_addr->total_trans);
         printf("ELSE transition = \"%s\"\n", ((target_dfa.states)+(cur_state_addr->else_trans))->name);
+
 
 
         /* Every transition that the state contains. */
 
         for (int j=0; j<cur_state_addr->total_trans; j++)
         {
-            // printf(
-            //     "[%d] \"%s\" -> \"%s\"\n",
-            //     j, *((cur_state_addr->symbols)+j),
-            //     ((target_dfa.states)+(*((cur_state_addr->trans)+j)))->name
-            // );
             printf(
-                "[%d] -> \"%s\"\n",
-                j, ((target_dfa.states)+(*((cur_state_addr->trans)+j)))->name
+                "[%d]\"%s\" -> \"%s\"\n",
+                j, trav->sym, ((target_dfa.states)+(trav->trans))->name
             );
+
+            trav = trav -> next;
         }
+
+        printf("\n");
     }
 
 

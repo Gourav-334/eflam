@@ -70,6 +70,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byt
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_engine/dfa_stop_state_feed.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_cur_state_insp.h \
@@ -79,7 +81,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byt
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_state_type_insp.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_sym_pump_insp.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_trans_state_insp.h \
-  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_viewer.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_machine_view.h \
   /home/gouraarav/myProjects/eflam/c/include/utils/char_to_str_pump.h \
   /home/gouraarav/myProjects/eflam/c/include/utils/str_to_arr_pump.h \
   /usr/include/alloca.h \
@@ -172,6 +174,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_sto
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_cur_state_insp.h \
@@ -236,6 +240,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_s
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_other_sym_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_other_sym_insp.c \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_other_sym_insp.h \
@@ -361,6 +367,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_s
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_state_type_insp.h \
@@ -397,9 +405,14 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_sym_pump_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_sym_pump_insp.c \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_sym_pump_insp.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_add_sym.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /home/gouraarav/myProjects/eflam/c/include/utils/str_to_arr_pump.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
@@ -434,9 +447,14 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_sym_p
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_trans_state_insp.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_add_trans.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
   /usr/include/features-time64.h \
@@ -493,6 +511,42 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
+
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_machine_view.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
@@ -626,6 +680,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_map_vi
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_str_test.h \
@@ -661,49 +717,19 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o: 
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c \
-  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_viewer.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: /home/gouraarav/myProjects/eflam/c/src/test.c \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_create.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h \
+  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_machine_view.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_add_sym.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_add_trans.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_view.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_str_test.h \
-  /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_viewer.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/stdc-predef.h \
@@ -863,19 +889,19 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_map_view.c:
 
-/home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h:
-
-/home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_add_sym.h:
+/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_sym.c:
 
-/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c:
+/home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_add_sym.h:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_sym_pump_insp.c:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c:
+
+/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
@@ -885,7 +911,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.
 
 /home/gouraarav/myProjects/eflam/c/include/utils/char_to_str_pump.h:
 
-/home/gouraarav/myProjects/eflam/c/include/dfa/dfa_viewer.h:
+/home/gouraarav/myProjects/eflam/c/include/dfa/dfa_machine_view.h:
 
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_trans_state_insp.h:
 
@@ -900,6 +926,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c:
 
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_cur_state_insp.h:
+
+/home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_node.h:
 
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_state.h:
 
@@ -992,8 +1020,6 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_spl_sym_char.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 

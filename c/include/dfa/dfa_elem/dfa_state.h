@@ -13,6 +13,8 @@
 
 /* List of included headers. */
 
+#include "../dfa_map/dfa_map_ll.h"
+
 #include <stdbool.h>        // For using `bool` keyword.
 
 
@@ -29,8 +31,7 @@
 typedef struct dfa_state {
     char *name;                             // States where the current state makes transition to
     bool type[TOTAL_TYPES];                 // Tells if the state is accept state or not
-    char **symbols;                         // Array of symbols from where this state transists
-    int *trans;                             // Corresponding transitions for given symbols
+    dfa_map_ll map;                         // Symbols to state transition map
     int else_trans;                         // Index of ELSE transition symbol
     int total_trans;                        // Number of transitions current state makes
 } dfa_state;

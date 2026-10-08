@@ -10,7 +10,7 @@
 #include "../../../include/dfa/dfa_func/dfa_trans_state_insp.h"
 #include "../../../include/dfa/dfa_func/dfa_other_sym_insp.h"
 #include "../../../include/dfa/dfa_create.h"
-#include "../../../include/dfa/dfa_viewer.h"
+#include "../../../include/dfa/dfa_machine_view.h"
 #include "../../../include/utils/char_to_str_pump.h"
 #include "../../../include/utils/str_to_arr_pump.h"
 

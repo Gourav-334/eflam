@@ -1,6 +1,7 @@
 /* Including required headers */
 
 #include "../../../include/dfa/dfa_func/dfa_trans_state_insp.h"
+#include "../../../include/dfa/dfa_map/dfa_add_trans.h"
 
 #include <stdio.h>          // To get access to basic I/O functions
 #include <stdlib.h>         // To manage dynamically allocated memory
@@ -31,7 +32,6 @@ bool dfa_trans_state_insp(
     int trans_state_index;                  // Relative index of transition state.
     dfa_state *cur_state_addr = (target_dfa -> states) + cur_state_index;
     dfa_state *trans_state_addr = NULL;
-    int trans_backup[cur_state_addr->total_trans];
 
 
 
@@ -162,8 +162,8 @@ bool dfa_trans_state_insp(
 
         /* Setting pointers initially to NULL. */
 
-        trans_state_addr -> symbols = NULL;
-        trans_state_addr -> trans = NULL;
+        trans_state_addr -> map.head = NULL;
+        trans_state_addr -> map.tail = NULL;
         trans_state_addr -> else_trans = -1;
         trans_state_addr -> total_trans = 0;
     }
@@ -174,92 +174,13 @@ bool dfa_trans_state_insp(
 
     /* Allocating memory to append index to transitioning state. */
 
-    if (cur_state_addr->total_trans==0)
-    {
-        /* Creating the first state. */
-
-        cur_state_addr -> trans = malloc((*total_sym)*sizeof(int*));
-
-
-        /* Sending debugging information. */
-
-        if (cur_state_addr->trans==NULL)
-        {
-            printf("ERROR (%s):%d :: Memory allocation failed for first transition \"%s\"!\n", file, __LINE__, trans_state_name);
-            
-            return false;
-        }
-        else if (debug==true)
-        {
-            printf("OK (%s):%d :: Memory allocation successful for first transition \"%s\".\n", file, __LINE__, trans_state_name);
-        }
-    }
-    else
-    {
-        /* Copying transition index backups to buffer. */
-
-        for (int i=0; i<(cur_state_addr->total_trans)-(*total_sym); i++)
-        {
-            trans_backup[i] = *((cur_state_addr -> trans) + i);
-        }
-
-
-
-
-
-        /* Extending the number of states. */
-
-        alloc_ret = realloc(
-            cur_state_addr->trans,
-            (size_t)((cur_state_addr->total_trans)+(*total_sym))*sizeof(int*)
-        );
-
-
-        /* Sending debugging information. */
-
-        if (alloc_ret==NULL)
-        {
-            printf("ERROR (%s):%d :: Memory allocation failed for new transition \"%s\"!\n", file, __LINE__, trans_state_name);
-
-            return false;
-        }
-        else
-        {
-            /* Making sure that `target_dfa->states` reflects new address. */
-
-            cur_state_addr -> trans = alloc_ret;       // Ultimate NIGHTMARE!
-            trans_state_addr = (target_dfa -> states) + trans_state_index;
-
-
-            if (debug==true)
-            {
-                printf("OK (%s):%d :: Memory allocation successful for new transition \"%s\".\n", file, __LINE__, trans_state_name);
-            }
-        }
-    }
-
-
-
-
-    /* Copying the transition index back. */
-
-    for (int i=0; i<(cur_state_addr->total_trans)-(*total_sym); i++)
-    {
-        *((cur_state_addr -> trans) + i) = trans_backup[i];
-    }
-
-
-
-    /* Adding the transition state address to transition lists. */
-
-    for (
-        int i=(cur_state_addr->total_trans)-(*total_sym);
-        i<cur_state_addr->total_trans;
-        i++
-    )
-    {
-        *((cur_state_addr -> trans) + i) = trans_state_index;
-    }
+    dfa_add_trans(
+        &(cur_state_addr->map),
+        trans_state_index,
+        (cur_state_addr->total_trans)-(*total_sym),
+        (cur_state_addr->total_trans)-1,
+        debug
+    );
 
 
     /* Incrementing number of transitions. */

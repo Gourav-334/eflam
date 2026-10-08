@@ -9,6 +9,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byt
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_cur_state_insp.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/../dfa_elem/dfa_unit.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/../dfa_elem/dfa_state.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/../dfa_elem/../dfa_map/dfa_map_ll.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/../dfa_elem/../dfa_map/dfa_map_node.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_spl_state_char.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_spl_sym_char.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_state_type_insp.h \
@@ -19,7 +21,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byt
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_other_sym_insp.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_create.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_viewer.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_machine_view.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/utils/char_to_str_pump.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/utils/str_to_arr_pump.h \
  /usr/include/stdio.h \

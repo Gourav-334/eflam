@@ -265,19 +265,19 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o -c /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o -c /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.s
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o: /home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c
@@ -337,7 +337,7 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_trans.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o"
@@ -359,7 +359,7 @@ test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_trans.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_viewer.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o

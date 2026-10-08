@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef DFA_VIEWER_H
-    #define DFA_VIEWER_H
+#ifndef DFA_MACHINE_VIEW_H
+    #define DFA_MACHINE_VIEW_H
 
 
 
@@ -22,7 +22,7 @@
 
 /* Views the complete DFA at a given instant. */
 
-void dfa_viewer(
+void dfa_machine_view(
     dfa target_dfa             // Target DFA
 );
 

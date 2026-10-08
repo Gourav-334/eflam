@@ -271,10 +271,10 @@ dfa_state *dfa_str_test(
 ### 2.14 <u>DFA Machine Viewer</u>:
 
 ```c
-// dfa/dfa_machine_viewer.c
+// dfa/dfa_machine_view.c
 /* Views the complete DFA at a given instant. */
 
-void dfa_machine_viewer(
+void dfa_machine_view(
     dfa target_dfa             // Target DFA
 );
 ```

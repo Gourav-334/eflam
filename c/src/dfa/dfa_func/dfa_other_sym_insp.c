@@ -159,8 +159,8 @@ bool dfa_other_sym_insp (
 
             /* Setting pointers initially to NULL. */
 
-            trans_state_addr -> symbols = NULL;
-            trans_state_addr -> trans = NULL;
+            trans_state_addr -> map.head = NULL;
+            trans_state_addr -> map.tail = NULL;
             trans_state_addr -> else_trans = -1;
             trans_state_addr -> total_trans = 0;
         }

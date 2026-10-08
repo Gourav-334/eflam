@@ -1,13 +1,15 @@
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o: \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c \
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o: \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c \
  /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_str_test.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_machine_view.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_elem/dfa_unit.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_elem/dfa_unit.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_elem/dfa_state.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_elem/../dfa_map/dfa_map_ll.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_elem/../dfa_map/dfa_map_node.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_map/dfa_map_node.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/../../include/dfa/dfa_map/dfa_map_ll.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -31,7 +33,4 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o: 
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h

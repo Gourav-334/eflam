@@ -21,8 +21,9 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
     /* Variables & constants */
 
     char *file = "dfa_str_test.c";
-    dfa_state *cur_state_addr;
-    dfa_state *next_state_addr;
+    dfa_state *cur_state_addr = NULL;
+    dfa_state *next_state_addr = NULL;
+    dfa_map_node *trav = NULL;
 
 
 
@@ -54,15 +55,19 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
 
     for (int i=0; i<total_sym; i++)
     {
+        trav = cur_state_addr -> map.head;      // Starting search from first transition
+
+
+
         /* Traversing through every transition from current state. */
 
         for (int j=0; j<cur_state_addr->total_trans; j++)
         {
-            if (!strcmp(symbols[i], *((cur_state_addr->symbols)+j)))
+            if (!strcmp(symbols[i], trav->sym))
             {
                 /* Getting address of next state. */
 
-                next_state_addr = (target_dfa.states) + (*(cur_state_addr -> trans)) + j;
+                next_state_addr = (target_dfa.states) + (trav -> trans);
 
 
                 if (debug==true)
@@ -75,6 +80,8 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
 
 
                 cur_state_addr = next_state_addr;
+
+                break;
             }
             else if (j==(cur_state_addr->total_trans)-1)
             {
@@ -91,10 +98,34 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
                 }
                 else
                 {
-                    cur_state_addr = (target_dfa.states) + (cur_state_addr -> else_trans);
+                    next_state_addr = (target_dfa.states) + (cur_state_addr -> else_trans);
+
+                    if (debug==true)
+                    {
+                        printf(
+                            "STAT (%s):%d :: From \"%s\" to \"%s\" (with \"%s\")\n",
+                            file, __LINE__, cur_state_addr->name, next_state_addr->name, symbols[i]
+                        );
+                    }
+
+                    cur_state_addr = next_state_addr;
                 }
             }
+
+
+            trav = trav -> next;
         }
+    }
+
+
+
+
+
+    /* Displaying final state in case debug mode is on. */
+
+    if (debug==true)
+    {
+        printf("STAT (%s):%d :: Final State = \"%s\"\n", file, __LINE__, cur_state_addr->name);
     }
 
 

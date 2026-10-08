@@ -2,6 +2,7 @@
 
 #include "../../../include/dfa/dfa_func/dfa_sym_pump_insp.h"
 #include "../../../include/utils/str_to_arr_pump.h"
+#include "../../../include/dfa/dfa_map/dfa_add_sym.h"
 
 #include <stdio.h>              // To access basic I/O services
 #include <string.h>             // To compare strings & measure string length
@@ -25,6 +26,7 @@ bool dfa_sym_pump_insp(dfa *target_dfa, int cur_state_index, char *sym, int *tot
     bool exists = false;        // Indicates if a state already exists or not.
     void *alloc_ret = NULL;     // Allocation return value checker.
     dfa_state *cur_state_addr = (target_dfa -> states) + cur_state_index;
+    dfa_map_node *trans_find = cur_state_addr -> map.head;
 
 
 
@@ -34,7 +36,7 @@ bool dfa_sym_pump_insp(dfa *target_dfa, int cur_state_index, char *sym, int *tot
 
     for (int i=0; i<cur_state_addr->total_trans; i++)
     {
-        if (!strcmp(*((cur_state_addr->symbols)+i), sym))
+        if (!strcmp(trans_find->sym, sym))
         {
             exists = true;          // The symbol exists already
 
@@ -46,6 +48,9 @@ bool dfa_sym_pump_insp(dfa *target_dfa, int cur_state_index, char *sym, int *tot
         {
             printf("OK (%s):%d :: Symbol \"%s\" does not exist under state \"%s\" at index [%d].\n", file, __LINE__, sym, cur_state_addr->name, i);
         }
+
+
+        trans_find = trans_find -> next;
     }
 
 
@@ -56,18 +61,9 @@ bool dfa_sym_pump_insp(dfa *target_dfa, int cur_state_index, char *sym, int *tot
 
     if (exists==false)
     {
-        /* Pushing the new symbol to the transition list of state. */
-// printf("\nBEFORE_LOOP: sym=\"%s\", total_trans=%d\n", sym, cur_state_addr->total_trans);
-// for (int i=0; i<cur_state_addr->total_trans; i++)
-// {printf("IN_LOOP\n");
-//     printf ("\n$$$$$$$$$$$$$$$$$$$$$$$$ \"%s\"[%d] = \"%s\" $$$$$$$$$$$$$$$$$$$$$$$$\n", cur_state_addr->name, i, *((cur_state_addr->symbols)+i));
-// }printf("\nAFTER_LOOP\n\n");
-        str_to_arr_pump(&(cur_state_addr->symbols), sym, &(cur_state_addr->total_trans), debug);
-// printf("\nBEFORE_LOOP: sym=\"%s\", total_trans=%d\n", sym, cur_state_addr->total_trans);
-// for (int i=0; i<cur_state_addr->total_trans; i++)
-// {printf("IN_LOOP\n");
-//     printf ("\n$$$$$$$$$$$$$$$$$$$$$$$$ \"%s\"[%d] = \"%s\" $$$$$$$$$$$$$$$$$$$$$$$$\n", cur_state_addr->name, i, *((cur_state_addr->symbols)+i));
-// }printf("\nAFTER_LOOP\n\n");
+        dfa_add_sym(&(cur_state_addr->map), sym, debug);
+        (cur_state_addr -> total_trans)++;
+
         (*total_sym)++;                     // Registering count of new symbols
 
         

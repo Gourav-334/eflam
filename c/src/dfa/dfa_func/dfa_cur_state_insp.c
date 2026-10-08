@@ -164,8 +164,8 @@ bool dfa_cur_state_insp(
 
         /* Setting pointers initially to NULL. */
 
-        cur_state_addr -> symbols = NULL;
-        cur_state_addr -> trans = NULL;
+        cur_state_addr -> map.head = NULL;
+        cur_state_addr -> map.tail = NULL;
         cur_state_addr -> else_trans = -1;
         cur_state_addr -> total_trans = 0;
 
@@ -178,9 +178,9 @@ bool dfa_cur_state_insp(
         if (debug==true)
         {
             printf(
-                "STAT (%s):%d :: name=%s, symbols=%p, trans=%p, else_trans=%d, total_trans=%d\n",
+                "STAT (%s):%d :: name=%s, map=%p, else_trans=%d, total_trans=%d\n",
                 file, __LINE__,
-                cur_state_addr->name, cur_state_addr->symbols, cur_state_addr->trans, cur_state_addr->else_trans, cur_state_addr->total_trans
+                cur_state_addr->name, cur_state_addr->map, cur_state_addr->else_trans, cur_state_addr->total_trans
             );
 
             printf(
