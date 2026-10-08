@@ -180,7 +180,7 @@ bool dfa_cur_state_insp(
             printf(
                 "STAT (%s):%d :: name=%s, map=%p, else_trans=%d, total_trans=%d\n",
                 file, __LINE__,
-                cur_state_addr->name, cur_state_addr->map, cur_state_addr->else_trans, cur_state_addr->total_trans
+                cur_state_addr->name, (void*)&(cur_state_addr->map), cur_state_addr->else_trans, cur_state_addr->total_trans
             );
 
             printf(
