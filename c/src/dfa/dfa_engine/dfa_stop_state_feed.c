@@ -15,7 +15,7 @@
 
 /* Tells at which state the byte processor stopped. */
 
-void dfa_stop_state_feed(int stop_state, char *filepath, int row, int column)
+void dfa_stop_state_feed(int stop_state, char *filepath, int row, int column, bool debug)
 {
     switch (stop_state)
     {
@@ -90,12 +90,18 @@ void dfa_stop_state_feed(int stop_state, char *filepath, int row, int column)
 
 
         case 0:
-            printf("OK (%s) :: %d:%d :: This is an ACCEPT state.\n", filepath, row, column);
+            if (debug==true)
+            {
+                printf("OK (%s) :: %d:%d :: This is an ACCEPT state.\n", filepath, row, column);
+            }
             break;
         
 
         case 1:
-            printf("OK (%s) :: %d:%d :: This is an ACCEPT state.\n", filepath, row, column);
+            if (debug==true)
+            {
+                printf("OK (%s) :: %d:%d :: This is an ACCEPT state.\n", filepath, row, column);
+            }
             break;
         
 

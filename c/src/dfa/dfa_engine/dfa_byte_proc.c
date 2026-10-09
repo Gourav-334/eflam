@@ -12,7 +12,6 @@
 #include "../../../include/dfa/dfa_create.h"
 #include "../../../include/dfa/dfa_machine_view.h"
 #include "../../../include/utils/char_to_str_pump.h"
-#include "../../../include/utils/str_to_arr_pump.h"
 
 #include <stdio.h>          // For using basic I/O services from C
 #include <stdlib.h>         // For managing dynamically allocated memory
@@ -472,7 +471,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
 
     /* Checking for where the machine stops at last. */
 
-    dfa_stop_state_feed(state, filepath, row, column);
+    dfa_stop_state_feed(state, filepath, row, column, debug);
 
 
 

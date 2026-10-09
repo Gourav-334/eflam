@@ -239,7 +239,8 @@ void dfa_stop_state_feed(
     int stop_state,             // Stop state for byte processor
     char *filepath,             // File path for particular file
     int row,                    // Row value of the file
-    int column                  // Column value of the file
+    int column,                 // Column value of the file,
+    bool debug                  // Debugging mode (ON/OFF)
 );
 ```
 

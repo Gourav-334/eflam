@@ -8,6 +8,7 @@
 #include "../include/dfa/dfa_map/dfa_add_sym.h"
 #include "../include/dfa/dfa_map/dfa_map_view.h"
 #include "../include/dfa/dfa_map/dfa_add_trans.h"
+#include "../include/utils/char_serial.h"
 
 #include <stdio.h>
 
@@ -27,22 +28,10 @@ int main(int argc, char *argv[])
         .states = NULL
     };
 
+    dfa_state *output = NULL;
     char *filepaths[] = {"eflam_codes/print.eflam"};
 
-    char *symbols[] = {"print", "(", "\"", "GOURAV", "\"", ")"};
-    char *symbols2[] = {"print", "\"", "KUMAR", "\"", ")"};
-    char *symbols3[] = {"print", "(", "\"", "GOURAV", "\"", ")", ";"};
-    char *symbols4[] = {"print", "(", "\"", "\"", ")"};
-    char *symbols5[] = {"print", "(", "\"", "GOURAV", "\"", "\t", ")"};
-
     dfa_create(&my_dfa, filepaths, 1, true);
-    dfa_machine_view(my_dfa);
-
-    dfa_str_test(my_dfa, symbols, 6, true);
-    dfa_str_test(my_dfa, symbols2, 5, true);
-    dfa_str_test(my_dfa, symbols3, 7, true);
-    dfa_str_test(my_dfa, symbols4, 5, true);
-    dfa_str_test(my_dfa, symbols5, 7, true);
 
 
 

@@ -16,7 +16,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_node.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_view.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_add_trans.h \
- /usr/include/stdio.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/utils/char_serial.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -25,7 +26,6 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \

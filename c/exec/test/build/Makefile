@@ -513,6 +513,30 @@ home/gouraarav/myProjects/eflam/c/src/test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/test.c.s
 
+home/gouraarav/myProjects/eflam/c/src/utils/char_serial.o: home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_serial.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o
+
+home/gouraarav/myProjects/eflam/c/src/utils/char_serial.i: home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_serial.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.i
+
+home/gouraarav/myProjects/eflam/c/src/utils/char_serial.s: home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_serial.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.s
+
 home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.o: home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o
 .PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.o
 
@@ -536,30 +560,6 @@ home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.s: home/gouraarav/m
 home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.s
-
-home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.o: home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o
-.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.o
-
-# target to build an object file
-home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o
-.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.o
-
-home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.i: home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i
-.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.i
-
-# target to preprocess a source file
-home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i
-.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.i
-
-home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.s: home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s
-.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.s
-
-# target to generate assembly for a file
-home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s
-.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.c.s
 
 # Help Target
 help:
@@ -618,12 +618,12 @@ help:
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/test.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/char_serial.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/char_serial.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/char_serial.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.s"
-	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.o"
-	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.i"
-	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/str_to_arr_pump.s"
 .PHONY : help
 
 

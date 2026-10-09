@@ -1,7 +1,6 @@
 /* Including required headers. */
 
 #include "../../../include/dfa/dfa_func/dfa_sym_pump_insp.h"
-#include "../../../include/utils/str_to_arr_pump.h"
 #include "../../../include/dfa/dfa_map/dfa_add_sym.h"
 
 #include <stdio.h>              // To access basic I/O services

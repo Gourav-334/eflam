@@ -91,6 +91,11 @@ $5${'A'} | ('\n')$0$, (' ','\t')$5$, (@)$-5$;
 
 1. Write your EFLAM code:
 ```c
+/* EFLAM's DFA header in `include/` of respective language. */
+
+#include "include/eflam_dfa.h"
+
+
 /* Initializing the structure. */
 
 dfa my_dfa = {

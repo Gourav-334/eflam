@@ -1,29 +1,9 @@
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.o: \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c \
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o: \
+ /home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c \
  /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_engine/dfa_byte_proc.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_engine/../dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_engine/../dfa_elem/dfa_unit.h \
+ /home/gouraarav/myProjects/eflam/c/src/utils/../../include/utils/char_serial.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_engine/dfa_stop_state_feed.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_cur_state_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/../dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/../dfa_elem/dfa_state.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/../dfa_elem/../dfa_map/dfa_map_ll.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/../dfa_elem/../dfa_map/dfa_map_node.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_spl_state_char.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_spl_sym_char.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_state_type_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_sym_pump_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_trans_state_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/../../dfa/dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/../../dfa/dfa_elem/dfa_state.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_func/dfa_other_sym_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_create.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_machine_view.h \
- /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/utils/char_to_str_pump.h \
- /usr/include/stdio.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -32,7 +12,6 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byt
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \

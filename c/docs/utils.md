@@ -31,24 +31,24 @@ bool char_to_str_pump(
 
 
 
-### 2.2 <u>String To Array Pump</u>
+### 2.2 <u>Character Serializer</u>
 
 ```c
-// utils/str_to_arr_pump.c
-/* Used for pushing strings to array of strings. */
+// utils/char_serial.c
+/* Used for serializing all characters in a string to multiple strings. */
 
-bool str_to_arr_pump(
-    char ***str_arr,        // Array that contains strings
+size_t char_serial(
     char *str,              // String to be pushed to array
-    int *str_count,         // Number of strings currently in array
+    char ***str_arr,        // Array that contains strings
     bool debug              // Debugging option for getting runtime information.
 );
 ```
 
-1. Check if `str` is NULL, and return error if so.
-2. Check the `str_count` and allocate space for placing pointer to `str` in `str_arr`.
-3. Now add pointer of `str` to allocated memory `str_arr`.
-4. And then increment `str_count`.
+1. If string is NULL, throw error to the user.
+2. If string array is not NULL, free it and warn user if debug mode is on.
+3. Allocate memory for as many pointers as characters in string.
+4. For every pointer in the series, allocate `2` bytes and fill them with corresponding character & `\0`.
+5. Return total number of characters converted to string.
 
 
 
