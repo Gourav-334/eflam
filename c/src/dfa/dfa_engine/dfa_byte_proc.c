@@ -11,6 +11,7 @@
 #include "../../../include/dfa/dfa_func/dfa_other_sym_insp.h"
 #include "../../../include/dfa/dfa_create.h"
 #include "../../../include/dfa/dfa_machine_view.h"
+#include "../../../include/dfa/dfa_erase.h"
 #include "../../../include/utils/char_to_str_pump.h"
 
 #include <stdio.h>          // For using basic I/O services from C
@@ -63,7 +64,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
     {
         /* Checking and modifying row & column numbers. */
 
-        if (fstream[i]=='\n') {row++; column = 1;}          // If endline occurs, reset column number
+        if (fstream[i]=='\n') {row++; column = 0;}          // If endline occurs, reset column number
         else {column++;}                                    // Increase column number if on same line
 
 
@@ -78,7 +79,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 0;}
                 else if (fstream[i]=='#') {state = 1;}
                 else if (fstream[i]=='$') {state = 2;}
-                else {state = -1;}
+                else {state = -1; fine = false;}
 
                 break;
             
@@ -94,7 +95,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             
             case 2:
                 if (fstream[i]=='\\') {state = 4;}
-                else if (fstream[i]=='$') {state = -2;}
+                else if (fstream[i]=='$') {state = -2; fine = false;}
                 else
                 {
                     state = 3;
@@ -142,7 +143,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 5;}
                 else if (fstream[i]=='{') {state = 6;}
                 else if (fstream[i]=='|') {state = 13;}
-                else {state = -3;}
+                else {state = -3; fine = false;}
 
                 break;
             
@@ -152,7 +153,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 6;}
                 else if (fstream[i]=='\'') {state = 7;}
                 else if (fstream[i]=='}') {state = 11;}
-                else {state = -4;}
+                else {state = -4; fine = false;}
 
                 break;
             
@@ -160,7 +161,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
 
             case 7:
                 if (fstream[i]=='\\') {state = 9;}
-                else if (fstream[i]=='\'') {state = -5;}
+                else if (fstream[i]=='\'') {state = -5; fine = false;}
                 else
                 {
                     state = 8;
@@ -207,7 +208,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 if (fstream[i]==',') {state = 6;}
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 10;}
                 else if (fstream[i]=='}') {state = 11;}
-                else {state = -6;}
+                else {state = -6; fine = false;}
 
                 break;
             
@@ -217,7 +218,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 if (fstream[i]==';') {state = 0;}
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 11;}
                 else if (fstream[i]=='|') {state = 13;}
-                else {state = -7;}
+                else {state = -7; fine = false;}
 
                 break;
             
@@ -226,7 +227,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             case 12:
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 12;}
                 else if (fstream[i]==')') {state = 25;}
-                else {state = -8;}
+                else {state = -8; fine = false;}
 
                 break;
             
@@ -235,7 +236,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             case 13:
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 13;}
                 else if (fstream[i]=='(') {state = 14;}
-                else {state = -9;}
+                else {state = -9; fine = false;}
 
                 break;
             
@@ -245,7 +246,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 if (fstream[i]=='@') {state = 12;}
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 14;}
                 else if (fstream[i]=='\'') {state = 15;}
-                else {state = -10;}
+                else {state = -10; fine = false;}
 
                 break;
             
@@ -299,7 +300,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 18;}
                 else if (fstream[i]==',') {state = 19;}
                 else if (fstream[i]==')') {state = 20;}
-                else {state = -11;}
+                else {state = -11; fine = false;}
 
                 break;
             
@@ -308,7 +309,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             case 19:
                 if (fstream[i]=='\'') {state = 15;}
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 19;}
-                else {state = -12;}
+                else {state = -12; fine = false;}
 
                 break;
             
@@ -317,7 +318,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             case 20:
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 20;}
                 else if (fstream[i]=='$') {state = 21;}
-                else {state = -13;}
+                else {state = -13; fine = false;}
 
                 break;
             
@@ -371,7 +372,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 if (fstream[i]==';') {state = 0;}
                 else if (fstream[i]==',') {state = 13;}
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 24;}
-                else {state = -14;}
+                else {state = -14; fine = false;}
 
                 break;
             
@@ -380,7 +381,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             case 25:
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 25;}
                 else if (fstream[i]=='$') {state = 26;}
-                else {state = -13;}
+                else {state = -13; fine = false;}
 
                 break;
             
@@ -434,7 +435,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 if (fstream[i]==';') {state = 0;}
                 else if (fstream[i]==',') {state = 13;}
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 29;}
-                else {state = -14;}
+                else {state = -14; fine = false;}
 
                 break;
         }
@@ -459,6 +460,9 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
 
         if (fine==false)
         {
+            //dfa_erase(target_dfa, debug);
+            dfa_stop_state_feed(state, filepath, row, column, debug);
+
             printf("ERROR (%s):%d :: Halting processing for an issue, keep debug mode ON to know it in details.\n", file, __LINE__);
 
             return false;

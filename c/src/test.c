@@ -1,14 +1,6 @@
 /* Including required headers. */
 
-#include "../include/dfa/dfa_create.h"
-#include "../include/dfa/dfa_str_test.h"
-#include "../include/dfa/dfa_machine_view.h"
-#include "../include/dfa/dfa_elem/dfa_unit.h"
-#include "../include/dfa/dfa_elem/dfa_state.h"
-#include "../include/dfa/dfa_map/dfa_add_sym.h"
-#include "../include/dfa/dfa_map/dfa_map_view.h"
-#include "../include/dfa/dfa_map/dfa_add_trans.h"
-#include "../include/utils/char_serial.h"
+#include "../include/eflam_dfa.h"
 
 #include <stdio.h>
 

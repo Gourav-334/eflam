@@ -20,6 +20,7 @@ add_executable(test
     ../../src/dfa/dfa_create.c
     ../../src/dfa/dfa_str_test.c
     ../../src/dfa/dfa_machine_view.c
+    ../../src/dfa/dfa_erase.c
     ../../src/utils/char_to_str_pump.c
     ../../src/utils/char_serial.c
     ../../src/test.c

@@ -201,6 +201,30 @@ home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_stop_state_feed.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_stop_state_feed.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_stop_state_feed.c.s
 
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.i: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.i
+
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.s: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.s
+
 home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.o: home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.o
 .PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.o
 
@@ -579,6 +603,9 @@ help:
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_stop_state_feed.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_stop_state_feed.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_stop_state_feed.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.s"

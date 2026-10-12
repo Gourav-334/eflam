@@ -279,10 +279,24 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.s
 
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o -c /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c
+
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.i
+
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.s
+
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o: /home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o -c /home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o: /home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o -c /home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.i: cmake_force
@@ -310,7 +324,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.s:
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: /home/gouraarav/myProjects/eflam/c/src/test.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o -c /home/gouraarav/myProjects/eflam/c/src/test.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.i: cmake_force
@@ -338,6 +352,7 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o"
@@ -360,12 +375,13 @@ test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_create.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_machine_view.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_erase.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking C executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

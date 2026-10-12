@@ -1,21 +1,35 @@
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: \
  /home/gouraarav/myProjects/eflam/c/src/test.c /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_create.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/eflam_dfa.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_engine/dfa_byte_proc.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_engine/../dfa_elem/dfa_unit.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_engine/../dfa_elem/dfa_unit.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_str_test.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_state.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/../dfa_map/dfa_map_ll.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/../dfa_map/dfa_map_node.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_machine_view.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_state.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_engine/dfa_stop_state_feed.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_cur_state_insp.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../dfa_elem/dfa_unit.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../dfa_elem/dfa_state.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../dfa_elem/../dfa_map/dfa_map_ll.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../dfa_elem/../dfa_map/dfa_map_node.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_other_sym_insp.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_spl_state_char.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_spl_sym_char.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_state_type_insp.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_sym_pump_insp.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_trans_state_insp.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../../dfa/dfa_elem/dfa_unit.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../../dfa/dfa_elem/dfa_state.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_add_sym.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_ll.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_node.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_view.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_add_trans.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_view.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_create.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_machine_view.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_str_test.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_state.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/utils/char_to_str_pump.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/utils/char_serial.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

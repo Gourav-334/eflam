@@ -22,6 +22,10 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byt
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_create.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_elem/dfa_unit.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_machine_view.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_erase.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_elem/dfa_state.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_map/dfa_map_ll.h \
+ /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/dfa/dfa_map/dfa_map_node.h \
  /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/../../../include/utils/char_to_str_pump.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

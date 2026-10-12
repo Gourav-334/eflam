@@ -371,6 +371,29 @@ dfa_map_node *dfa_add_trans(
 5. Fill every node from there to finish with the index.
 
 
+### 2.20 <u>DFA Eraser</u>:
+
+```c
+// dfa/dfa_eraser.c
+/* Erases everything related to the particular DFA. */
+
+dfa *dfa_erase(
+    dfa *target_dfa,            // Target DFA
+    bool debug                  // Debugging mode (ON/OFF)
+);
+```
+
+1. For every state in DFA:
+    2. For every transition's map node:
+        3. Copy address to next node to a buffer pointer.
+        4. Free the current node.
+        5. Move to next node using the buffer pointer.
+    6. Then free all members inside the state.
+    7. Free the state.
+8. Free all the members inside the DFA.
+9. Free the DFA itself.
+
+
 
 ## 3. Test Cases & Benchmarks
 
