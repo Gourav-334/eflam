@@ -33,14 +33,16 @@ dfa *dfa_erase(dfa *target_dfa, bool debug)
     for (int i=0; i<target_dfa->total_states; i++)
     {
         cur = ((target_dfa -> states) + i) -> map.head;
+        
 
         if (debug==true)
         {
             printf(
-                "STAT (%s):%d :: Freeing memory for state \"%s\".\n",
-                file, __LINE__, ((target_dfa->states)+i)->name
+                "STAT (%s):%d :: Freeing memory for state \"%s\" (%d transitions).\n",
+                file, __LINE__, ((target_dfa->states)+i)->name, ((target_dfa->states)+i)->total_trans
             );
         }
+
 
 
         /* Freeing everything within every map node. */
@@ -49,7 +51,6 @@ dfa *dfa_erase(dfa *target_dfa, bool debug)
         {
             /* Freeing members and setting next node. */
 
-            dfa_map_view(((target_dfa->states)+i)->map);
             next = cur -> next;
 
 
@@ -63,17 +64,17 @@ dfa *dfa_erase(dfa *target_dfa, bool debug)
 
 
             if (cur->sym!=NULL) free(cur->sym);
-            if (cur->next!=NULL) free(cur->next);
             free(cur);
 
             cur = next;
         }
 
 
+
         /* Freeing pointer members inside this state. */
 
-        free(((target_dfa->states)+i)->name);
-        free((target_dfa->states)+i);
+        if (((target_dfa->states)+i)->name!=NULL)
+            free(((target_dfa->states)+i)->name);
     }
 
 
@@ -81,7 +82,6 @@ dfa *dfa_erase(dfa *target_dfa, bool debug)
     /* Freeing pointer members inside the DFA. */
 
     free(target_dfa->states);
-    free(target_dfa);
 
 
 

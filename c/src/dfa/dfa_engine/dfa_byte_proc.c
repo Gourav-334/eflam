@@ -460,7 +460,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
 
         if (fine==false)
         {
-            //dfa_erase(target_dfa, debug);
+            dfa_erase(target_dfa, debug);
             dfa_stop_state_feed(state, filepath, row, column, debug);
 
             printf("ERROR (%s):%d :: Halting processing for an issue, keep debug mode ON to know it in details.\n", file, __LINE__);
