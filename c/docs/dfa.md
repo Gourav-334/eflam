@@ -24,7 +24,7 @@ typedef struct dfa_state {
     char *name;                             // States where the current state makes transition to
     bool type[TOTAL_TYPES];                 // Tells if the state is accept state or not
     dfa_map_ll map;                         // Symbols to state transition map
-    int *else_trans;                        // Index of ELSE transition symbol
+    int else_trans;                        // Index of ELSE transition symbol
     int total_trans;                        // Number of transitions current state makes
 } dfa_state;
 ```
@@ -86,7 +86,7 @@ int dfa_byte_proc(
 ### 2.5 <u>DFA Special State Character Decoder</u>:
 
 ```c
-// dfa/dfa_func/spl_state_char.c
+// dfa/dfa_func/dfa_spl_state_char.c
 /* Used for decoding certain special characters in strings. */
 
 char dfa_spl_state_char(
@@ -107,7 +107,7 @@ char dfa_spl_state_char(
 ### 2.6 <u>DFA Special Symbol Character Decoder</u>:
 
 ```c
-// dfa/dfa_func/spl_sym_char.c
+// dfa/dfa_func/dfa_spl_sym_char.c
 /* Used for decoding certain special characters in symbols. */
 
 char dfa_spl_sym_char(
@@ -416,26 +416,7 @@ $5${'A'} | ('\n')$0$, (' ','\t')$5$, (@)$-5$;
 ## 4. Special Notes
 
 
-### 4.1 <u>Syntax Rules</u>:
-
-1. Every line either starts with comment or a state definition.
-2. Comments start with `#`.
-3. States might be followed by round brackets mentioning their type.
-4. After that there is OR operator `|` which means now transitions will be written.
-5. Transisiton symbols are written with symbols inside round bracket & then its equivalent state name outside.
-6. If a transition symbol is `@`, then it is meant to be the transitions for rest of the symbols.
-7. Transition states of right of `|` are separated by commas.
-8. Finally, a `;` is added at the end.
-9. A whole state definition could be broken down into multiple lines, and might include a comment at the end.
-10. Symbols or state names which might include special bytes critical to EFLAM syntax, need to be followed by `$`.
-11. Using `$` before an ordinary byte will add the byte without inclusion of `$`.
-12. Transition definitions and states could be defined multiple times.
-13. Multiple definitions must however mustn't have differing types & symbol transitions.
-
-
-### 4.2 <u>Bootstrapped EFLAM DFA</u>:
-
-- Special characters (`|`, `(`, `)`, `,`, `@`, `$`, `#`, `;`) must use `$` before themselves if intended to be used literally.
+### 4.1 <u>Bootstrapped EFLAM DFA</u>:
 
 ```eflam
 # Bootstrapped code for EFLAM.
