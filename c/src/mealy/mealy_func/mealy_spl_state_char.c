@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../../include/dfa/dfa_func/dfa_spl_state_char.h"
+#include "../../../include/mealy/mealy_func/mealy_spl_state_char.h"
 
 #include <stdio.h>          // To use standard I/O functions
 
@@ -15,11 +15,11 @@
 
 /* Used for decoding certain special characters in strings. */
 
-char dfa_spl_state_char(char spl_char, bool debug)
+char mealy_spl_state_char(char spl_char, bool debug)
 {
     /* Variables & constants */
 
-    char *file = "dfa_spl_state_char.c\0";
+    char *file = "mealy_spl_state_char.c\0";
 
 
 

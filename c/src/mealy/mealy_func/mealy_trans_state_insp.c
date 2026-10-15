@@ -1,7 +1,7 @@
 /* Including required headers */
 
-#include "../../../include/dfa/dfa_func/dfa_trans_state_insp.h"
-#include "../../../include/dfa/dfa_map/dfa_add_trans.h"
+#include "../../../include/mealy/mealy_func/mealy_trans_state_insp.h"
+#include "../../../include/mealy/mealy_map/mealy_add_trans.h"
 
 #include <stdio.h>          // To get access to basic I/O functions
 #include <stdlib.h>         // To manage dynamically allocated memory
@@ -18,20 +18,20 @@
 
 /* Checks if a transition state exists or need to be created. */
 
-bool dfa_trans_state_insp(
-    dfa *target_dfa, int cur_state_index,
+bool mealy_trans_state_insp(
+    mealy *target_mealy, int cur_state_index,
     char *trans_state_name, int *total_sym,
     bool debug
 )
 {
     /* Variables & constants */
 
-    char *file = "dfa_trans_state_insp.c";
+    char *file = "mealy_trans_state_insp.c";
     bool exists = false;                    // Indicates if a state already exists or not.
     void *alloc_ret = NULL;                 // Allocation return value checker.
     int trans_state_index;                  // Relative index of transition state.
-    dfa_state *cur_state_addr = (target_dfa -> states) + cur_state_index;
-    dfa_state *trans_state_addr = NULL;
+    mealy_state *cur_state_addr = (target_mealy -> states) + cur_state_index;
+    mealy_state *trans_state_addr = NULL;
 
 
 
@@ -39,11 +39,11 @@ bool dfa_trans_state_insp(
 
     /* Copying data for future references. */
 
-    for (int i=0; i<target_dfa->total_states; i++)
+    for (int i=0; i<target_mealy->total_states; i++)
     {
-        /* If state is found already existing in DFA. */
+        /* If state is found already existing in mealy. */
 
-        if (!strcmp(((target_dfa->states)+i)->name, trans_state_name))
+        if (!strcmp(((target_mealy->states)+i)->name, trans_state_name))
         {
             trans_state_index = i;
 
@@ -69,18 +69,18 @@ bool dfa_trans_state_insp(
 
     if (exists==false)
     {
-        /* Checking if its first state in DFA or not. */
+        /* Checking if its first state in mealy or not. */
 
-        if (target_dfa->total_states==0)
+        if (target_mealy->total_states==0)
         {
             /* Creating the first state. */
 
-            target_dfa -> states = malloc(sizeof(dfa_state));
+            target_mealy -> states = malloc(sizeof(mealy_state));
 
 
             /* Sending debugging information. */
 
-            if (target_dfa->states==NULL)
+            if (target_mealy->states==NULL)
             {
                 printf("ERROR (%s):%d :: Memory allocation failed for first state \"%s\"!\n", file, __LINE__, trans_state_name);
                 
@@ -96,8 +96,8 @@ bool dfa_trans_state_insp(
             /* Extending the number of states. */
 
             alloc_ret = realloc(
-                target_dfa->states,
-                (size_t)((target_dfa->total_states)+1)*sizeof(dfa_state)
+                target_mealy->states,
+                (size_t)((target_mealy->total_states)+1)*sizeof(mealy_state)
             );
 
 
@@ -111,10 +111,10 @@ bool dfa_trans_state_insp(
             }
             else
             {
-                /* Making sure that `target_dfa->states` reflects new address. */
+                /* Making sure that `target_mealy->states` reflects new address. */
 
-                target_dfa -> states = alloc_ret;       // Ultimate NIGHTMARE!
-                cur_state_addr = (target_dfa -> states) + cur_state_index;
+                target_mealy -> states = alloc_ret;       // Ultimate NIGHTMARE!
+                cur_state_addr = (target_mealy -> states) + cur_state_index;
 
 
                 if (debug==true)
@@ -128,9 +128,9 @@ bool dfa_trans_state_insp(
 
         /* Setting up the state with attributes. */
 
-        (target_dfa -> total_states)++;     // Incrementing total state counts
-        trans_state_index = (target_dfa -> total_states) - 1;
-        trans_state_addr = (target_dfa -> states) + trans_state_index;
+        (target_mealy -> total_states)++;     // Incrementing total state counts
+        trans_state_index = (target_mealy -> total_states) - 1;
+        trans_state_addr = (target_mealy -> states) + trans_state_index;
 
 
 
@@ -174,7 +174,7 @@ bool dfa_trans_state_insp(
 
     /* Allocating memory to append index to transitioning state. */
 
-    dfa_add_trans(
+    mealy_add_trans(
         &(cur_state_addr->map),
         trans_state_index,
         (cur_state_addr->total_trans)-(*total_sym),

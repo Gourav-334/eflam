@@ -1,7 +1,7 @@
 /* Including required headers. */
 
-#include "../../../include/dfa/dfa_func/dfa_sym_pump_insp.h"
-#include "../../../include/dfa/dfa_map/dfa_add_sym.h"
+#include "../../../include/mealy/mealy_func/mealy_sym_pump_insp.h"
+#include "../../../include/mealy/mealy_map/mealy_add_sym.h"
 
 #include <stdio.h>              // To access basic I/O services
 #include <string.h>             // To compare strings & measure string length
@@ -17,15 +17,15 @@
 
 /* Used for checking if a supplied symbol already exists & adding if not. */
 
-bool dfa_sym_pump_insp(dfa *target_dfa, int cur_state_index, char *sym, int *total_sym, bool debug)
+bool mealy_sym_pump_insp(mealy *target_mealy, int cur_state_index, char *sym, int *total_sym, bool debug)
 {
     /* Variables & constants */
 
-    char *file = "dfa_sym_pump_insp.c";
+    char *file = "mealy_sym_pump_insp.c";
     bool exists = false;        // Indicates if a state already exists or not.
     void *alloc_ret = NULL;     // Allocation return value checker.
-    dfa_state *cur_state_addr = (target_dfa -> states) + cur_state_index;
-    dfa_map_node *trans_find = cur_state_addr -> map.head;
+    mealy_state *cur_state_addr = (target_mealy -> states) + cur_state_index;
+    mealy_map_node *trans_find = cur_state_addr -> map.head;
 
 
 
@@ -60,7 +60,7 @@ bool dfa_sym_pump_insp(dfa *target_dfa, int cur_state_index, char *sym, int *tot
 
     if (exists==false)
     {
-        dfa_add_sym(&(cur_state_addr->map), sym, debug);
+        mealy_add_sym(&(cur_state_addr->map), sym, debug);
         (cur_state_addr -> total_trans)++;
 
         (*total_sym)++;                     // Registering count of new symbols

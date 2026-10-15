@@ -1,7 +1,7 @@
 /* Including required headers. */
 
-#include "../../include/dfa/dfa_create.h"
-#include "../../include/dfa/dfa_engine/dfa_byte_proc.h"
+#include "../../include/mealy/mealy_create.h"
+#include "../../include/mealy/mealy_engine/mealy_byte_proc.h"
 
 #include <stdio.h>              // For using standard I/O facilities
 #include <stdlib.h>             // To allow usage of memory management functions
@@ -17,15 +17,17 @@
 
 /* Used for loading contents of target EFLAM files into buffer. */
 
-bool dfa_create(dfa *target_dfa, char *filepaths[], int file_count, bool debug)
+/* Used for loading contents of target EFLAM files into the buffer. */
+
+bool mealy_create(mealy *target_mealy, char *filepaths[], int file_count, bool debug)
 {
     /* Variables & constants */
 
-    char *file = "dfa_create.c\0";          // Name of this source file.
+    char *file = "mealy_create.c\0";        // Name of this source file.
     char *buff = NULL;                      // Buffer to load filestreams into.
     FILE *fptr = NULL;                      // File pointer which accesses the file.
     long bytes;                             // Number of bytes file contains.
-    int final_state;                         // Final state at which the machine stops.
+    int final_state;                        // Final state at which the machine stops.
 
 
 
@@ -92,9 +94,9 @@ bool dfa_create(dfa *target_dfa, char *filepaths[], int file_count, bool debug)
 
 
 
-        /* Passing the stream in buffer to the DFA machine. */
+        /* Passing the stream in buffer to the Mealy machine. */
 
-        final_state = dfa_byte_proc(target_dfa, filepaths[i], buff, debug);
+        final_state = mealy_byte_proc(target_mealy, filepaths[i], buff, debug);
 
         if (debug==true) {printf("STAT (%s):%d :: bytes=%ld, final_state=%d\n", file, __LINE__, bytes, final_state);}
 

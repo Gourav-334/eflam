@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../../include/dfa/dfa_map/dfa_add_sym.h"
+#include "../../../include/mealy/mealy_map/mealy_add_sym.h"
 
 #include <stdio.h>              // To access basic I/O functions
 #include <stdlib.h>             // To dynamically allocate memory
@@ -15,14 +15,14 @@
 
 
 
-/* Adds a node with symbol to the DFA map. */
+/* Adds a node with symbol to the mealy map. */
 
-dfa_map_node *dfa_add_sym(dfa_map_ll *map, char *sym, bool debug)
+mealy_map_node *mealy_add_sym(mealy_map_ll *map, char *sym, bool debug)
 {
     /* Variables & constants */
 
-    char *file = "dfa_add_sym.c";
-    dfa_map_node *new_node = NULL;
+    char *file = "mealy_add_sym.c";
+    mealy_map_node *new_node = NULL;
 
 
 
@@ -30,17 +30,17 @@ dfa_map_node *dfa_add_sym(dfa_map_ll *map, char *sym, bool debug)
 
     /* Creating a new node. */
 
-    new_node = malloc(sizeof(dfa_map_node));
+    new_node = malloc(sizeof(mealy_map_node));
         
 
     if (new_node==NULL)
     {
-        printf("ERROR (%s):%d :: Memory allocation for DFA Map Node failed!\n", file, __LINE__);
+        printf("ERROR (%s):%d :: Memory allocation for mealy Map Node failed!\n", file, __LINE__);
         return NULL;
     }
     else if (debug==true)
     {
-        printf("OK (%s):%d :: Memory allocation for DFA Map Node successful.\n", file, __LINE__);
+        printf("OK (%s):%d :: Memory allocation for mealy Map Node successful.\n", file, __LINE__);
     }
 
 

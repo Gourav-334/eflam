@@ -1,9 +1,9 @@
 /* Including required headers. */
 
-#include "../../include/dfa/dfa_machine_view.h"
-#include "../../include/dfa/dfa_elem/dfa_state.h"
-#include "../../include/dfa/dfa_map/dfa_map_node.h"
-#include "../../include/dfa/dfa_map/dfa_map_ll.h"
+#include "../../include/mealy/mealy_machine_view.h"
+#include "../../include/mealy/mealy_elem/mealy_state.h"
+#include "../../include/mealy/mealy_map/mealy_map_node.h"
+#include "../../include/mealy/mealy_map/mealy_map_ll.h"
 
 #include <stdio.h>              // To access basic I/O functions
 
@@ -16,39 +16,39 @@
 
 
 
-/* Views the complete DFA at a given instant. */
+/* Views the complete mealy at a given instant. */
 
-void dfa_machine_view(dfa target_dfa)
+void mealy_machine_view(mealy target_mealy)
 {
     /* Variables & constants */
 
-    char *file = "dfa_viewer.c";
-    char *model = "Deterministic Finite Automata (DFA)";
-    dfa_state *cur_state_addr = NULL;
-    dfa_map_node *trav = NULL;
+    char *file = "mealy_viewer.c";
+    char *model = "Deterministic Finite Automata (mealy)";
+    mealy_state *cur_state_addr = NULL;
+    mealy_map_node *trav = NULL;
 
 
 
 
 
-    /* Displaying start state & total number of transitions from DFA. */
+    /* Displaying start state & total number of transitions from mealy. */
 
     printf("\n--------------------------------------------------------------\n");
 
 
     printf("Model = %s\n", model);
-    printf("Address = %p\n", &target_dfa);
-    printf("Total states = %d\n", target_dfa.total_states);
+    printf("Address = %p\n", &target_mealy);
+    printf("Total states = %d\n", target_mealy.total_states);
 
 
-    if (target_dfa.total_states==0)
+    if (target_mealy.total_states==0)
     {
         printf("--------------------------------------------------------------\n\n");
         return;
     }
 
 
-    printf("Start state = \"%s\"\n\n", (target_dfa.states + target_dfa.start_state)->name);
+    printf("Start state = \"%s\"\n\n", (target_mealy.states + target_mealy.start_state)->name);
 
 
 
@@ -56,15 +56,15 @@ void dfa_machine_view(dfa target_dfa)
 
     /* Displaying transitions for each state. */
 
-    for (int i=0; i<target_dfa.total_states; i++)
+    for (int i=0; i<target_mealy.total_states; i++)
     {
-        cur_state_addr = target_dfa.states + i;
+        cur_state_addr = target_mealy.states + i;
         trav = cur_state_addr -> map.head;
 
 
         printf("State name = \"%s\"\n", cur_state_addr->name);
         printf("Total transitions = %d\n", cur_state_addr->total_trans);
-        printf("ELSE transition = \"%s\"\n", ((target_dfa.states)+(cur_state_addr->else_trans))->name);
+        printf("ELSE transition = \"%s\"\n", ((target_mealy.states)+(cur_state_addr->else_trans))->name);
 
 
 
@@ -74,7 +74,7 @@ void dfa_machine_view(dfa target_dfa)
         {
             printf(
                 "[%d]\"%s\" -> \"%s\"\n",
-                j, trav->sym, ((target_dfa.states)+(trav->trans))->name
+                j, trav->sym, ((target_mealy.states)+(trav->trans))->name
             );
 
             trav = trav -> next;

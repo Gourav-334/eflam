@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../../include/dfa/dfa_map/dfa_map_view.h"
+#include "../../../include/mealy/mealy_map/mealy_map_view.h"
 
 #include <stdio.h>              // To access basic I/O functions
 
@@ -15,12 +15,12 @@
 
 /* Used for viewing everything that the map contains. */
 
-bool dfa_map_view(dfa_map_ll map)
+bool mealy_map_view(mealy_map_ll map)
 {
     /* Variables & constants */
 
-    char *file = "dfa_map_view.c";
-    dfa_map_node *cur_node = map.head;
+    char *file = "mealy_map_view.c";
+    mealy_map_node *cur_node = map.head;
 
 
 

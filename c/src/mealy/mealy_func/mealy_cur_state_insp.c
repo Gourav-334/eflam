@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../../include/dfa/dfa_func/dfa_cur_state_insp.h"
+#include "../../../include/mealy/mealy_func/mealy_cur_state_insp.h"
 
 #include <stdio.h>              // To allow usage of NULL.
 #include <stdlib.h>             // To manage dynamic memory.
@@ -17,17 +17,17 @@
 
 /* Used for creating a state if it doesn't exist yet. */
 
-bool dfa_cur_state_insp(
-    dfa *target_dfa, char *cur_state_name, int *cur_state_index,
+bool mealy_cur_state_insp(
+    mealy *target_mealy, char *cur_state_name, int *cur_state_index,
     bool debug
 )
 {
     /* Variables & constants */
 
-    char *file = "dfa_cur_state_insp.c";
+    char *file = "mealy_cur_state_insp.c";
     bool exists = false;                // Indicates if a state already exists or not.
     void *alloc_ret = NULL;             // Allocation return value checker.
-    dfa_state *cur_state_addr = NULL;   // Current state's address
+    mealy_state *cur_state_addr = NULL;   // Current state's address
 
 
 
@@ -35,18 +35,18 @@ bool dfa_cur_state_insp(
 
     /* Copying data for future references. */
 
-    for (int i=0; i<target_dfa->total_states; i++)
+    for (int i=0; i<target_mealy->total_states; i++)
     {
-        /* If state is found already existing in DFA. */
+        /* If state is found already existing in mealy. */
 
-        if (!strcmp(((target_dfa->states)+i)->name, cur_state_name))
+        if (!strcmp(((target_mealy->states)+i)->name, cur_state_name))
         {
             if (debug==true)
             {
                 printf("STAT (%s):%d :: Current state \"%s\" already exists.\n", file, __LINE__, cur_state_name);
             }
 
-            cur_state_addr = (target_dfa -> states) + i;
+            cur_state_addr = (target_mealy -> states) + i;
             *cur_state_index = i;
 
             exists = true;
@@ -68,22 +68,22 @@ bool dfa_cur_state_insp(
     {
         /* Setting current state index if new. */
 
-        *cur_state_index = target_dfa -> total_states;
+        *cur_state_index = target_mealy -> total_states;
 
 
 
-        /* Checking if its first state in DFA or not. */
+        /* Checking if its first state in mealy or not. */
 
-        if (target_dfa->total_states==0)
+        if (target_mealy->total_states==0)
         {
             /* Creating the first state. */
 
-            target_dfa -> states = malloc(sizeof(dfa_state));
+            target_mealy -> states = malloc(sizeof(mealy_state));
 
 
             /* Sending debugging information. */
 
-            if (target_dfa->states==NULL)
+            if (target_mealy->states==NULL)
             {
                 printf("ERROR (%s):%d :: Memory allocation failed for first state \"%s\"!\n", file, __LINE__, cur_state_name);
                 
@@ -99,8 +99,8 @@ bool dfa_cur_state_insp(
             /* Extending the number of states. */
 
             alloc_ret = realloc(
-                target_dfa->states,
-                (size_t)((target_dfa->total_states)+1)*sizeof(dfa_state)
+                target_mealy->states,
+                (size_t)((target_mealy->total_states)+1)*sizeof(mealy_state)
             );
 
 
@@ -114,10 +114,10 @@ bool dfa_cur_state_insp(
             }
             else
             {
-                /* Making sure that `target_dfa->states` reflects new address. */
+                /* Making sure that `target_mealy->states` reflects new address. */
 
-                target_dfa -> states = alloc_ret;       // Ultimate NIGHTMARE!
-                cur_state_addr = (target_dfa -> states) + (*cur_state_index);
+                target_mealy -> states = alloc_ret;       // Ultimate NIGHTMARE!
+                cur_state_addr = (target_mealy -> states) + (*cur_state_index);
 
 
                 if (debug==true)
@@ -131,8 +131,8 @@ bool dfa_cur_state_insp(
 
         /* Setting up the state with attributes. */
 
-        (target_dfa -> total_states)++;     // Incrementing total state counts
-        cur_state_addr = (target_dfa -> states) + ((target_dfa -> total_states) - 1);
+        (target_mealy -> total_states)++;     // Incrementing total state counts
+        cur_state_addr = (target_mealy -> states) + ((target_mealy -> total_states) - 1);
 
 
 
@@ -186,7 +186,7 @@ bool dfa_cur_state_insp(
             printf(
                 "STAT (%s):%d :: start_state=[%d], total_states=%d, states=%p\n",
                 file, __LINE__,
-                target_dfa->start_state, target_dfa->total_states, target_dfa->states
+                target_mealy->start_state, target_mealy->total_states, target_mealy->states
             );
         }
     }

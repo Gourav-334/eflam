@@ -1,7 +1,7 @@
 /* Including required functions. */
 
-#include "../../../include/dfa/dfa_func/dfa_state_type_insp.h"
-#include "../../../include/dfa/dfa_elem/dfa_unit.h"
+#include "../../../include/mealy/mealy_func/mealy_state_type_insp.h"
+#include "../../../include/mealy/mealy_elem/mealy_unit.h"
 
 #include <stdio.h>          // To be able to use I/O functions.
 #include <string.h>         // To specifically compare strings.
@@ -17,15 +17,15 @@
 
 /* Used for checking if the state types are valid, and add valid ones. */
 
-bool dfa_state_type_insp(dfa *target_dfa, int cur_state_index, char *type, bool debug)
+bool mealy_state_type_insp(mealy *target_mealy, int cur_state_index, char *type, bool debug)
 {
     /* Variables & constants. */
 
-    char *file = "dfa_state_type_insp.c";               // Current file name
+    char *file = "mealy_state_type_insp.c";               // Current file name
     char *start_state = "S";                            // Start state string
     char *accept_state = "A";                           // Accept state string
     bool match = false;                                 // Tells if it matches
-    dfa_state *cur_state_addr = (target_dfa -> states) + cur_state_index;
+    mealy_state *cur_state_addr = (target_mealy -> states) + cur_state_index;
 
 
 
@@ -38,14 +38,14 @@ bool dfa_state_type_insp(dfa *target_dfa, int cur_state_index, char *type, bool 
         match = true;
 
 
-        if (target_dfa->start_state<0)
+        if (target_mealy->start_state<0)
         {
             cur_state_addr -> type[START_STATE] = 1;
-            target_dfa -> start_state = cur_state_index;
+            target_mealy -> start_state = cur_state_index;
         }
         else
         {
-            printf("ERROR (%s):%d :: Start state already exists as \"%s\"!\n", file, __LINE__, ((target_dfa->states)+(target_dfa->start_state))->name);
+            printf("ERROR (%s):%d :: Start state already exists as \"%s\"!\n", file, __LINE__, ((target_mealy->states)+(target_mealy->start_state))->name);
 
             return false;
         }

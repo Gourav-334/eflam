@@ -1,17 +1,17 @@
 /* List of included headers. */
 
-#include "../../../include/dfa/dfa_engine/dfa_byte_proc.h"
-#include "../../../include/dfa/dfa_engine/dfa_stop_state_feed.h"
-#include "../../../include/dfa/dfa_func/dfa_cur_state_insp.h"
-#include "../../../include/dfa/dfa_func/dfa_spl_state_char.h"
-#include "../../../include/dfa/dfa_func/dfa_spl_sym_char.h"
-#include "../../../include/dfa/dfa_func/dfa_state_type_insp.h"
-#include "../../../include/dfa/dfa_func/dfa_sym_pump_insp.h"
-#include "../../../include/dfa/dfa_func/dfa_trans_state_insp.h"
-#include "../../../include/dfa/dfa_func/dfa_other_sym_insp.h"
-#include "../../../include/dfa/dfa_create.h"
-#include "../../../include/dfa/dfa_machine_view.h"
-#include "../../../include/dfa/dfa_erase.h"
+#include "../../../include/mealy/mealy_engine/mealy_byte_proc.h"
+#include "../../../include/mealy/mealy_engine/mealy_stop_state_feed.h"
+#include "../../../include/mealy/mealy_func/mealy_cur_state_insp.h"
+#include "../../../include/mealy/mealy_func/mealy_spl_state_char.h"
+#include "../../../include/mealy/mealy_func/mealy_spl_sym_char.h"
+#include "../../../include/mealy/mealy_func/mealy_state_type_insp.h"
+#include "../../../include/mealy/mealy_func/mealy_sym_pump_insp.h"
+#include "../../../include/mealy/mealy_func/mealy_trans_state_insp.h"
+#include "../../../include/mealy/mealy_func/mealy_other_sym_insp.h"
+#include "../../../include/mealy/mealy_create.h"
+#include "../../../include/mealy/mealy_machine_view.h"
+#include "../../../include/mealy/mealy_erase.h"
 #include "../../../include/utils/char_to_str_pump.h"
 
 #include <stdio.h>          // For using basic I/O services from C
@@ -27,14 +27,14 @@
 
 
 
-/* Loads the rules given by users and creates the DFA. */
+/* Checks the Mealy as per user given rules. */
 
-int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
+int mealy_byte_proc(mealy *target_mealy, char *filepath, char *fstream, bool debug)
 {
     /* Variables & constants */
 
-    char *file = "dfa_byte_proc.c";
-    int state = 0;                              // Current state for the hardcoded DFA.
+    char *file = "mealy_byte_proc.c";
+    int state = 0;                              // Current state for the hardcoded mealy.
     bool fine = true;                           // Tells whether byte processor is still running fine.
     bool resume = true;                         // Tells if state machine needs to resume.
     int row=1, column=0;                        // Recording row & column count for error feedback.
@@ -54,11 +54,14 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
     int sym_len = 0;                            // Symbol name length
     int total_sym = 0;                          // Size of transition symbols array
 
+    char *output = NULL;                        // Output of current state
+    int output_len = 0;                         // Length of output string
 
 
 
 
-    /* Memory-based hardcoded DFA implementation. */
+
+    /* Memory-based hardcoded mealy implementation. */
 
     for (int i=0; i<fstream_len; i++)
     {
@@ -71,7 +74,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
 
 
 
-        /* Memory-based modified base DFA. */
+        /* Memory-based modified base mealy. */
 
         switch (state)
         {
@@ -113,7 +116,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 5;
 
-                    fine = dfa_cur_state_insp(target_dfa, cur_state_name, &cur_state_index, debug);
+                    fine = mealy_cur_state_insp(target_mealy, cur_state_name, &cur_state_index, debug);
 
                     free(cur_state_name); cur_state_name = NULL;
                     cur_state_name_len = 0;
@@ -132,17 +135,15 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             case 4:
                 state = 3;
 
-                fine = char_to_str_pump(&cur_state_name, dfa_spl_state_char(fstream[i], debug), &cur_state_name_len, debug);
+                fine = char_to_str_pump(&cur_state_name, mealy_spl_state_char(fstream[i], debug), &cur_state_name_len, debug);
 
                 break;
             
 
 
             case 5:
-                if (fstream[i]==';') {state = 0;}
-                else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 5;}
-                else if (fstream[i]=='{') {state = 6;}
-                else if (fstream[i]=='|') {state = 13;}
+                if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 5;}
+                else if (fstream[i]=='[') {state = 30;}
                 else {state = -3; fine = false;}
 
                 break;
@@ -179,7 +180,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 10;
 
-                    fine = dfa_state_type_insp(target_dfa, cur_state_index, state_type_name, debug);
+                    fine = mealy_state_type_insp(target_mealy, cur_state_index, state_type_name, debug);
 
                     free(state_type_name); state_type_name = NULL;
                     state_type_name_len = 0;
@@ -198,7 +199,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             case 9:
                 state = 8;
 
-                fine = char_to_str_pump(&cur_state_name, dfa_spl_state_char(fstream[i], debug), &cur_state_name_len, debug);
+                fine = char_to_str_pump(&cur_state_name, mealy_spl_state_char(fstream[i], debug), &cur_state_name_len, debug);
 
                 break;
             
@@ -271,7 +272,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 18;
 
-                    fine = dfa_sym_pump_insp(target_dfa, cur_state_index, sym, &total_sym, debug);
+                    fine = mealy_sym_pump_insp(target_mealy, cur_state_index, sym, &total_sym, debug);
 
                     free(sym); sym = NULL;
                     sym_len = 0;
@@ -290,7 +291,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
             case 17:
                 state = 16;
 
-                fine = char_to_str_pump(&sym, dfa_spl_sym_char(fstream[i], debug), &sym_len, debug);
+                fine = char_to_str_pump(&sym, mealy_spl_sym_char(fstream[i], debug), &sym_len, debug);
 
                 break;
             
@@ -343,7 +344,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 24;
 
-                    fine = dfa_trans_state_insp(target_dfa, cur_state_index, trans_state_name, &total_sym, debug);
+                    fine = mealy_trans_state_insp(target_mealy, cur_state_index, trans_state_name, &total_sym, debug);
 
                     free(trans_state_name); trans_state_name = NULL;
                     trans_state_name_len = 0;
@@ -406,7 +407,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 {
                     state = 29;
 
-                    fine = dfa_other_sym_insp(target_dfa, cur_state_index, trans_state_name, debug);
+                    fine = mealy_other_sym_insp(target_mealy, cur_state_index, trans_state_name, debug);
 
                     free(trans_state_name); trans_state_name = NULL;
                     trans_state_name_len = 0;
@@ -438,6 +439,72 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
                 else {state = -14; fine = false;}
 
                 break;
+            
+
+
+            case 30:
+                if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 30;}
+                else if (fstream[i]=='\'') {state = 31;}
+                else {state = -15; fine = false;}
+
+                break;
+            
+
+
+            case 31:
+                if (fstream[i]=='\'') {fine = false; state = -16;}
+                else if (fstream[i]=='\\') {state = 35;}
+                else
+                {
+                    state = 32;
+
+                    fine = char_to_str_pump(&output, fstream[i], &output_len, debug);
+                }
+
+                break;
+            
+
+
+            case 32:
+                if (fstream[i]=='\'') {state = 33;}
+                else if (fstream[i]=='\\') {state = 35;}
+                else
+                {
+                    state = 32;
+
+                    fine = char_to_str_pump(&output, fstream[i], &output_len, debug);
+                }
+
+                break;
+            
+
+
+            case 33:
+                if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 33;}
+                else if (fstream[i]==']') {state = 34;}
+                else {state = -16;}
+
+                break;
+            
+
+
+            case 34:
+                if (fstream[i]==';') {state = 0;}
+                else if (fstream[i]=='{') {state = 6;}
+                else if (fstream[i]=='|') {state = 13;}
+                else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 34;}
+                else {state = -17;}
+            
+                break;
+            
+
+
+            case 35:
+                state = 32;
+
+                fine = char_to_str_pump(&output, mealy_spl_sym_char(fstream[i], debug), &output_len, debug);
+
+                break;
         }
 
 
@@ -460,8 +527,8 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
 
         if (fine==false)
         {
-            dfa_erase(target_dfa, debug);
-            dfa_stop_state_feed(state, filepath, row, column, debug);
+            mealy_erase(target_mealy, debug);
+            mealy_stop_state_feed(state, filepath, row, column, debug);
 
             printf("ERROR (%s):%d :: Halting processing for an issue, keep debug mode ON to know it in details.\n", file, __LINE__);
 
@@ -475,7 +542,7 @@ int dfa_byte_proc(dfa *target_dfa, char *filepath, char *fstream, bool debug)
 
     /* Checking for where the machine stops at last. */
 
-    dfa_stop_state_feed(state, filepath, row, column, debug);
+    mealy_stop_state_feed(state, filepath, row, column, debug);
 
 
 

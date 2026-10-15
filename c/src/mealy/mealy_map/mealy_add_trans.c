@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../../include/dfa/dfa_map/dfa_add_trans.h"
+#include "../../../include/mealy/mealy_map/mealy_add_trans.h"
 
 #include <stdio.h>              // To access basic I/O functions
 
@@ -15,12 +15,12 @@
 
 /* Used for adding index of a transition state to map's node. */
 
-dfa_map_node *dfa_add_trans(dfa_map_ll *map, int trans, int trans_start, int trans_finish, bool debug)
+mealy_map_node *mealy_add_trans(mealy_map_ll *map, int trans, int trans_start, int trans_finish, bool debug)
 {
     /* Variables & constants */
 
-    char *file = "dfa_add_trans.c";
-    dfa_map_node *cur_node = map -> head;
+    char *file = "mealy_add_trans.c";
+    mealy_map_node *cur_node = map -> head;
 
 
 

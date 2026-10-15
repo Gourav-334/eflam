@@ -17,7 +17,7 @@ Implementation of the automata machine is made in form of graph using structures
 ## 2. Implementation
 
 
-### 2.1 <u>Mealy State (Structure)</u>:
+### 2.1 <u>Mealy State (Structure)</u>://
 
 ```c
 // mealy/mealy_ops/mealy_units.h
@@ -251,7 +251,7 @@ void mealy_stop_state_feed(
 - NOTE: State feedbacks might vary as per EFLAM version.
 
 
-### 2.13 <u>Mealy String Tester</u>:
+### 2.13 <u>Mealy String Tester</u>://
 
 ```c
 // mealy/mealy_str_test.c
@@ -274,7 +274,7 @@ mealy_state *mealy_str_test(
 6. Return the address of stop state at last.
 
 
-### 2.14 <u>Mealy Machine Viewer</u>:
+### 2.14 <u>Mealy Machine Viewer</u>://
 
 ```c
 // mealy/mealy_machine_view.c
@@ -376,7 +376,7 @@ mealy_map_node *mealy_add_trans(
 5. Fill every node from there to finish with the index.
 
 
-### 2.20 <u>Mealy Eraser</u>:
+### 2.20 <u>Mealy Eraser</u>://
 
 ```c
 // mealy/mealy_eraser.c
@@ -406,7 +406,6 @@ mealy *mealy_erase(
 /* Inspects and makes sure that every state produces an output. */
 
 bool mealy_state_out_insp(
-    char *filepaths[],              // Path to all the target files
     mealy target_mealy,             // Target Mealy
     bool debug                      // Debugging mode (ON/OFF)
 );
@@ -414,6 +413,23 @@ bool mealy_state_out_insp(
 
 1. Move through all the states of the Mealy machine and check if they contain output.
 2. Produce error for every state that doesn't contain the output.
+
+
+### 2.22 <u>Mealy Set State Output</u>:
+
+```c
+// mealy/mealy_func/mealy_set_state_out.c
+/* Pushes a string as output to particular Mealy machine state. */
+
+bool mealy_set_state_out(
+    mealy_state *cur_state_addr,        // Current state address
+    char *output,                       // Output string
+    bool debug                          // Debugging mode (ON/OFF)
+);
+```
+
+1. For the output of state, reserve memory for state's output as per input.
+2. Fill the memory with input string.
 
 
 

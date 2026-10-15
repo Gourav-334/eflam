@@ -1,6 +1,7 @@
 /* Including required headers. */
 
-#include "../../include/dfa/dfa_str_test.h"
+#include "../../include/mealy/mealy_str_test.h"
+#include "../../include/utils/sym_tape/sym_tape_ll.h"
 
 #include <stdio.h>              // To get access to basic I/O functions
 #include <string.h>             // To compare string against each other
@@ -14,16 +15,16 @@
 
 
 
-/* Passes a string through DFA byte processor to check where it stops. */
+/* Passes a string through mealy byte processor to check where it stops. */
 
-dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool debug)
+mealy_state *mealy_str_test(mealy target_mealy, char *symbols[], sym_tape_ll *tape, int total_sym, bool debug)
 {
     /* Variables & constants */
 
-    char *file = "dfa_str_test.c";
-    dfa_state *cur_state_addr = NULL;
-    dfa_state *next_state_addr = NULL;
-    dfa_map_node *trav = NULL;
+    char *file = "mealy_str_test.c";
+    mealy_state *cur_state_addr = NULL;
+    mealy_state *next_state_addr = NULL;
+    mealy_map_node *trav = NULL;
 
 
 
@@ -31,21 +32,21 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
 
     /* Checking if a START state even exists or not. */
 
-    if (target_dfa.start_state<0)
+    if (target_mealy.start_state<0)
     {
-        printf("ERROR (%s):%d :: DFA at %p does not contain a start state!\n", file, __LINE__, (void*)&target_dfa);
+        printf("ERROR (%s):%d :: mealy at %p does not contain a start state!\n", file, __LINE__, (void*)&target_mealy);
         return NULL;
     }
     else if (debug==true)
     {
-        printf("OK (%s):%d :: For DFA at %p, start state \"%s\" exists.\n", file, __LINE__, (void*)&target_dfa, (target_dfa.states + target_dfa.start_state)->name);
+        printf("OK (%s):%d :: For mealy at %p, start state \"%s\" exists.\n", file, __LINE__, (void*)&target_mealy, (target_mealy.states + target_mealy.start_state)->name);
     }
 
 
 
     /* Setting start state as initial state. */
 
-    cur_state_addr = (target_dfa.states) + (target_dfa.start_state);
+    cur_state_addr = (target_mealy.states) + (target_mealy.start_state);
 
 
 
@@ -67,7 +68,7 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
             {
                 /* Getting address of next state. */
 
-                next_state_addr = (target_dfa.states) + (trav -> trans);
+                next_state_addr = (target_mealy.states) + (trav -> trans);
 
 
                 if (debug==true)
@@ -98,7 +99,7 @@ dfa_state *dfa_str_test(dfa target_dfa, char *symbols[], int total_sym, bool deb
                 }
                 else
                 {
-                    next_state_addr = (target_dfa.states) + (cur_state_addr -> else_trans);
+                    next_state_addr = (target_mealy.states) + (cur_state_addr -> else_trans);
 
                     if (debug==true)
                     {
