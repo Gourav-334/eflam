@@ -1,7 +1,7 @@
 /* Including guard macros to avoid multiple inclusions. */
 
-#ifndef DFA_SPL_SYM_CHAR_H
-    #define DFA_SPL_SYM_CHAR_H
+#ifndef MEALY_SPL_SYM_CHAR_H
+    #define MEALY_SPL_SYM_CHAR_H
 
 
 
@@ -20,9 +20,9 @@
 
 
 
-/* Used for decoding certain special characters in strings. */
+/* Used for decoding certain special characters in symbols. */
 
-char dfa_spl_sym_char(
+char mealy_spl_sym_char(
     char spl_char,          // Special character found
     bool debug              // Debugging mode (ON/OFF)
 );

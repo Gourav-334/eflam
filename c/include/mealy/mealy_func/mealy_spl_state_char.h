@@ -1,7 +1,7 @@
 /* Including guard macros to avoid multiple inclusions. */
 
-#ifndef DFA_SPL_STATE_CHAR_H
-    #define DFA_SPL_STATE_CHAR_H
+#ifndef MEALY_SPL_STATE_CHAR_H
+    #define MEALY_SPL_STATE_CHAR_H
 
 
 
@@ -22,7 +22,7 @@
 
 /* Used for decoding certain special characters in strings. */
 
-char dfa_spl_state_char(
+char mealy_spl_state_char(
     char spl_char,          // Special character found
     bool debug              // Debugging mode (ON/OFF)
 );

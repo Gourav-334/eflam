@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef DFA_TRANS_STATE_INSP_H
-    #define DFA_TRANS_STATE_INSP_H
+#ifndef MEALY_TRANS_STATE_INSP_H
+    #define MEALY_TRANS_STATE_INSP_H
 
 
 
@@ -9,8 +9,8 @@
 
 /* Including required headers. */
 
-#include "../../dfa/dfa_elem/dfa_unit.h"
-#include "../../dfa/dfa_elem/dfa_state.h"
+#include "../../mealy/mealy_elem/mealy_unit.h"
+#include "../../mealy/mealy_elem/mealy_state.h"
 
 #include <stdbool.h>            // To use boolean return types
 
@@ -23,10 +23,10 @@
 
 
 
-/* Checks if a transition state exists or need to be created. */
+/* Checks if a transition state exists or needs to be created. */
 
-bool dfa_trans_state_insp(
-    dfa *target_dfa,                    // Target DFA
+bool mealy_trans_state_insp(
+    mealy *target_mealy,                // Target Mealy
     int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     int *total_sym,                     // Total symbols to be pushed

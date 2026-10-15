@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusion. */
 
-#ifndef DFA_STATE_TYPE_INSP_H
-    #define DFA_STATE_TYPE_INSP_H
+#ifndef MEALY_STATE_TYPE_INSP_H
+    #define MEALY_STATE_TYPE_INSP_H
 
 
 
@@ -9,8 +9,8 @@
 
 /* Including required headers. */
 
-#include "../dfa_elem/dfa_state.h"
-#include "../dfa_elem/dfa_unit.h"
+#include "../mealy_elem/mealy_state.h"
+#include "../mealy_elem/mealy_unit.h"
 
 #include <stdbool.h>            // To return boolean results for functions.
 
@@ -25,8 +25,8 @@
 
 /* Used for checking if the state types are valid, and add valid ones. */
 
-bool dfa_state_type_insp(
-    dfa *target_dfa,                        // Target DFA
+bool mealy_state_type_insp(
+    mealy *target_mealy,                    // Target Mealy
     int cur_state_index,                    // Relative index of current state
     char *type,                             // String showing state type
     bool debug                              // Debugging mode (ON/OFF)

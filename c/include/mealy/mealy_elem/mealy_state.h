@@ -1,7 +1,7 @@
 /* Setting guards to avoid multiple inclusions. */
 
-#ifndef DFA_STATE_H
-    #define DFA_STATE_H
+#ifndef MEALY_STATE_H
+    #define MEALY_STATE_H
 
 #define START_STATE 0           // Index for START state configuration.
 #define ACCEPT_STATE 1          // Index for ACCEPT state configuration.
@@ -13,7 +13,7 @@
 
 /* List of included headers. */
 
-#include "../dfa_map/dfa_map_ll.h"
+#include "../mealy_map/mealy_map_ll.h"
 
 #include <stdbool.h>        // For using `bool` keyword.
 
@@ -28,13 +28,14 @@
 
 /* Structure from which created instances represent unit state. */
 
-typedef struct dfa_state {
+typedef struct mealy_state {
     char *name;                             // States where the current state makes transition to
+    char *output;                           // Output string for current state
     bool type[TOTAL_TYPES];                 // Tells if the state is accept state or not
-    dfa_map_ll map;                         // Symbols to state transition map
+    mealy_map_ll map;                       // Symbols to state transition map
     int else_trans;                         // Index of ELSE transition symbol
     int total_trans;                        // Number of transitions current state makes
-} dfa_state;
+} mealy_state;
 
 
 

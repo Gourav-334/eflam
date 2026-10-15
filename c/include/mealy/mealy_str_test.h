@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef DFA_STR_TESTER_H
-    #define DFA_STR_TESTER_H
+#ifndef MEALY_STR_TESTER_H
+    #define MEALY_STR_TESTER_H
 
 
 
@@ -9,8 +9,9 @@
 
 /* Including required headers. */
 
-#include "dfa_elem/dfa_unit.h"
-#include "dfa_elem/dfa_state.h"
+#include "mealy_elem/mealy_unit.h"
+#include "mealy_elem/mealy_state.h"
+#include "../utils/sym_tape/sym_tape_ll.h"
 
 #include <stdbool.h>            // To direct debug requests specifically
 
@@ -23,11 +24,12 @@
 
 
 
-/* Passes a string through DFA byte processor to check where it stops. */
+/* Passes a string through Mealy byte processor to check where it stops. */
 
-dfa_state *dfa_str_test(
-    dfa target_dfa,                 // Target DFA
+mealy_state *mealy_str_test(
+    mealy target_mealy,             // Target Mealy
     char *symbols[],                // Array of strings
+    sym_tape_ll *tape,              // Tape to write output on
     int total_sym,                  // Total number of strings
     bool debug                      // Debugging mode (ON/OFF)
 );
