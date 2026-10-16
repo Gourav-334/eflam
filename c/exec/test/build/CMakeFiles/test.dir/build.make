@@ -83,257 +83,257 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/test.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o -c /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.o: /home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/eflam/c/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.o -c /home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c > CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.s
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.o: /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c
@@ -618,24 +618,24 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c.s:
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_stop_state_feed.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.o" \
@@ -661,24 +661,24 @@ test_OBJECTS = \
 test_EXTERNAL_OBJECTS =
 
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_byte_proc.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_engine/moore_stop_state_feed.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_cur_state_insp.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_other_sym_insp.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_set_state_out.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_state_char.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_spl_sym_char.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_out_insp.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_state_type_insp.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_sym_pump_insp.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_func/moore_trans_state_insp.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_sym.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_add_trans.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_map/moore_map_view.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_erase.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_machine_view.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/moore/moore_str_test.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_stop_state_feed.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c.o

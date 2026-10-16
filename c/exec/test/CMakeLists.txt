@@ -6,24 +6,24 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 
 add_executable(test
     ../../src/test.c
-    ../../src/mealy/mealy_engine/mealy_byte_proc.c
-    ../../src/mealy/mealy_engine/mealy_stop_state_feed.c
-    ../../src/mealy/mealy_func/mealy_cur_state_insp.c
-    ../../src/mealy/mealy_func/mealy_other_sym_insp.c
-    ../../src/mealy/mealy_func/mealy_set_state_out.c
-    ../../src/mealy/mealy_func/mealy_spl_state_char.c
-    ../../src/mealy/mealy_func/mealy_spl_sym_char.c
-    ../../src/mealy/mealy_func/mealy_state_out_insp.c
-    ../../src/mealy/mealy_func/mealy_state_type_insp.c
-    ../../src/mealy/mealy_func/mealy_sym_pump_insp.c
-    ../../src/mealy/mealy_func/mealy_trans_state_insp.c
-    ../../src/mealy/mealy_map/mealy_add_sym.c
-    ../../src/mealy/mealy_map/mealy_add_trans.c
-    ../../src/mealy/mealy_map/mealy_map_view.c
-    ../../src/mealy/mealy_create.c
-    ../../src/mealy/mealy_erase.c
-    ../../src/mealy/mealy_machine_view.c
-    ../../src/mealy/mealy_str_test.c
+    ../../src/moore/moore_engine/moore_byte_proc.c
+    ../../src/moore/moore_engine/moore_stop_state_feed.c
+    ../../src/moore/moore_func/moore_cur_state_insp.c
+    ../../src/moore/moore_func/moore_other_sym_insp.c
+    ../../src/moore/moore_func/moore_set_state_out.c
+    ../../src/moore/moore_func/moore_spl_state_char.c
+    ../../src/moore/moore_func/moore_spl_sym_char.c
+    ../../src/moore/moore_func/moore_state_out_insp.c
+    ../../src/moore/moore_func/moore_state_type_insp.c
+    ../../src/moore/moore_func/moore_sym_pump_insp.c
+    ../../src/moore/moore_func/moore_trans_state_insp.c
+    ../../src/moore/moore_map/moore_add_sym.c
+    ../../src/moore/moore_map/moore_add_trans.c
+    ../../src/moore/moore_map/moore_map_view.c
+    ../../src/moore/moore_create.c
+    ../../src/moore/moore_erase.c
+    ../../src/moore/moore_machine_view.c
+    ../../src/moore/moore_str_test.c
 
     ../../src/dfa/dfa_engine/dfa_byte_proc.c
     ../../src/dfa/dfa_engine/dfa_stop_state_feed.c

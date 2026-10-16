@@ -5,7 +5,7 @@
 ## 1. Introduction
 
 
-*EFLAM* is created with goal to provide compact syntax to represent state machines in mathematically established methods like **Deterministic Finite Automata**, **Mealy's Machine**, **Moore's Machine**, **Pushdown Automata**, etc. And to achieve it, a very compact syntax is built that can represent the states and its respective transitions together in a human readable format, with considerably sufficient flexibility in its code.
+*EFLAM* is created with goal to provide compact syntax to represent state machines in mathematically established methods like **Deterministic Finite Automata**, **Moore's Machine**, **Moore's Machine**, **Pushdown Automata**, etc. And to achieve it, a very compact syntax is built that can represent the states and its respective transitions together in a human readable format, with considerably sufficient flexibility in its code.
 
 
 
@@ -125,12 +125,12 @@ gcc -o my_program main.c -L. -static-ldfa
 
 
 
-## 4. Mealy Machine
+## 4. Moore Machine
 
 
 ### 4.1 Convention
 
-Directories and files are named in format of `mealy_*/` or `mealy_*.*`, where `*` can contain any stream of legal characters used in naming file on ***Linux*** distributions. You can discard directories that are irrelavant to you language or required tools, in order to save space.
+Directories and files are named in format of `moore_*/` or `moore_*.*`, where `*` can contain any stream of legal characters used in naming file on ***Linux*** distributions. You can discard directories that are irrelavant to you language or required tools, in order to save space.
 
 Users are advised to keep their EFLAM code files with extension of `.eflam` to keep them recognizable within their projects, though there is no restriction on the extension.
 
@@ -201,14 +201,14 @@ $-5$ ['ERROR-5'];
 
 1. Write your EFLAM code:
 ```c
-/* EFLAM's Mealy header in `include/` of respective language. */
+/* EFLAM's Moore header in `include/` of respective language. */
 
-#include "include/eflam_mealy.h"
+#include "include/eflam_moore.h"
 
 
 /* Initializing the structures. */
 
-mealy my_mealy = {.start_state=-1, .total_states=0, .states=NULL};
+moore my_moore = {.start_state=-1, .total_states=0, .states=NULL};
 sym_tape tape = {.head=NULL, .tail=NULL, .total_cells=0};
 
 
@@ -217,21 +217,21 @@ sym_tape tape = {.head=NULL, .tail=NULL, .total_cells=0};
 char *filepaths[] = {"eflam_codes/print.eflam", "../../main_dir/lexer.eflam"};
 
 
-/* Creating the Mealy as per mentioned code:
-mealy_crea(address_to_mealy, str_arr_to_paths, total_files, debug_mode) */
+/* Creating the Moore as per mentioned code:
+moore_crea(address_to_moore, str_arr_to_paths, total_files, debug_mode) */
 
-mealy_create(&my_mealy, filepaths, 2, false);
+moore_create(&my_moore, filepaths, 2, false);
 
 
 /* Passing the array of strings whatever way you want.
-mealy_str_test(mealy_struct, symbol_str_array, output_tape total_symbols, debug_mode) */
+moore_str_test(moore_struct, symbol_str_array, output_tape total_symbols, debug_mode) */
 
-mealy_str_test(my_mealy, symbols, &tape, 6, true);
+moore_str_test(my_moore, symbols, &tape, 6, true);
 ```
 
 2. Link to archive (static) binary when compiling whole project:
 ```c
-gcc -o my_program main.c -L. -static-lmealy
+gcc -o my_program main.c -L. -static-lmoore
 ```
 
 ---

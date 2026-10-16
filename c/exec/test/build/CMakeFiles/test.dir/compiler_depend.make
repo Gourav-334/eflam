@@ -785,900 +785,6 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.o: 
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_create.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_engine/mealy_byte_proc.h \
-  /usr/include/alloca.h \
-  /usr/include/endian.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_create.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_engine/mealy_byte_proc.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_engine/mealy_stop_state_feed.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_erase.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_cur_state_insp.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_other_sym_insp.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_set_state_out.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_spl_state_char.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_spl_sym_char.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_state_out_insp.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_state_type_insp.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_sym_pump_insp.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_trans_state_insp.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_machine_view.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/utils/char_to_str_pump.h \
-  /usr/include/alloca.h \
-  /usr/include/endian.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_engine/mealy_stop_state_feed.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_erase.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_view.h \
-  /usr/include/alloca.h \
-  /usr/include/endian.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_cur_state_insp.h \
-  /usr/include/alloca.h \
-  /usr/include/endian.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_other_sym_insp.h \
-  /usr/include/alloca.h \
-  /usr/include/endian.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_set_state_out.h \
-  /usr/include/alloca.h \
-  /usr/include/endian.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_spl_state_char.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_spl_sym_char.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_state_out_insp.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_state_type_insp.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_sym_pump_insp.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_add_sym.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_trans_state_insp.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_add_trans.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /usr/include/alloca.h \
-  /usr/include/endian.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_machine_view.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_add_sym.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /usr/include/alloca.h \
-  /usr/include/endian.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
-  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/endian.h \
-  /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
-  /usr/include/x86_64-linux-gnu/bits/select.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
-  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
-  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
-  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
-  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/sys/select.h \
-  /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_add_trans.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_view.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
-CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o: /home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c \
-  /home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/sym_tape_cell.h \
-  /home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/sym_tape_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_state.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h \
-  /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_str_test.h \
-  /home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/add_cell_to_tape.h \
-  /home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/sym_tape_cell.h \
-  /home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/sym_tape_ll.h \
-  /usr/include/features-time64.h \
-  /usr/include/features.h \
-  /usr/include/stdc-predef.h \
-  /usr/include/stdio.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/floatn.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/time64.h \
-  /usr/include/x86_64-linux-gnu/bits/timesize.h \
-  /usr/include/x86_64-linux-gnu/bits/types.h \
-  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
-  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
-
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: /home/gouraarav/myProjects/eflam/c/src/test.c \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_create.h \
   /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_ll.h \
@@ -1999,31 +1105,11 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 
 /home/gouraarav/myProjects/eflam/c/src/utils/char_to_str_pump.c:
 
-/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c:
-
-/home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/sym_tape_view.h:
-
-/home/gouraarav/myProjects/eflam/c/include/eflam_mealy.h:
-
-/home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/sym_tape_ll.h:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c:
-
-/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_add_trans.h:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c:
-
 /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_engine/mealy_stop_state_feed.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
@@ -2047,23 +1133,17 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
-/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_add_sym.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
-/home/gouraarav/myProjects/eflam/c/src/test.c:
-
-/home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/add_cell_to_tape.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_stop_state_feed.c:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
+
+/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_sym_pump_insp.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
@@ -2085,31 +1165,19 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/stdc-predef.h:
 
-/home/gouraarav/myProjects/eflam/c/include/utils/char_serial.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/home/gouraarav/myProjects/eflam/c/include/eflam_dfa.h:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c:
+/home/gouraarav/myProjects/eflam/c/include/eflam_mealy.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_sym_char.c:
 
 /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_spl_sym_char.h:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c:
 
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_engine/dfa_byte_proc.h:
 
@@ -2120,6 +1188,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_view.h:
 
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_elem/dfa_unit.h:
+
+/home/gouraarav/myProjects/eflam/c/include/eflam_dfa.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
@@ -2132,8 +1202,6 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 /home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/sym_tape_cell.h:
 
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_spl_state_char.h:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 
@@ -2177,6 +1245,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 
 /usr/include/alloca.h:
 
+/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_trans.c:
+
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_engine/dfa_stop_state_feed.h:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_engine/dfa_byte_proc.c:
@@ -2194,10 +1264,6 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_spl_state_char.c:
 
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_other_sym_insp.h:
-
-/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_str_test.h:
-
-/home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_state_type_insp.h:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c:
 
@@ -2221,27 +1287,23 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_map_view.h:
 
-/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c:
+/home/gouraarav/myProjects/eflam/c/src/utils/char_serial.c:
 
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c:
+/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_cur_state_insp.c:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_state_type_insp.c:
 
-/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_trans.c:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_out_insp.c:
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/home/gouraarav/myProjects/eflam/c/include/utils/char_serial.h:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_sym_pump_insp.c:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c:
 
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_map/dfa_add_sym.h:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_map/dfa_add_sym.c:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_set_state_out.c:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c:
 
 /home/gouraarav/myProjects/eflam/c/src/dfa/dfa_func/dfa_trans_state_insp.c:
 
@@ -2249,23 +1311,17 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 
 /home/gouraarav/myProjects/eflam/c/include/dfa/dfa_str_test.h:
 
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c:
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/add_cell_to_tape.h:
+
+/home/gouraarav/myProjects/eflam/c/src/test.c:
+
+/home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/sym_tape_ll.h:
 
 /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_create.h:
 
-/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h:
-
-/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_engine/mealy_byte_proc.h:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_erase.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c:
+/home/gouraarav/myProjects/eflam/c/include/utils/sym_tape/sym_tape_view.h:
 
 /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_ll.h:
 
@@ -2274,6 +1330,14 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_spl_state_char.h:
 
 /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_map_node.h:
+
+/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_elem/mealy_unit.h:
+
+/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_engine/mealy_byte_proc.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_erase.h:
 
 /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_cur_state_insp.h:
 
@@ -2285,6 +1349,12 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tap
 
 /home/gouraarav/myProjects/eflam/c/include/mealy/mealy_machine_view.h:
 
-/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_func/mealy_sym_pump_insp.h:
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c:
+/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_add_sym.h:
+
+/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_map/mealy_add_trans.h:
+
+/home/gouraarav/myProjects/eflam/c/include/dfa/dfa_func/dfa_state_type_insp.h:
+
+/home/gouraarav/myProjects/eflam/c/include/mealy/mealy_str_test.h:
