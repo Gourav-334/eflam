@@ -17,7 +17,7 @@
 
 /* Inspects and makes sure that every state produces an output. */
 
-bool mealy_state_out_insp(char *filepaths[], mealy target_mealy, bool debug)
+bool mealy_state_out_insp(mealy *target_mealy, bool debug)
 {
     /* Variables & constants */
 
@@ -30,13 +30,13 @@ bool mealy_state_out_insp(char *filepaths[], mealy target_mealy, bool debug)
 
     /* Checking which states don't contain any output. */
 
-    for (int i=0; i<target_mealy.total_states; i++)
+    for (int i=0; i<target_mealy->total_states; i++)
     {
-        if (((target_mealy.states)+i)->output==NULL)
+        if (((target_mealy->states)+i)->output==NULL)
         {
             printf(
                 "ERROR (%s):%d :: State \"%s\" has no output!\n",
-                file, __LINE__, ((target_mealy.states)+i)->name
+                file, __LINE__, ((target_mealy->states)+i)->name
             );
 
             exists_all = false;
@@ -45,7 +45,7 @@ bool mealy_state_out_insp(char *filepaths[], mealy target_mealy, bool debug)
         {
             printf(
                 "OK (%s):%d :: State \"%s\" has output \"%s\".\n",
-                file, __LINE__, ((target_mealy.states)+i)->name, ((target_mealy.states)+i)->output
+                file, __LINE__, ((target_mealy->states)+i)->name, ((target_mealy->states)+i)->output
             );
         }
     }

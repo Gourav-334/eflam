@@ -12,6 +12,8 @@
 #include "sym_tape_cell.h"
 #include "sym_tape_ll.h"
 
+#include <stdbool.h>            // Specifically for switching debugging mode
+
 
 
 

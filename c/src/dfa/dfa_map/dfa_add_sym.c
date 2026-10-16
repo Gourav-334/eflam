@@ -56,6 +56,8 @@ dfa_map_node *dfa_add_sym(dfa_map_ll *map, char *sym, bool debug)
             "ERROR (%s):%d :: Total nodes can\'t be less than %d, data corrupted!\n",
             file, __LINE__, 0
         );
+
+        return NULL;
     }
     else if (map->total_nodes>0)
     {
@@ -104,5 +106,5 @@ dfa_map_node *dfa_add_sym(dfa_map_ll *map, char *sym, bool debug)
 
     /* Returning address of the recently created node. */
 
-    return (new_node->next);
+    return new_node;
 }

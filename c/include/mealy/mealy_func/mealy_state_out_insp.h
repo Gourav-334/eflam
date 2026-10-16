@@ -25,8 +25,7 @@
 /* Inspects and makes sure that every state produces an output. */
 
 bool mealy_state_out_insp(
-    char *filepaths[],              // Path to all the target files
-    mealy target_mealy,             // Target Mealy
+    mealy *target_mealy,            // Target Mealy
     bool debug                      // Debugging mode (ON/OFF)
 );
 

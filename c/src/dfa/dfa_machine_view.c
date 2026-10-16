@@ -64,7 +64,11 @@ void dfa_machine_view(dfa target_dfa)
 
         printf("State name = \"%s\"\n", cur_state_addr->name);
         printf("Total transitions = %d\n", cur_state_addr->total_trans);
-        printf("ELSE transition = \"%s\"\n", ((target_dfa.states)+(cur_state_addr->else_trans))->name);
+        
+        if (cur_state_addr->else_trans>=0)
+        {
+            printf("ELSE transition = \"%s\"\n", ((target_dfa.states)+(cur_state_addr->else_trans))->name);
+        }
 
 
 

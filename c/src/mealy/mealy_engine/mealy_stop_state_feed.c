@@ -19,6 +19,21 @@ void mealy_stop_state_feed(int stop_state, char *filepath, int row, int column, 
 {
     switch (stop_state)
     {
+        case -17:
+            printf("ERROR (%s) :: %d:%d :: Only transition field operator can be added after state declaration!\n", filepath, row, column);
+            break;
+        
+
+        case -16:
+            printf("ERROR (%s) :: %d:%d :: Illegal character encountered when output enclosers about to close!\n", filepath, row, column);
+            break;
+        
+
+        case -15:
+            printf("ERROR (%s) :: %d:%d :: Illegal character encountered after output enclosers opened!\n", filepath, row, column);
+            break;
+
+
         case -14:
             printf("ERROR (%s) :: %d:%d :: After transition declaration the line must be either closed or new transition must be declared!\n", filepath, row, column);
             break;
@@ -75,7 +90,7 @@ void mealy_stop_state_feed(int stop_state, char *filepath, int row, int column, 
         
 
         case -3:
-            printf("ERROR (%s) :: %d:%d :: Only transition field operator can be added after state declaration!\n", filepath, row, column);
+            printf("ERROR (%s) :: %d:%d :: Only output enclosers can be added after state declaration!\n", filepath, row, column);
             break;
         
 
@@ -242,6 +257,36 @@ void mealy_stop_state_feed(int stop_state, char *filepath, int row, int column, 
 
         case 29:
             printf("ERROR (%s) :: %d:%d :: End of declaration punctuation wasn't added!\n", filepath, row, column);
+            break;
+        
+
+        case 30:
+            printf("ERROR (%s) :: %d:%d :: Output enclosers left unclosed after state name declaration!\n", filepath, row, column);
+            break;
+        
+
+        case 31:
+            printf("ERROR (%s) :: %d:%d :: State output left undefined after string enclosers were opened!\n", filepath, row, column);
+            break;
+        
+
+        case 32:
+            printf("ERROR (%s) :: %d:%d :: State output left undefined after string enclosers were opened!\n", filepath, row, column);
+            break;
+        
+
+        case 33:
+            printf("ERROR (%s) :: %d:%d :: Output enclosers left unclosed after state name declaration!\n", filepath, row, column);
+            break;
+        
+
+        case 34:
+            printf("ERROR (%s) :: %d:%d :: Line terminator not added after state declaration!\n", filepath, row, column);
+            break;
+        
+
+        case 35:
+            printf("ERROR (%s) :: %d:%d :: State output left undefined after string enclosers were opened!\n", filepath, row, column);
             break;
     }
 }

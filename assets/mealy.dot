@@ -44,7 +44,7 @@ digraph EFLAM_DFA
     q32 [label="q32", shape=circle, fillcolor=white];
     q33 [label="q33", shape=circle, fillcolor=white];
     q34 [label="q34", shape=circle, fillcolor=white];
-    q35 [label="q34", shape=circle, fillcolor=white];
+    q35 [label="q35", shape=circle, fillcolor=white];
 
 
 

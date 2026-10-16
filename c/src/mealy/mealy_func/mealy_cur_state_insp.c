@@ -157,6 +157,7 @@ bool mealy_cur_state_insp(
 
         /* Setting up state type. */
 
+        cur_state_addr -> output = NULL;
         cur_state_addr -> type[START_STATE] = 0;
         cur_state_addr -> type[ACCEPT_STATE] = 0;
 

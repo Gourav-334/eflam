@@ -3,7 +3,8 @@
 #include "../../../include/utils/sym_tape/add_cell_to_tape.h"
 
 #include <stdio.h>              // For using basic I/O functionalities
-#include <stdbool.h>            // Specifically for switching debugging mode
+#include <stdlib.h>             // For dynamic memory allocation
+#include <string.h>             // For copying & measuring length of string
 
 
 
@@ -55,6 +56,8 @@ sym_tape_cell *add_cell_to_tape(sym_tape_ll *tape, char *sym, bool debug)
             "ERROR (%s):%d :: Total cells can\'t be less than %d, data corrupted!\n",
             file, __LINE__, 0
         );
+
+        return NULL;
     }
     else if (tape->total_cells>0)
     {
@@ -102,5 +105,5 @@ sym_tape_cell *add_cell_to_tape(sym_tape_ll *tape, char *sym, bool debug)
 
     /* Returning address of the recently created node. */
 
-    return (new_cell->next);
+    return new_cell;
 }

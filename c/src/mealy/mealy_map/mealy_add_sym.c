@@ -56,6 +56,8 @@ mealy_map_node *mealy_add_sym(mealy_map_ll *map, char *sym, bool debug)
             "ERROR (%s):%d :: Total nodes can\'t be less than %d, data corrupted!\n",
             file, __LINE__, 0
         );
+
+        return NULL;
     }
     else if (map->total_nodes>0)
     {
@@ -104,5 +106,5 @@ mealy_map_node *mealy_add_sym(mealy_map_ll *map, char *sym, bool debug)
 
     /* Returning address of the recently created node. */
 
-    return (new_node->next);
+    return new_node;
 }

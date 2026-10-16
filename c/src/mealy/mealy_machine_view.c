@@ -63,8 +63,13 @@ void mealy_machine_view(mealy target_mealy)
 
 
         printf("State name = \"%s\"\n", cur_state_addr->name);
+        printf("Output symbol = \"%s\"\n", cur_state_addr->output);
         printf("Total transitions = %d\n", cur_state_addr->total_trans);
-        printf("ELSE transition = \"%s\"\n", ((target_mealy.states)+(cur_state_addr->else_trans))->name);
+        
+        if (cur_state_addr->else_trans>=0)
+        {
+            printf("ELSE transition = \"%s\"\n", ((target_mealy.states)+(cur_state_addr->else_trans))->name);
+        }
 
 
 

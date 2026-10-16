@@ -15,9 +15,9 @@
 /* Node that contains a Mealy mapping. */
 
 typedef struct mealy_map_node {
-    char *sym;                      // Symbol string
-    int trans;                      // Transition state index
-    mealy_map_node *next;           // Pointer to next node
+    char *sym;                              // Symbol string
+    int trans;                              // Transition state index
+    struct mealy_map_node *next;            // Pointer to next node
 } mealy_map_node;
 
 

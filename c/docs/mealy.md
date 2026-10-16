@@ -251,7 +251,7 @@ void mealy_stop_state_feed(
 - NOTE: State feedbacks might vary as per EFLAM version.
 
 
-### 2.13 <u>Mealy String Tester</u>://
+### 2.13 <u>Mealy String Tester</u>:
 
 ```c
 // mealy/mealy_str_test.c
@@ -274,7 +274,7 @@ mealy_state *mealy_str_test(
 6. Return the address of stop state at last.
 
 
-### 2.14 <u>Mealy Machine Viewer</u>://
+### 2.14 <u>Mealy Machine Viewer</u>:
 
 ```c
 // mealy/mealy_machine_view.c
@@ -287,7 +287,7 @@ void mealy_machine_view(
 
 1. First display the total number of transitions for DFA.
 2. Then display the name of START state with its output.
-3. For every state of DFA, list the transitions in format of `[INDEX] SYMBOL -> STATE (OUTPUT)`.
+3. For every state of DFA, list the transitions in format of `[INDEX] SYMBOL -> STATE` with output symbol mentioned.
 4. Then display the ELSE state transition with its output.
 
 
@@ -399,7 +399,7 @@ mealy *mealy_erase(
 9. Free the Mealy itself.
 
 
-### 2.21 <u>State Output Inspector</u>:
+### 2.21 <u>Mealy State Output Inspector</u>:
 
 ```c
 // mealy/mealy_func/mealy_state_out_insp.c
@@ -422,7 +422,8 @@ bool mealy_state_out_insp(
 /* Pushes a string as output to particular Mealy machine state. */
 
 bool mealy_set_state_out(
-    mealy_state *cur_state_addr,        // Current state address
+    mealy *target_mealy,
+    mealy_state cur_state_index,        // Current state index
     char *output,                       // Output string
     bool debug                          // Debugging mode (ON/OFF)
 );

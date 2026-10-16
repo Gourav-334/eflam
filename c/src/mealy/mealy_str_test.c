@@ -2,6 +2,7 @@
 
 #include "../../include/mealy/mealy_str_test.h"
 #include "../../include/utils/sym_tape/sym_tape_ll.h"
+#include "../../include/utils/sym_tape/add_cell_to_tape.h"
 
 #include <stdio.h>              // To get access to basic I/O functions
 #include <string.h>             // To compare string against each other
@@ -34,7 +35,7 @@ mealy_state *mealy_str_test(mealy target_mealy, char *symbols[], sym_tape_ll *ta
 
     if (target_mealy.start_state<0)
     {
-        printf("ERROR (%s):%d :: mealy at %p does not contain a start state!\n", file, __LINE__, (void*)&target_mealy);
+        printf("ERROR (%s):%d :: Mealy at %p does not contain a start state!\n", file, __LINE__, (void*)&target_mealy);
         return NULL;
     }
     else if (debug==true)
@@ -56,7 +57,30 @@ mealy_state *mealy_str_test(mealy target_mealy, char *symbols[], sym_tape_ll *ta
 
     for (int i=0; i<total_sym; i++)
     {
-        trav = cur_state_addr -> map.head;      // Starting search from first transition
+        /* Adding output to the tape. */
+
+        if(add_cell_to_tape(tape, cur_state_addr->output, debug)==NULL)
+        {
+            printf(
+                "ERROR (%s):%d :: Cell with symbol \"%s\" failed to be added!\n",
+                file, __LINE__, cur_state_addr->output
+            );
+
+            return NULL;
+        }
+        else if (debug==true)
+        {
+            printf(
+                "OK (%s):%d :: Cell with symbol \"%s\" added successfully.\n",
+                file, __LINE__, cur_state_addr->output
+            );
+        }
+
+
+
+        /* Starting search from first transition. */
+
+        trav = cur_state_addr -> map.head;
 
 
 
@@ -99,6 +123,8 @@ mealy_state *mealy_str_test(mealy target_mealy, char *symbols[], sym_tape_ll *ta
                 }
                 else
                 {
+                    /* Updating address to next state. */
+
                     next_state_addr = (target_mealy.states) + (cur_state_addr -> else_trans);
 
                     if (debug==true)
@@ -127,6 +153,29 @@ mealy_state *mealy_str_test(mealy target_mealy, char *symbols[], sym_tape_ll *ta
     if (debug==true)
     {
         printf("STAT (%s):%d :: Final State = \"%s\"\n", file, __LINE__, cur_state_addr->name);
+    }
+
+
+
+
+
+    /* Adding final state output to tape. */
+
+    if(add_cell_to_tape(tape, cur_state_addr->output, debug)==NULL)
+    {
+        printf(
+            "ERROR (%s):%d :: Cell with symbol \"%s\" failed to be added!\n",
+            file, __LINE__, cur_state_addr->output
+        );
+
+        return NULL;
+    }
+    else if (debug==true)
+    {
+        printf(
+            "OK (%s):%d :: Cell with symbol \"%s\" added successfully.\n",
+            file, __LINE__, cur_state_addr->output
+        );
     }
 
 

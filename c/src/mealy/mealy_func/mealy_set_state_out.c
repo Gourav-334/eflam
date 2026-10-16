@@ -3,6 +3,8 @@
 #include "../../../include/mealy/mealy_func/mealy_set_state_out.h"
 
 #include <stdio.h>              // To access basic I/O functionalities
+#include <stdlib.h>             // To dynamically allocate memory
+#include <string.h>             // To copy & measure string length
 
 
 
@@ -15,11 +17,12 @@
 
 /* Pushes a string as output to particular Mealy machine state. */
 
-bool mealy_set_state_out(mealy_state *cur_state_addr, char *output, bool debug)
+bool mealy_set_state_out(mealy *target_mealy, int cur_state_index, char *output, bool debug)
 {
     /* Variables & constants */
 
     char *file = "mealy_set_state_out.c";
+    mealy_state *cur_state_addr = (target_mealy -> states) + cur_state_index;
 
 
 
@@ -85,6 +88,23 @@ bool mealy_set_state_out(mealy_state *cur_state_addr, char *output, bool debug)
     /* Copying the input to state's output. */
 
     strcpy(cur_state_addr->output, output);
+
+
+    /* Sending final debug information to user. */
+
+    if (debug==true)
+    {
+        printf(
+            "STAT (%s):%d :: Output for state \"%s\" is set as \"%s\".\n",
+            file, __LINE__, cur_state_addr->name, cur_state_addr->output
+        );
+    }
+
+
+
+
+
+    /* Returning true for successful completion of operations. */
 
     return true;
 }

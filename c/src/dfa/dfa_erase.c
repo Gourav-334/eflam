@@ -82,6 +82,7 @@ dfa *dfa_erase(dfa *target_dfa, bool debug)
     /* Freeing pointer members inside the DFA. */
 
     free(target_dfa->states);
+    target_dfa -> total_states = 0;
 
 
 

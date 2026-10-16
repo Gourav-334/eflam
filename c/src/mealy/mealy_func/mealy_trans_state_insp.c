@@ -155,6 +155,7 @@ bool mealy_trans_state_insp(
 
         /* Setting up state type. */
 
+        trans_state_addr -> output = NULL;
         trans_state_addr -> type[START_STATE] = 0;
         trans_state_addr -> type[ACCEPT_STATE] = 0;
 

@@ -75,6 +75,9 @@ mealy *mealy_erase(mealy *target_mealy, bool debug)
 
         if (((target_mealy->states)+i)->name!=NULL)
             free(((target_mealy->states)+i)->name);
+        
+        else if (((target_mealy->states)+i)->output!=NULL)
+            free(((target_mealy->states)+i)->output);
     }
 
 
@@ -82,6 +85,7 @@ mealy *mealy_erase(mealy *target_mealy, bool debug)
     /* Freeing pointer members inside the mealy. */
 
     free(target_mealy->states);
+    target_mealy -> total_states = 0;
 
 
 

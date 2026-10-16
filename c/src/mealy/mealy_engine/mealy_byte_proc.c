@@ -9,6 +9,8 @@
 #include "../../../include/mealy/mealy_func/mealy_sym_pump_insp.h"
 #include "../../../include/mealy/mealy_func/mealy_trans_state_insp.h"
 #include "../../../include/mealy/mealy_func/mealy_other_sym_insp.h"
+#include "../../../include/mealy/mealy_func/mealy_state_out_insp.h"
+#include "../../../include/mealy/mealy_func/mealy_set_state_out.h"
 #include "../../../include/mealy/mealy_create.h"
 #include "../../../include/mealy/mealy_machine_view.h"
 #include "../../../include/mealy/mealy_erase.h"
@@ -452,7 +454,7 @@ int mealy_byte_proc(mealy *target_mealy, char *filepath, char *fstream, bool deb
 
 
             case 31:
-                if (fstream[i]=='\'') {fine = false; state = -16;}
+                if (fstream[i]=='\'') {state = -16; fine = false;}
                 else if (fstream[i]=='\\') {state = 35;}
                 else
                 {
@@ -466,7 +468,13 @@ int mealy_byte_proc(mealy *target_mealy, char *filepath, char *fstream, bool deb
 
 
             case 32:
-                if (fstream[i]=='\'') {state = 33;}
+                if (fstream[i]=='\'')
+                {
+                    state = 33;
+
+                    fine = mealy_set_state_out(target_mealy, cur_state_index, output, debug);
+                    free(output); output_len = 0;
+                }
                 else if (fstream[i]=='\\') {state = 35;}
                 else
                 {
@@ -482,7 +490,7 @@ int mealy_byte_proc(mealy *target_mealy, char *filepath, char *fstream, bool deb
             case 33:
                 if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 33;}
                 else if (fstream[i]==']') {state = 34;}
-                else {state = -16;}
+                else {state = -16; fine = false;}
 
                 break;
             
@@ -493,7 +501,7 @@ int mealy_byte_proc(mealy *target_mealy, char *filepath, char *fstream, bool deb
                 else if (fstream[i]=='{') {state = 6;}
                 else if (fstream[i]=='|') {state = 13;}
                 else if (fstream[i]==' ' || fstream[i]=='\n' || fstream[i]=='\t') {state = 34;}
-                else {state = -17;}
+                else {state = -17; fine = false;}
             
                 break;
             
@@ -508,6 +516,12 @@ int mealy_byte_proc(mealy *target_mealy, char *filepath, char *fstream, bool deb
         }
 
 
+
+
+
+        /* Checking if each state contains an output. */
+
+        //if (fine==true) {fine = mealy_state_out_insp(target_mealy, debug);}
 
 
 
@@ -541,6 +555,15 @@ int mealy_byte_proc(mealy *target_mealy, char *filepath, char *fstream, bool deb
 
 
     /* Checking for where the machine stops at last. */
+
+    if (mealy_state_out_insp(target_mealy, debug)==false)
+    {
+        mealy_erase(target_mealy, debug);
+        
+        printf("ERROR (%s):%d :: Halting processing for an issue, keep debug mode ON to know it in details.\n", file, __LINE__);
+
+        return state;
+    }
 
     mealy_stop_state_feed(state, filepath, row, column, debug);
 
