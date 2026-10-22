@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_MACHINE_VIEW_H
-    #define MEALY_MACHINE_VIEW_H
+#ifndef MOORE_MACHINE_VIEW_H
+    #define MOORE_MACHINE_VIEW_H
 
 
 

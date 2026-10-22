@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_ADD_TRANS_H
-    #define MEALY_ADD_TRANS_H
+#ifndef MOORE_ADD_TRANS_H
+    #define MOORE_ADD_TRANS_H
 
 
 

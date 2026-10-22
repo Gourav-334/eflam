@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_STR_TESTER_H
-    #define MEALY_STR_TESTER_H
+#ifndef MOORE_STR_TESTER_H
+    #define MOORE_STR_TESTER_H
 
 
 

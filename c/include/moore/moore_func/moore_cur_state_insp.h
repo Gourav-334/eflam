@@ -1,7 +1,7 @@
 /* Including guards to avoid multiple inclusions. */
 
-#ifndef MEALY_CUR_STATE_INSP_H
-    #define MEALY_CUR_STATE_INSP_H
+#ifndef MOORE_CUR_STATE_INSP_H
+    #define MOORE_CUR_STATE_INSP_H
 
 
 

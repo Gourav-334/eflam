@@ -1,7 +1,7 @@
 /* Setting guards to avoid multiple inclusions. */
 
-#ifndef MEALY_STATE_H
-    #define MEALY_STATE_H
+#ifndef MOORE_STATE_H
+    #define MOORE_STATE_H
 
 #define START_STATE 0           // Index for START state configuration.
 #define ACCEPT_STATE 1          // Index for ACCEPT state configuration.

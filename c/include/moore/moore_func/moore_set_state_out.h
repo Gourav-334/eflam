@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_SET_STATE_OUT_H
-    #define MEALY_SET_STATE_OUT_H
+#ifndef MOORE_SET_STATE_OUT_H
+    #define MOORE_SET_STATE_OUT_H
 
 
 

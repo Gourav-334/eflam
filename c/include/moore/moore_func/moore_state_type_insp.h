@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusion. */
 
-#ifndef MEALY_STATE_TYPE_INSP_H
-    #define MEALY_STATE_TYPE_INSP_H
+#ifndef MOORE_STATE_TYPE_INSP_H
+    #define MOORE_STATE_TYPE_INSP_H
 
 
 

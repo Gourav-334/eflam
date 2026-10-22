@@ -1,7 +1,7 @@
 /* Setting guards to avoid multiple inclusions. */
 
-#ifndef MEALY_MACHINE_H
-    #define MEALY_MACHINE_H
+#ifndef MOORE_MACHINE_H
+    #define MOORE_MACHINE_H
 
 
 

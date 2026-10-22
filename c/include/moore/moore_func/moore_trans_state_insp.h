@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_TRANS_STATE_INSP_H
-    #define MEALY_TRANS_STATE_INSP_H
+#ifndef MOORE_TRANS_STATE_INSP_H
+    #define MOORE_TRANS_STATE_INSP_H
 
 
 

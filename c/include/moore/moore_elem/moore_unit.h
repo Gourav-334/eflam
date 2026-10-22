@@ -1,7 +1,7 @@
 /* Setting guards to avoid multiple inclusions. */
 
-#ifndef MEALY_UNIT_H
-    #define MEALY_UNIT_H
+#ifndef MOORE_UNIT_H
+    #define MOORE_UNIT_H
 
 
 

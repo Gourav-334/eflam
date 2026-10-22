@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusion. */
 
-#ifndef MEALY_ADD_SYM_H
-    #define MEALY_ADD_SYM_H
+#ifndef MOORE_ADD_SYM_H
+    #define MOORE_ADD_SYM_H
 
 
 

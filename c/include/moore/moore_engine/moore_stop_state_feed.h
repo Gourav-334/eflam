@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_STOP_STATE_FEED_H
-    #define MEALY_STOP_STATE_FEED_H
+#ifndef MOORE_STOP_STATE_FEED_H
+    #define MOORE_STOP_STATE_FEED_H
 
 
 

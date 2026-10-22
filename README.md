@@ -35,15 +35,48 @@
 │   ├── dfa_map/
 |   |   ├── dfa_add_sym
 |   |   ├── dfa_add_trans
+|   |   ├── moore_map_ll
+|   |   ├── moore_map_node
 |   |   └── dfa_map_view
 |   |
 |   ├── dfa_create
+|   ├── dfa_erase
 |   ├── dfa_machine_view
 |   └── dfa_str_test
 |
 ├── nfa/
 |
 ├── moore/
+│   ├── moore_elem/
+|   |   ├── moore_state
+|   |   └── moore_unit
+|   |
+|   ├── moore_engine/
+|   |   ├── moore_byte_proc
+|   |   └── moore_stop_state_feed
+|   |
+│   ├── moore_func/
+|   |   ├── moore_cur_state_insp
+|   |   ├── moore_other_sym_insp
+|   |   ├── moore_set_state_out
+|   |   ├── moore_spl_state_char
+|   |   ├── moore_spl_sym_char
+|   |   ├── moore_state_out_insp
+|   |   ├── moore_state_type_insp
+|   |   ├── moore_sym_pump_insp
+|   |   └── moore_trans_state_insp
+|   |
+│   ├── moore_map/
+|   |   ├── moore_add_sym
+|   |   ├── moore_add_trans
+|   |   ├── moore_map_ll
+|   |   ├── moore_map_node
+|   |   └── moore_map_view
+|   |
+|   ├── moore_create
+|   ├── moore_erase
+|   ├── moore_machine_view
+|   └── moore_str_test
 |
 ├── mealy/
 |
@@ -56,6 +89,12 @@
 ├── turing/
 │
 ├── utils/
+│   ├── sym_tape/
+|   |   ├── add_cell_to_tape
+|   |   ├── sym_tape_cell
+|   |   ├── sym_tape_ll
+|   |   └── sym_tape_view
+|   |
 |   ├── char_to_str_pump
 |   └── str_to_arr_pump
 |

@@ -18,5 +18,3 @@
 #include "dfa/dfa_erase.h"
 #include "dfa/dfa_machine_view.h"
 #include "dfa/dfa_str_test.h"
-#include "utils/char_to_str_pump.h"
-#include "utils/char_serial.h"

@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_CREATE_H
-    #define MEALY_CREATE_H
+#ifndef MOORE_CREATE_H
+    #define MOORE_CREATE_H
 
 
 

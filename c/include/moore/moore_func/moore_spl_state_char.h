@@ -1,7 +1,7 @@
 /* Including guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_SPL_STATE_CHAR_H
-    #define MEALY_SPL_STATE_CHAR_H
+#ifndef MOORE_SPL_STATE_CHAR_H
+    #define MOORE_SPL_STATE_CHAR_H
 
 
 

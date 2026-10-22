@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_SYM_PUMP_INSP_H
-    #define MEALY_SYM_PUMP_INSP_H
+#ifndef MOORE_SYM_PUMP_INSP_H
+    #define MOORE_SYM_PUMP_INSP_H
 
 
 

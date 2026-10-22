@@ -17,7 +17,7 @@ Implementation of the automata machine is made in form of graph using structures
 ## 2. Implementation
 
 
-### 2.1 <u>Moore State (Structure)</u>://
+### 2.1 <u>MOORE State (Structure)</u>://
 
 ```c
 // moore/moore_ops/moore_units.h
@@ -34,28 +34,28 @@ typedef struct moore_state {
 ```
 
 
-### 2.2 <u>Moore (Structure)</u>:
+### 2.2 <u>MOORE (Structure)</u>:
 
 ```c
 // moore/moore_ops/moore_units.h
-/* Structure representing whole Moore, enclosing its states. */
+/* Structure representing whole MOORE, enclosing its states. */
 
 typedef struct moore {
-    int start_state;                        // Index of initial/start state of the Moore
-    int total_states;                       // Number of states that the Moore contains
-    struct moore_state *states;             // Array of states that Moore encloses
+    int start_state;                        // Index of initial/start state of the MOORE
+    int total_states;                       // Number of states that the MOORE contains
+    struct moore_state *states;             // Array of states that MOORE encloses
 } moore;
 ```
 
 
-### 2.3 <u>Create Moore</u>:
+### 2.3 <u>Create MOORE</u>:
 
 ```c
 // moore/moore_create.c
 /* Used for loading contents of target EFLAM files into the buffer. */
 
 bool moore_create(
-    moore *target_moore,        // Target Moore for loading the language.
+    moore *target_moore,        // Target MOORE for loading the language.
     char *filepaths[],          // Array of file paths passed linearly.
     int file_count,             // Total number of files connected to connector file.
     bool debug                  // Debugging option for getting runtime information.
@@ -63,20 +63,20 @@ bool moore_create(
 ```
 
 1. As per the number of files, in loop, load a filestream into buffer.
-2. Pass the buffer & target Moore into the Moore state machine.
+2. Pass the buffer & target MOORE into the MOORE state machine.
 3. Repeat.
 
 
-### 2.4 <u>Moore Byte Processor (Function)</u>:
+### 2.4 <u>MOORE Byte Processor (Function)</u>:
 
 ```c
 // moore/moore_engine/moore_byte_proc.h
-/* Checks the Moore as per user given rules. */
+/* Checks the MOORE as per user given rules. */
 
 int moore_byte_proc(
-    moore *target_moore,            // Address to target Moore structure
+    moore *target_moore,            // Address to target MOORE structure
     char *filepath,                 // Name of the particular file/ its path
-    char *fstream,                  // Pointer to fstream containing Moore rules
+    char *fstream,                  // Pointer to fstream containing MOORE rules
     bool debug                      // Tells if debugging logs are required
 );
 ```
@@ -87,7 +87,7 @@ int moore_byte_proc(
 4. If not, return `-1`.
 
 
-### 2.5 <u>Moore Special State Character Decoder</u>:
+### 2.5 <u>MOORE Special State Character Decoder</u>:
 
 ```c
 // moore/moore_func/moore_spl_state_char.c
@@ -108,7 +108,7 @@ char moore_spl_state_char(
 7. Else return whatever the character is.
 
 
-### 2.6 <u>Moore Special Symbol Character Decoder</u>:
+### 2.6 <u>MOORE Special Symbol Character Decoder</u>:
 
 ```c
 // moore/moore_func/moore_spl_sym_char.c
@@ -129,21 +129,21 @@ char moore_spl_sym_char(
 7. Else return whatever the character is.
 
 
-### 2.7 <u>Moore Current State Inspector</u>:
+### 2.7 <u>MOORE Current State Inspector</u>:
 
 ```c
 // moore/moore_func/moore_cur_state_insp.c
 /* Used for creating a state if it doesn't exist yet. */
 
 bool moore_cur_state_insp(
-    moore *target_moore,                        // Target Moore machine
+    moore *target_moore,                        // Target MOORE machine
     char *cur_state_name,                       // Current state name
     int *cur_state_index,                       // Relative index of current state
     bool debug                                  // Debugging mode (ON/OFF)
 );
 ```
 
-1. Check if the current state already exists in Moore.
+1. Check if the current state already exists in MOORE.
 2. If existing:
     3. Don't make a new state & continue with existing one.
 4. Else if not existing:
@@ -151,14 +151,14 @@ bool moore_cur_state_insp(
     6. Set all the initial attributes to this new state.
 
 
-### 2.8 <u>Moore State Type Inspector</u>:
+### 2.8 <u>MOORE State Type Inspector</u>:
 
 ```c
 // moore/moore_func/moore_state_type_insp.c
 /* Used for checking if the state types are valid, and add valid ones. */
 
 bool moore_state_type_insp(
-    moore *target_moore,                    // Target Moore
+    moore *target_moore,                    // Target MOORE
     int cur_state_index,                    // Relative index of current state
     char *type,                             // String showing state type
     bool debug                              // Debugging mode (ON/OFF)
@@ -171,14 +171,14 @@ bool moore_state_type_insp(
     4. Otherwise throw error.
 
 
-### 2.9 <u>Moore Symbol Pump Inspector</u>:
+### 2.9 <u>MOORE Symbol Pump Inspector</u>:
 
 ```c
 // moore/moore_func/moore_sym_pump_insp.c
 /* Used for checking if a supplied symbol already exists & adding if not. */
 
 bool moore_sym_pump_insp(
-    moore *target_moore,                    // Target Moore
+    moore *target_moore,                    // Target MOORE
     int cur_state_index,                    // Relative index of current state
     char *sym,                              // String representing symbol
     int *total_sym,                         // Count of total symbols for the transition
@@ -191,14 +191,14 @@ bool moore_sym_pump_insp(
 3. If not, pump it to the array of symbols for the state.
 
 
-### 2.10 <u>Moore Transition State Inspector</u>:
+### 2.10 <u>MOORE Transition State Inspector</u>:
 
 ```c
 // moore/moore_func/moore_trans_state_insp.c
 /* Checks if a transition state exists or needs to be created. */
 
 bool moore_trans_state_insp(
-    moore *target_moore,                // Target Moore
+    moore *target_moore,                // Target MOORE
     int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     int *total_sym,                     // Total symbols to be pushed
@@ -212,14 +212,14 @@ bool moore_trans_state_insp(
 4. And then connect it to the current state's transition list as per number of symbols supplied.
 
 
-### 2.11 <u>Moore Other Symbol Inspector</u>:
+### 2.11 <u>MOORE Other Symbol Inspector</u>:
 
 ```c
 // moore/moore_func/moore_other_sym_insp.c
 /* Sets transition to a state for the remaining symbols. */
 
 bool moore_other_sym_insp (
-    moore *target_moore,                // Target Moore
+    moore *target_moore,                // Target MOORE
     int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     bool debug                          // Debugging mode (ON/OFF)
@@ -233,7 +233,7 @@ bool moore_other_sym_insp (
         5. And then add its address as ELSE transition for current state.
 
 
-### 2.12 <u>Moore Stop State Feedback</u>:
+### 2.12 <u>MOORE Stop State Feedback</u>:
 
 ```c
 // moore/moore_func/moore_stop_state_feed.c
@@ -251,14 +251,14 @@ void moore_stop_state_feed(
 - NOTE: State feedbacks might vary as per EFLAM version.
 
 
-### 2.13 <u>Moore String Tester</u>:
+### 2.13 <u>MOORE String Tester</u>:
 
 ```c
 // moore/moore_str_test.c
-/* Passes a string through Moore byte processor to check where it stops. */
+/* Passes a string through MOORE byte processor to check where it stops. */
 
 moore_state *moore_str_test(
-    moore target_moore,             // Target Moore
+    moore target_moore,             // Target MOORE
     char *symbols[],                // Array of strings
     sym_tape_ll *tape,              // Tape to write output on
     int total_sym,                  // Total number of strings
@@ -274,14 +274,14 @@ moore_state *moore_str_test(
 6. Return the address of stop state at last.
 
 
-### 2.14 <u>Moore Machine Viewer</u>:
+### 2.14 <u>MOORE Machine Viewer</u>:
 
 ```c
 // moore/moore_machine_view.c
-/* Views the complete Moore at a given instant. */
+/* Views the complete MOORE at a given instant. */
 
 void moore_machine_view(
-    moore target_moore             // Target Moore
+    moore target_moore             // Target MOORE
 );
 ```
 
@@ -291,11 +291,11 @@ void moore_machine_view(
 4. Then display the ELSE state transition with its output.
 
 
-### 2.15 <u>Moore Map Node (Structure)</u>:
+### 2.15 <u>MOORE Map Node (Structure)</u>:
 
 ```c
 // moore/moore_map/moore_map_node.h
-/* Node that contains a Moore mapping. */
+/* Node that contains a MOORE mapping. */
 
 typedef struct moore_map_node {
     char *sym;                      // Symbol string
@@ -305,11 +305,11 @@ typedef struct moore_map_node {
 ```
 
 
-### 2.16 <u>Moore Map Linked List (Structure)</u>:
+### 2.16 <u>MOORE Map Linked List (Structure)</u>:
 
 ```c
 // moore/moore_map/moore_map_ll.h
-/* Linked list that maps Moore transitions. */
+/* Linked list that maps MOORE transitions. */
 
 typedef struct moore_map_ll {
     struct moore_map_node *head;         // Pointer to head of linked list
@@ -319,14 +319,14 @@ typedef struct moore_map_ll {
 ```
 
 
-### 2.17 <u>Moore Add Symbol</u>
+### 2.17 <u>MOORE Add Symbol</u>
 
 ```c
 // moore/moore_map/moore_add_sym.c
-/* Adds a node with symbol to the Moore map. */
+/* Adds a node with symbol to the MOORE map. */
 
 moore_map_node *moore_add_sym(
-    moore_map_ll *map,          // Address to Moore map linked list
+    moore_map_ll *map,          // Address to MOORE map linked list
     char *sym,                  // Symbol string to add
     bool debug                  // Debugging mode (ON/OFF)
 );
@@ -338,7 +338,7 @@ moore_map_node *moore_add_sym(
 4. Return the address to newly created node now.
 
 
-### 2.18 <u>Moore Map Viewer</u>:
+### 2.18 <u>MOORE Map Viewer</u>:
 
 ```c
 // moore/moore_map/moore_map_view.c
@@ -354,7 +354,7 @@ bool moore_map_view(
 3. Otherwise display the symbol and transition index that every node contains.
 
 
-### 2.19 <u>Moore Add Transition</u>:
+### 2.19 <u>MOORE Add Transition</u>:
 
 ```c
 // moore/moore_map/moore_add_trans.c
@@ -376,50 +376,50 @@ moore_map_node *moore_add_trans(
 5. Fill every node from there to finish with the index.
 
 
-### 2.20 <u>Moore Eraser</u>://
+### 2.20 <u>MOORE Eraser</u>://
 
 ```c
 // moore/moore_eraser.c
-/* Erases everything related to the particular Moore. */
+/* Erases everything related to the particular MOORE. */
 
 moore *moore_erase(
-    moore *target_moore,            // Target Moore
+    moore *target_moore,            // Target MOORE
     bool debug                      // Debugging mode (ON/OFF)
 );
 ```
 
-1. For every state in Moore:
+1. For every state in MOORE:
     2. For every transition's map node:
         3. Copy address to next node to a buffer pointer.
         4. Free the current node.
         5. Move to next node using the buffer pointer.
     6. Then free all members inside the state.
     7. Free the state.
-8. Free all the members inside the Moore.
-9. Free the Moore itself.
+8. Free all the members inside the MOORE.
+9. Free the MOORE itself.
 
 
-### 2.21 <u>Moore State Output Inspector</u>:
+### 2.21 <u>MOORE State Output Inspector</u>:
 
 ```c
 // moore/moore_func/moore_state_out_insp.c
 /* Inspects and makes sure that every state produces an output. */
 
 bool moore_state_out_insp(
-    moore target_moore,             // Target Moore
+    moore target_moore,             // Target MOORE
     bool debug                      // Debugging mode (ON/OFF)
 );
 ```
 
-1. Move through all the states of the Moore machine and check if they contain output.
+1. Move through all the states of the MOORE machine and check if they contain output.
 2. Produce error for every state that doesn't contain the output.
 
 
-### 2.22 <u>Moore Set State Output</u>:
+### 2.22 <u>MOORE Set State Output</u>:
 
 ```c
 // moore/moore_func/moore_set_state_out.c
-/* Pushes a string as output to particular Moore machine state. */
+/* Pushes a string as output to particular MOORE machine state. */
 
 bool moore_set_state_out(
     moore *target_moore,
@@ -455,10 +455,10 @@ $5$ ['BRACKET_CLOSE'] {'A'} | ('\n')$0$, (' ','\t')$5$, (@)$-5$;
 ## 4. Special Notes
 
 
-### 4.1 <u>EFLAM DFA Code For Moore</u>:
+### 4.1 <u>EFLAM DFA Code For MOORE</u>:
 
 ```eflam
-# Bootstrapped code for EFLAM's Moore machine.
+# Bootstrapped code for EFLAM's MOORE machine.
 
 $0$ {'S','A'} | (' ','\n','\t')$0$, ('#')$1$, ('$')$2$, (@)$-1$;
 $1$ {'A'} | ('\n')$0$, (@)$1$;

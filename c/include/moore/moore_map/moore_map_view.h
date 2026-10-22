@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_MAP_VIEW_H
-    #define MEALY_MAP_VIEW_H
+#ifndef MOORE_MAP_VIEW_H
+    #define MOORE_MAP_VIEW_H
 
 
 

@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_ERASE_H
-    #define MEALY_ERASE_H
+#ifndef MOORE_ERASE_H
+    #define MOORE_ERASE_H
 
 
 

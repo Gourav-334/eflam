@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_OUT_INSP_H
-    #define MEALY_OUT_INSP_H
+#ifndef MOORE_OUT_INSP_H
+    #define MOORE_OUT_INSP_H
 
 
 

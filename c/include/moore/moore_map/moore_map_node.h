@@ -1,7 +1,7 @@
 /* Guard macros to avoid multiple inclusions. */
 
-#ifndef MEALY_MAP_NODE_H
-    #define MEALY_MAP_NODE_H
+#ifndef MOORE_MAP_NODE_H
+    #define MOORE_MAP_NODE_H
 
 
 
