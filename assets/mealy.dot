@@ -39,6 +39,13 @@ digraph EFLAM_DFA
     q27 [label="q27", shape=circle, fillcolor=white];
     q28 [label="q28", shape=circle, fillcolor=white];
     q29 [label="q29", shape=circle, fillcolor=white];
+    q30 [label="q30", shape=circle, fillcolor=white];
+    q31 [label="q31", shape=circle, fillcolor=white];
+    q32 [label="q32", shape=circle, fillcolor=white];
+    q33 [label="q33", shape=circle, fillcolor=white];
+    q34 [label="q34", shape=circle, fillcolor=white];
+    q35 [label="q35", shape=circle, fillcolor=white];
+    q36 [label="q36", shape=circle, fillcolor=white];
 
 
 
@@ -102,9 +109,8 @@ digraph EFLAM_DFA
     q22 -> q23 [label="\\", fontcolor=black];
     q22 -> q24 [label="$", fontcolor=black];
     q23 -> q22 [label="ELSE", fontcolor=black];
-    q24 -> q0 [label=";", fontcolor=black];
-    q24 -> q13 [label=",", fontcolor=black];
     q24 -> q24 [label=" ,\\n,\\t", fontcolor=black];
+    q24 -> q30 [label="[", fontcolor=black];
     q25 -> q25 [label=" ,\\n,\\t", fontcolor=black];
     q25 -> q26 [label="$", fontcolor=black];
     q26 -> q27 [label="ELSE", fontcolor=black];
@@ -114,6 +120,21 @@ digraph EFLAM_DFA
     q27 -> q29 [label="$", fontcolor=black];
     q28 -> q27 [label="ELSE", fontcolor=black];
     q29 -> q29 [label=" ,\\n,\\t", fontcolor=black];
-    q29 -> q0 [label=";", fontcolor=black];
-    q29 -> q13 [label=",", fontcolor=black];
+    q29 -> q30 [label="[", fontcolor=black];
+    q30 -> q30 [label=" ,\\n,\\t", fontcolor=black];
+    q30 -> q31 [label="\'", fontcolor=black];
+    q30 -> q35 [label="C", fontcolor=black];
+    q31 -> q32 [label="ELSE", fontcolor=black];
+    q32 -> q32 [label="ELSE", fontcolor=black];
+    q32 -> q33 [label="\'", fontcolor=black];
+    q33 -> q33 [label=" ,\\n,\\t", fontcolor=black];
+    q33 -> q34 [label="]", fontcolor=black];
+    q34 -> q0 [label=";", fontcolor=black];
+    q34 -> q13 [label=",", fontcolor=black];
+    q34 -> q34 [label=" ,\\n,\\t", fontcolor=black];
+    q35 -> q35 [label=" ,\\n,\\t", fontcolor=black];
+    q35 -> q36 [label="]", fontcolor=black];
+    q36 -> q36 [label=" ,\\n,\\t", fontcolor=black];
+    q36 -> q0 [label=";", fontcolor=black];
+    q36 -> q13 [label=",", fontcolor=black];
 }

@@ -23,8 +23,8 @@ Implementation of the automata machine is made in form of graph using structures
 typedef struct mealy_state {
     char *name;                             // States where the current state makes transition to
     bool type[TOTAL_TYPES];                 // Tells if the state is accept state or not
-    mealy_map_ll map;                         // Symbols to state transition map
-    int else_trans;                        // Index of ELSE transition symbol
+    mealy_map_ll map;                       // Symbols to state transition map
+    int else_trans;                         // Index of ELSE transition symbol
     int total_trans;                        // Number of transitions current state makes
 } mealy_state;
 ```
@@ -445,12 +445,19 @@ $20$ | (' ','\n','\t')$20$, ('$')$21$, (@)$-13$;
 $21$ | (@)$22$, ('\\')$23$;
 $22$ | (@)$22$, ('\\')$23$, ('$')$24$;
 $23$ | (@)$22$;
-$24$ | (';')$0$, (',')$13$, (' ','\n','\t')$24$, (@)$-14$;
+$24$ | (' ','\n','\t')$24$, ('[')$30$, (@)$-14$;
 $25$ | (' ','\n','\t')$25$, ('$')$26$, (@)$-13$;
 $26$ | (@)$27$, ('\\')$28$;
 $27$ | (@)$27$, ('\\')$28$, ('$')$29$;
 $28$ | (@)$27$;
-$29$ | (';')$0$, (',')$13$, (' ','\n','\t')$29$, (@)$-14$;
+$29$ | (' ','\n','\t')$29$, ('[')$30$, (@)$-14$;
+$30$ | (' ','\n','\t')$30$, ('\'')$31$, ('C')$35$, $-15$;
+$31$ | (@)$32$, ('\'')$-16$;
+$32$ | (@)$32$, ('\'')$33$;
+$33$ | (' ','\n','\t')$33$, (']')$34$, (@)$-17$;
+$34$ | (';')$0$, (',')$13$, (' ','\n','\t')$34$, (@)$-18$;
+$35$ | (' ','\n','\t')$35$, (']')$36$, (@)$-19$;
+$36$ | (';')$0$, (',')$13$, (' ','\n','\t')$36$, (@)$-20$;
 ```
 
 ---
