@@ -6,6 +6,24 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 
 add_executable(test
     ../../src/test.c
+
+    ../../src/mealy/mealy_engine/mealy_byte_proc.c
+    ../../src/mealy/mealy_engine/mealy_stop_state_feed.c
+    ../../src/mealy/mealy_func/mealy_cur_state_insp.c
+    ../../src/mealy/mealy_func/mealy_other_sym_insp.c
+    ../../src/mealy/mealy_func/mealy_spl_state_char.c
+    ../../src/mealy/mealy_func/mealy_spl_sym_char.c
+    ../../src/mealy/mealy_func/mealy_state_type_insp.c
+    ../../src/mealy/mealy_func/mealy_sym_pump_insp.c
+    ../../src/mealy/mealy_func/mealy_trans_state_insp.c
+    ../../src/mealy/mealy_map/mealy_add_sym.c
+    ../../src/mealy/mealy_map/mealy_add_trans.c
+    ../../src/mealy/mealy_map/mealy_map_view.c
+    ../../src/mealy/mealy_create.c
+    ../../src/mealy/mealy_erase.c
+    ../../src/mealy/mealy_machine_view.c
+    ../../src/mealy/mealy_str_test.c
+
     ../../src/moore/moore_engine/moore_byte_proc.c
     ../../src/moore/moore_engine/moore_stop_state_feed.c
     ../../src/moore/moore_func/moore_cur_state_insp.c
@@ -44,6 +62,7 @@ add_executable(test
 
     ../../src/utils/sym_tape/add_cell_to_tape.c
     ../../src/utils/sym_tape/sym_tape_view.c
+    ../../src/utils/sym_tape/sym_tape_to_str_arr.c
     ../../src/utils/char_to_str_pump.c
     ../../src/utils/char_serial.c
 )

@@ -513,6 +513,390 @@ home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.c.s
 
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.c.s
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.o: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.o
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.i: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.i
+
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.s: home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c.s
+
 home/gouraarav/myProjects/eflam/c/src/moore/moore_create.o: home/gouraarav/myProjects/eflam/c/src/moore/moore_create.c.o
 .PHONY : home/gouraarav/myProjects/eflam/c/src/moore/moore_create.o
 
@@ -1041,6 +1425,30 @@ home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/add_cell_to_tape.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/add_cell_to_tape.c.s
 .PHONY : home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/add_cell_to_tape.c.s
 
+home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.o: home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.o
+
+# target to build an object file
+home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.o
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.o
+
+home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.i: home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.i
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.i
+
+home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.s: home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.s
+.PHONY : home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.c.s
+
 home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_view.o: home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_view.c.o
 .PHONY : home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_view.o
 
@@ -1122,6 +1530,54 @@ help:
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/dfa/dfa_str_test.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_create.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_byte_proc.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_engine/mealy_stop_state_feed.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_erase.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_cur_state_insp.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_other_sym_insp.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_state_char.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_spl_sym_char.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_state_type_insp.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_sym_pump_insp.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_func/mealy_trans_state_insp.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_machine_view.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_sym.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_add_trans.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_map/mealy_map_view.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/moore/moore_create.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/moore/moore_create.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/moore/moore_create.s"
@@ -1188,6 +1644,9 @@ help:
 	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/add_cell_to_tape.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/add_cell_to_tape.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/add_cell_to_tape.s"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.o"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.i"
+	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_to_str_arr.s"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_view.o"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_view.i"
 	@echo "... home/gouraarav/myProjects/eflam/c/src/utils/sym_tape/sym_tape_view.s"

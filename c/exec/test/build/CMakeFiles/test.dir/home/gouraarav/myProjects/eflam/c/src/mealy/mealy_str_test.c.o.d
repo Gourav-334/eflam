@@ -8,12 +8,6 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/mealy/mealy_str_test.c
  /home/gouraarav/myProjects/eflam/c/src/mealy/../../include/mealy/mealy_elem/mealy_state.h \
  /home/gouraarav/myProjects/eflam/c/src/mealy/../../include/mealy/mealy_elem/../mealy_map/mealy_map_ll.h \
  /home/gouraarav/myProjects/eflam/c/src/mealy/../../include/mealy/mealy_elem/../mealy_map/mealy_map_node.h \
- /home/gouraarav/myProjects/eflam/c/src/mealy/../../include/mealy/../utils/sym_tape/sym_tape_ll.h \
- /home/gouraarav/myProjects/eflam/c/src/mealy/../../include/mealy/../utils/sym_tape/sym_tape_cell.h \
- /home/gouraarav/myProjects/eflam/c/src/mealy/../../include/utils/sym_tape/sym_tape_ll.h \
- /home/gouraarav/myProjects/eflam/c/src/mealy/../../include/utils/sym_tape/add_cell_to_tape.h \
- /home/gouraarav/myProjects/eflam/c/src/mealy/../../include/utils/sym_tape/sym_tape_cell.h \
- /home/gouraarav/myProjects/eflam/c/src/mealy/../../include/utils/sym_tape/sym_tape_ll.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

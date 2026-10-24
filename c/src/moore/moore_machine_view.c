@@ -48,7 +48,18 @@ void moore_machine_view(moore target_moore)
     }
 
 
-    printf("Start state = \"%s\"\n\n", (target_moore.states + target_moore.start_state)->name);
+    if (target_moore.start_state<0)
+    {
+        printf(
+            "ERROR (%s):%d :: Moore machine doesn\'t contain any START state!\n",
+            file, __LINE__
+        );
+        printf("--------------------------------------------------------------\n\n");
+    }
+    else
+    {
+        printf("Start state = \"%s\"\n\n", (target_moore.states + target_moore.start_state)->name);
+    }
 
 
 

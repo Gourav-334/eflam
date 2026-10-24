@@ -48,7 +48,18 @@ void dfa_machine_view(dfa target_dfa)
     }
 
 
-    printf("Start state = \"%s\"\n\n", (target_dfa.states + target_dfa.start_state)->name);
+    if (target_dfa.start_state<0)
+    {
+        printf(
+            "ERROR (%s):%d :: DFA machine doesn\'t contain any START state!\n",
+            file, __LINE__
+        );
+        printf("--------------------------------------------------------------\n\n");
+    }
+    else
+    {
+        printf("Start state = \"%s\"\n\n", (target_dfa.states + target_dfa.start_state)->name);
+    }
 
 
 

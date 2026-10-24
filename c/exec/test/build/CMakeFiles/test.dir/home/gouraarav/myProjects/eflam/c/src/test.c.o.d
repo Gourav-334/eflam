@@ -1,48 +1,10 @@
 CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: \
  /home/gouraarav/myProjects/eflam/c/src/test.c /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/eflam_dfa.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_state.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/../dfa_map/dfa_map_ll.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/../dfa_map/dfa_map_node.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_engine/dfa_byte_proc.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_engine/../dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_engine/dfa_stop_state_feed.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_cur_state_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../dfa_elem/dfa_state.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_other_sym_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_spl_state_char.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_spl_sym_char.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_state_type_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_sym_pump_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/dfa_trans_state_insp.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../../dfa/dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_func/../../dfa/dfa_elem/dfa_state.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_add_sym.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_ll.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_node.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_add_trans.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_ll.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_node.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_view.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_create.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_unit.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_erase.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_elem/dfa_state.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_ll.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_map/dfa_map_node.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_machine_view.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/dfa/dfa_str_test.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/utils/char_to_str_pump.h \
- /home/gouraarav/myProjects/eflam/c/src/../include/utils/char_serial.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/eflam_moore.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/moore/moore_elem/moore_state.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/moore/moore_elem/../moore_map/moore_map_ll.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/moore/moore_elem/../moore_map/moore_map_node.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/moore/moore_elem/moore_unit.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/moore/moore_elem/moore_unit.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/moore/moore_engine/moore_byte_proc.h \
@@ -80,13 +42,17 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/eflam/c/src/test.c.o: \
  /home/gouraarav/myProjects/eflam/c/src/../include/moore/moore_str_test.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/moore/../utils/sym_tape/sym_tape_ll.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/moore/../utils/sym_tape/sym_tape_cell.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/eflam_utils.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/utils/sym_tape/add_cell_to_tape.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/utils/sym_tape/sym_tape_cell.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/utils/sym_tape/sym_tape_ll.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/utils/sym_tape/sym_tape_cell.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/utils/sym_tape/sym_tape_ll.h \
  /home/gouraarav/myProjects/eflam/c/src/../include/utils/sym_tape/sym_tape_view.h \
- /usr/include/stdio.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/utils/sym_tape/sym_tape_to_str_arr.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/utils/char_to_str_pump.h \
+ /home/gouraarav/myProjects/eflam/c/src/../include/utils/char_serial.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

@@ -89,6 +89,19 @@ int sym_tape_to_str_arr(sym_tape_ll target_tape, char ***str_arr, bool debug)
         strcpy(*(*str_arr + i), trav->sym);
 
 
+
+        /* Final debugging information sent to user. */
+
+        if (debug==true)
+        {
+            printf(
+                "STAT (%s):%d :: *(*str_arr + i)=\"%s\", trav=%p\n",
+                file, __LINE__, *(*str_arr + i), trav
+            );
+        }
+
+
+
         /* Moving to next cell in the tape. */
 
         trav = trav -> next;
