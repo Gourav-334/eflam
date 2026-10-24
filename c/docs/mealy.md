@@ -14,7 +14,7 @@ Implementation of the automata machine is made in form of graph using structures
 ## 2. Implementation
 
 
-### 2.1 <u>MEALY State (Structure)</u>:
+### 2.1 <u>MEALY State (Structure)</u>://////////////////////////////////////////
 
 ```c
 // mealy/mealy_ops/mealy_units.h
@@ -25,6 +25,7 @@ typedef struct mealy_state {
     bool type[TOTAL_TYPES];                 // Tells if the state is accept state or not
     mealy_map_ll map;                       // Symbols to state transition map
     int else_trans;                         // Index of ELSE transition symbol
+    char *else_out;                         // Output from ELSE transition
     int total_trans;                        // Number of transitions current state makes
 } mealy_state;
 ```
@@ -52,9 +53,9 @@ typedef struct mealy {
 
 bool mealy_create(
     mealy *target_mealy,        // Target MEALY for loading the language.
-    char *filepaths[],      // Array of file paths passed linearly.
-    int file_count,         // Total number of files connected to connector file.
-    bool debug              // Debugging option for getting runtime information.
+    char *filepaths[],          // Array of file paths passed linearly.
+    int file_count,             // Total number of files connected to connector file.
+    bool debug                  // Debugging option for getting runtime information.
 );
 ```
 
@@ -70,7 +71,7 @@ bool mealy_create(
 /* Checks the MEALY as per user given rules. */
 
 int mealy_byte_proc(
-    mealy *target_mealy,            // Address to target MEALY structure
+    mealy *target_mealy,        // Address to target MEALY structure
     char *filepath,             // Name of the particular file/ its path
     char *fstream,              // Pointer to fstream containing MEALY rules
     bool debug                  // Tells if debugging logs are required
@@ -132,7 +133,7 @@ char mealy_spl_sym_char(
 /* Used for creating a state if it doesn't exist yet. */
 
 bool mealy_cur_state_insp(
-    mealy *target_mealy,                            // Target MEALY machine
+    mealy *target_mealy,                        // Target MEALY machine
     char *cur_state_name,                       // Current state name
     int *cur_state_index,                       // Relative index of current state
     bool debug                                  // Debugging mode (ON/OFF)
@@ -263,7 +264,7 @@ mealy_state *mealy_str_test(
 
 1. Give an error if there is no START state for the MEALY.
 2. Begin from the START state.
-3. Move from one state to another based on the corresponding address to the string in transition list.
+3. Move from one state to another based on the corresponding address to the string in transition list & add its output to tape.
 4. If none of the strings in transition list matches to current string & there is no ELSE transition, return this DUMP state.
 5. Keep doing it until exhaust of all the strings.
 6. Return the address of stop state at last.
@@ -286,7 +287,7 @@ void mealy_machine_view(
 4. Then display the ELSE state transition.
 
 
-### 2.15 <u>MEALY Map Node (Structure)</u>:
+### 2.15 <u>MEALY Map Node (Structure)</u>://////////////////////////////////////////
 
 ```c
 // mealy/mealy_map/mealy_map_node.h
@@ -295,7 +296,9 @@ void mealy_machine_view(
 typedef struct mealy_map_node {
     char *sym;                  // Symbol string
     int trans;                  // Transition state index
-    mealy_map_node *next;         // Pointer to next node
+    char *output;               // Output for the particular transition
+    bool *corresp;              // Tells if the correspondance rule is applied
+    mealy_map_node *next;       // Pointer to next node
 } mealy_map_node;
 ```
 
@@ -307,9 +310,9 @@ typedef struct mealy_map_node {
 /* Linked list that maps MEALY transitions. */
 
 typedef struct mealy_map_ll {
-    mealy_map_node *head;         // Pointer to head of linked list
-    mealy_map_node *tail;         // Pointer to tail of linked list
-    int total_nodes;            // Total count of nodes
+    mealy_map_node *head;           // Pointer to head of linked list
+    mealy_map_node *tail;           // Pointer to tail of linked list
+    int total_nodes;                // Total count of nodes
 } mealy_map_ll;
 ```
 
@@ -356,7 +359,7 @@ bool mealy_map_view(
 /* Used for adding index of a transition state to map's node. */
 
 mealy_map_node *mealy_add_trans(
-    mealy_map_ll *map,            // The linked list map containing transitions
+    mealy_map_ll *map,          // The linked list map containing transitions
     int trans,                  // Transition state index to fill nodes with
     int trans_start,            // Start point to fill with transition state index
     int trans_finish,           // Finish point to fill with transition state index
@@ -378,7 +381,7 @@ mealy_map_node *mealy_add_trans(
 /* Erases everything related to the particular MEALY. */
 
 mealy *mealy_erase(
-    mealy *target_mealy,            // Target MEALY
+    mealy *target_mealy,        // Target MEALY
     bool debug                  // Debugging mode (ON/OFF)
 );
 ```
@@ -392,6 +395,37 @@ mealy *mealy_erase(
     7. Free the state.
 8. Free all the members inside the MEALY.
 9. Free the MEALY itself.
+
+
+### 2.21 <u>MOORE Set Transition Output</u>:
+
+```c
+// mealy/mealy_func/mealy_set_trans_out.c
+/* Sets output for given transition. */
+
+bool mealy_set_trans_out(
+    mealy *target_mealy,                // Target MEALY
+    char *output,                       // Output to configure
+    int cur_state_index,                // Current state index
+    int total_sym,                      // Total symbols
+    bool debug                          // Debugging mode (ON/OFF)
+);
+```
+
+
+### 2.22 <u>MOORE Set ELSE Transition Output</u>:
+
+```c
+// mealy/mealy_func/mealy_set_else_trans_out.c
+/* Sets output for given transition. */
+
+bool mealy_set_else_trans_out(
+    mealy *target_mealy,                // Target MEALY
+    char *output,                       // Output to configure
+    int cur_state_index,                // Current state index
+    bool debug                          // Debugging mode (ON/OFF)
+);
+```
 
 
 

@@ -22,7 +22,7 @@ void dfa_machine_view(dfa target_dfa)
 {
     /* Variables & constants */
 
-    char *file = "dfa_viewer.c";
+    char *file = "dfa_machine_viewer.c";
     char *model = "Deterministic Finite Automata (DFA)";
     dfa_state *cur_state_addr = NULL;
     dfa_map_node *trav = NULL;

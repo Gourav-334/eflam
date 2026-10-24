@@ -22,7 +22,7 @@ void mealy_machine_view(mealy target_mealy)
 {
     /* Variables & constants */
 
-    char *file = "mealy_viewer.c";
+    char *file = "mealy_machine_viewer.c";
     char *model = "Deterministic Finite Automata (MEALY)";
     mealy_state *cur_state_addr = NULL;
     mealy_map_node *trav = NULL;

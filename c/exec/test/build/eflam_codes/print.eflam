@@ -1,18 +1,37 @@
+# A basic Mealy machine that accepts `print("STRING")` codes.
 
-$START$ ['NONE'] {'S'} |
-    ('0','1','2','3','4','5','6','7','8','9')$NUMBER$,
-    ('+')$ADD$,
-    ('-')$SUB$,
-    ('*')$MUL$,
-    ('/')$DIV$;
 
-$NUMBER$ ['NUM'] |
-    ('0','1','2','3','4','5','6','7','8','9')$NUMBER$;
+$0$ {'S','A'} |
+    (' ','\n','\t')$0$ ['ALPHA'],
+    ('print')$1$ ['BETA'],
+    (@)$-1$ ['ERROR-1'];
 
-$ADD$ ['ADD'];
 
-$SUB$ ['SUB'];
+$1$ |
+    (' ','\t')$1$ ['CHARLIE'],
+    ('(')$2$ ['DELTA'],
+    (@)$-2$ ['ERROR-2'];
 
-$MUL$ ['MUL'];
 
-$DIV$ ['DIV'];
+$2$ |
+    (' ','\t')$2$ ['ECHO'],
+    ('"')$3$ ['FOXTROT'],
+    (@)$-3$ ['ERROR-3'];
+
+
+$3$ |
+    ('"')$4$ ['GOLF'],
+    (@)$3$ ['HOTEL'];
+
+
+$4$ |
+    (' ','\t')$4$ ['INDIA'],
+    (')')$5$ ['PRINT_STR'],
+    (@)$-4$ ['JULIETTE'];
+
+
+$5$ {'A'} |
+    ('\n')$0$ ['KILO'],
+    (' ','\t')$5$ ['LIMMA'],
+    (@)$-5$ ['ERROR-5'];
+

@@ -22,7 +22,7 @@ void moore_machine_view(moore target_moore)
 {
     /* Variables & constants */
 
-    char *file = "moore_viewer.c";
+    char *file = "moore_machine_viewer.c";
     char *model = "Deterministic Finite Automata (moore)";
     moore_state *cur_state_addr = NULL;
     moore_map_node *trav = NULL;
