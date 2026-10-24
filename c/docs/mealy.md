@@ -39,7 +39,7 @@ typedef struct mealy_state {
 typedef struct mealy {
     int start_state;                        // Index of initial/start state of the MEALY
     int total_states;                       // Number of states that the MEALY contains
-    struct mealy_state *states;               // Array of states that MEALY encloses
+    struct mealy_state *states;             // Array of states that MEALY encloses
 } mealy;
 ```
 

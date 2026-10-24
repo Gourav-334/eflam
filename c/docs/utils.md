@@ -108,6 +108,27 @@ bool sym_tape_view(
 ```
 
 
+### 2.7 <u>Symbol Tape To String Array</u>:
+
+```c
+// utils/sym_tape/sym_tape_to_str_arr.c
+/* Converts series of symbols on symbol tape into a string array. */
+
+int sym_tape_to_str_arr(
+    sym_tape_ll target_tape,            // Target symbol tape
+    char ***str_arr,                    // Target string array
+    bool debug                          // Debugging mode (ON/OFF)
+);
+```
+
+1. Make sure the provided string array is actually unused.
+2. Allocate memory to hold pointers to characters as per number of symbols.
+3. Traverse through every cell in the tape to do following operations:
+    4. Allocate memory for the particular string as per symbol length.
+    5. Fill the string with the value of symbol.
+6. Return total number of strings pushed.
+
+
 
 ## 3. Test Cases & Benchmarks
 
