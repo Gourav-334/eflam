@@ -14,7 +14,7 @@ Implementation of the automata machine is made in form of graph using structures
 ## 2. Implementation
 
 
-### 2.1 <u>MEALY State (Structure)</u>://////////////////////////////////////////
+### 2.1 <u>MEALY State (Structure)</u>:
 
 ```c
 // mealy/mealy_ops/mealy_units.h
@@ -26,6 +26,7 @@ typedef struct mealy_state {
     mealy_map_ll map;                       // Symbols to state transition map
     int else_trans;                         // Index of ELSE transition symbol
     char *else_out;                         // Output from ELSE transition
+    bool corresp;                           // Tells if ELSE output is correspondant
     int total_trans;                        // Number of transitions current state makes
 } mealy_state;
 ```
@@ -175,7 +176,7 @@ bool mealy_state_type_insp(
 /* Used for checking if a supplied symbol already exists & adding if not. */
 
 bool mealy_sym_pump_insp(
-    mealy *target_mealy,                        // Target MEALY
+    mealy *target_mealy,                    // Target MEALY
     int cur_state_index,                    // Relative index of current state
     char *sym,                              // String representing symbol
     int *total_sym,                         // Count of total symbols for the transition
@@ -195,7 +196,7 @@ bool mealy_sym_pump_insp(
 /* Checks if a transition state exists or needs to be created. */
 
 bool mealy_trans_state_insp(
-    mealy *target_mealy,                    // Target MEALY
+    mealy *target_mealy,                // Target MEALY
     int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     int *total_sym,                     // Total symbols to be pushed
@@ -216,7 +217,7 @@ bool mealy_trans_state_insp(
 /* Sets transition to a state for the remaining symbols. */
 
 bool mealy_other_sym_insp (
-    mealy *target_mealy,                    // Target MEALY
+    mealy *target_mealy,                // Target MEALY
     int cur_state_index,                // Relative index of current state
     char *trans_state_name,             // Name of transition state
     bool debug                          // Debugging mode (ON/OFF)
@@ -287,7 +288,7 @@ void mealy_machine_view(
 4. Then display the ELSE state transition.
 
 
-### 2.15 <u>MEALY Map Node (Structure)</u>://////////////////////////////////////////
+### 2.15 <u>MEALY Map Node (Structure)</u>:
 
 ```c
 // mealy/mealy_map/mealy_map_node.h
@@ -325,8 +326,8 @@ typedef struct mealy_map_ll {
 
 mealy_map_node *mealy_add_sym(
     mealy_map_ll *map,            // Address to MEALY map linked list
-    char *sym,                  // Symbol string to add
-    bool debug                  // Debugging mode (ON/OFF)
+    char *sym,                    // Symbol string to add
+    bool debug                    // Debugging mode (ON/OFF)
 );
 ```
 
@@ -397,31 +398,73 @@ mealy *mealy_erase(
 9. Free the MEALY itself.
 
 
-### 2.21 <u>MOORE Set Transition Output</u>:
+### 2.21 <u>MEALY Add Output</u>:
 
 ```c
-// mealy/mealy_func/mealy_set_trans_out.c
-/* Sets output for given transition. */
+// mealy/mealy_map/mealy_add_out.c
+/* Used for adding output of a transition to map's node. */
 
-bool mealy_set_trans_out(
-    mealy *target_mealy,                // Target MEALY
-    char *output,                       // Output to configure
-    int cur_state_index,                // Current state index
-    int total_sym,                      // Total symbols
-    bool debug                          // Debugging mode (ON/OFF)
+mealy_map_node *mealy_add_out(
+    mealy_map_ll *map,          // The linked list map containing transitions
+    char *output,               // Transition output to fill nodes with
+    int out_start,              // Start point to fill with output
+    int out_finish,             // Finish point to fill with output
+    bool debug                  // Debugging mode (ON/OFF)
 );
 ```
+
+1. Check if the start & finish point go out of bound as per available number of nodes, or mismatch in order.
+    2. If yes, display error.
+    3. If not, continue with flow.
+4. Traverse to the node from where to start.
+5. Fill every node from there to finish with the index.
 
 
 ### 2.22 <u>MOORE Set ELSE Transition Output</u>:
 
 ```c
-// mealy/mealy_func/mealy_set_else_trans_out.c
+// mealy/mealy_func/mealy_set_else_out.c
 /* Sets output for given transition. */
 
-bool mealy_set_else_trans_out(
+bool mealy_set_else_out(
     mealy *target_mealy,                // Target MEALY
     char *output,                       // Output to configure
+    int cur_state_index,                // Current state index
+    bool debug                          // Debugging mode (ON/OFF)
+);
+```
+
+
+### 2.23 <u>MEALY Add Correspondant Output</u>:
+
+```c
+// mealy/mealy_map/mealy_add_corresp_out.c
+/* Used for adding correspondant output of a transition to map's node. */
+
+mealy_map_node *mealy_add_corresp_out(
+    mealy_map_ll *map,          // The linked list map containing transitions
+    bool corresp,               // Correspondant value to fill nodes with
+    int corresp_start,          // Start point to fill with correspondant
+    int corresp_finish,         // Finish point to fill with correspondant
+    bool debug                  // Debugging mode (ON/OFF)
+);
+```
+
+1. Check if the start & finish point go out of bound as per available number of nodes, or mismatch in order.
+    2. If yes, display error.
+    3. If not, continue with flow.
+4. Traverse to the node from where to start.
+5. Fill every node from there to finish with the index.
+
+
+### 2.24 <u>MOORE Set ELSE Correspondant Output</u>:
+
+```c
+// mealy/mealy_func/mealy_set_corresp_else_out.c
+/* Sets output as corresponding symbol for given ELSE transition. */
+
+bool mealy_set_corresp_else_out(
+    mealy *target_mealy,                // Target MEALY
     int cur_state_index,                // Current state index
     bool debug                          // Debugging mode (ON/OFF)
 );
@@ -435,14 +478,36 @@ bool mealy_set_else_trans_out(
 ### 3.1 <u>Print</u>:
 
 ```eflam
-# A basic MEALY that accepts `print("STRING")` codes.
+# A basic Mealy machine that accepts `print("STRING")` codes.
 
-$0${'S','A'} | (' ','\n','\t')$0$, ('print')$1$, (@)$-1$;
-$1$ | (' ','\t')$1$, ('(')$2$, (@)$-2$;
-$2$ | (' ','\t')$2$, ('"')$3$, (@)$-3$;
-$3$ | ('"')$4$, (@)$3$;
-$4$ | (' ','\t')$4$, (')')$5$, (@)$-4$;
-$5${'A'} | ('\n')$0$, (' ','\t')$5$, (@)$-5$;
+$0$ {'S','A'} |
+    (' ','\n','\t')$0$ ['ALPHA'],
+    ('print')$1$ ['BETA'],
+    (@)$-1$ ['ERROR-1'];
+
+$1$ |
+    (' ','\t')$1$ ['CHARLIE'],
+    ('(')$2$ ['DELTA'],
+    (@)$-2$ ['ERROR-2'];
+
+$2$ |
+    (' ','\t')$2$ ['ECHO'],
+    ('"')$3$ ['FOXTROT'],
+    (@)$-3$ ['ERROR-3'];
+
+$3$ |
+    ('"')$4$ ['GOLF'],
+    (@)$3$ ['HOTEL'];
+
+$4$ |
+    (' ','\t')$4$ ['INDIA'],
+    (')')$5$ ['PRINT_STR'],
+    (@)$-4$ ['ERROR-4'];
+
+$5$ {'A'} |
+    ('\n')$0$ ['JULIETTE'],
+    (' ','\t')$5$ ['KILO'],
+    (@)$-5$ ['ERROR-5'];
 ```
 
 
@@ -453,7 +518,7 @@ $5${'A'} | ('\n')$0$, (' ','\t')$5$, (@)$-5$;
 ### 4.1 <u>Bootstrapped EFLAM MEALY</u>:
 
 ```eflam
-# Bootstrapped code for EFLAM.
+# Bootstrapped code for EFLAM MEALY.
 
 $0${'S','A'} | (' ','\n','\t')$0$, ('#')$1$, ('$')$2$, (@)$-1$;
 $1${'A'} | ('\n')$0$, (@)$1$;
@@ -484,7 +549,7 @@ $25$ | (' ','\n','\t')$25$, ('$')$26$, (@)$-13$;
 $26$ | (@)$27$, ('\\')$28$;
 $27$ | (@)$27$, ('\\')$28$, ('$')$29$;
 $28$ | (@)$27$;
-$29$ | (' ','\n','\t')$29$, ('[')$30$, (@)$-14$;
+$29$ | (' ','\n','\t')$29$, ('[')$37$, (@)$-14$;
 $30$ | (' ','\n','\t')$30$, ('\'')$31$, ('C')$35$, $-15$;
 $31$ | (@)$32$, ('\'')$-16$;
 $32$ | (@)$32$, ('\'')$33$;
@@ -492,6 +557,63 @@ $33$ | (' ','\n','\t')$33$, (']')$34$, (@)$-17$;
 $34$ | (';')$0$, (',')$13$, (' ','\n','\t')$34$, (@)$-18$;
 $35$ | (' ','\n','\t')$35$, (']')$36$, (@)$-19$;
 $36$ | (';')$0$, (',')$13$, (' ','\n','\t')$36$, (@)$-20$;
+$37$ | (' ','\n','\t')$37$, ('\'')$38$, ('C')$42$, $-21$;
+$38$ | (@)$39$, ('\'')$-22$;
+$39$ | (@)$39$, ('\'')$40$;
+$40$ | (' ','\n','\t')$40$, (']')$41$, (@)$-23$;
+$41$ | (';')$0$, (',')$13$, (' ','\n','\t')$41$, (@)$-24$;
+$42$ | (' ','\n','\t')$42$, (']')$43$, (@)$-25$;
+$43$ | (';')$0$, (',')$13$, (' ','\n','\t')$43$, (@)$-25$;
 ```
+
+
+### 4.2 <u>Differences From DFA Blueprint</u>:
+
+#### 4.2.1 **MACHINE BLUEPRINT**:
+- **Modified states:** 24, 29
+- **Newly added states:** 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42
+
+#### 4.2.2 **MEALY STATE STRUCT**:
+```c
+typedef struct mealy_state {
+    char *name;
+    bool type[TOTAL_TYPES];
+    mealy_map_ll map;
+    int else_trans;
+    char *else_out;             // 1) New field that tells output from @
+    bool else_corresp;          // 2) New field telling if @ output is correspondant
+    int total_trans;
+} mealy_state;
+```
+
+#### 4.2.3 **MEALY MAP NODE**:
+```c
+typedef struct mealy_map_node {
+    char *sym;
+    int trans;
+    char *output;               // 1) New field telling output from transition
+    bool *corresp;              // 2) New field tells if output is correspondant
+    mealy_map_node *next;
+} mealy_map_node;
+```
+
+#### 4.2.4 **NEW FILE TYPES**:
+- `mealy_add_out.h` & `mealy_add_out.c`
+- `mealy_set_else_trans_out.h` & `mealy_set_else_trans_out.c`
+- `mealy_add_corresp_out.h` & `mealy_add_corresp_out.c`
+- `mealy_set_corresp_else_out.h` & `mealy_set_corresp_else_out.c`
+
+#### 4.2.5 **SUMMARY CHANGES**:
+- `mealy_state.h`
+- `mealy_map_node.h`
+- `mealy_add_out.h` & `mealy_add_out.c`
+- `mealy_set_else_trans_out.h` & `mealy_set_else_trans_out.c`
+- `mealy_add_corresp_out.h` & `mealy_add_corresp_out.c`
+- `mealy_set_corresp_else_out.h` & `mealy_set_corresp_else_out.c`
+
+> NOTE: Eye these files & related components when modifying copied files.
+
+#### 4.2.6 **WARNINGS**:
+- Watch for variables which must be preserved before being washed in this modified version of machine.
 
 ---

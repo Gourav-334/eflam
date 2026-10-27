@@ -7,6 +7,14 @@
 
 
 
+/* Including required headers. */
+
+#include <stdbool.h>            // To use boolean member in state struct
+
+
+
+
+
 
 
 
@@ -17,7 +25,9 @@
 typedef struct mealy_map_node {
     char *sym;                  // Symbol string
     int trans;                  // Transition state index
-    struct mealy_map_node *next;         // Pointer to next node
+    char *output;               // Output for the particular transition
+    bool *corresp;              // Tells if the correspondance rule is applied
+    mealy_map_node *next;       // Pointer to next node
 } mealy_map_node;
 
 

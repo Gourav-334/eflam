@@ -46,6 +46,13 @@ digraph EFLAM_DFA
     q34 [label="q34", shape=circle, fillcolor=white];
     q35 [label="q35", shape=circle, fillcolor=white];
     q36 [label="q36", shape=circle, fillcolor=white];
+    q37 [label="q37", shape=circle, fillcolor=white];
+    q38 [label="q38", shape=circle, fillcolor=white];
+    q39 [label="q39", shape=circle, fillcolor=white];
+    q40 [label="q40", shape=circle, fillcolor=white];
+    q41 [label="q41", shape=circle, fillcolor=white];
+    q42 [label="q42", shape=circle, fillcolor=white];
+    q43 [label="q43", shape=circle, fillcolor=white];
 
 
 
@@ -120,7 +127,7 @@ digraph EFLAM_DFA
     q27 -> q29 [label="$", fontcolor=black];
     q28 -> q27 [label="ELSE", fontcolor=black];
     q29 -> q29 [label=" ,\\n,\\t", fontcolor=black];
-    q29 -> q30 [label="[", fontcolor=black];
+    q29 -> q37 [label="[", fontcolor=black];
     q30 -> q30 [label=" ,\\n,\\t", fontcolor=black];
     q30 -> q31 [label="\'", fontcolor=black];
     q30 -> q35 [label="C", fontcolor=black];
@@ -137,4 +144,20 @@ digraph EFLAM_DFA
     q36 -> q36 [label=" ,\\n,\\t", fontcolor=black];
     q36 -> q0 [label=";", fontcolor=black];
     q36 -> q13 [label=",", fontcolor=black];
+    q37 -> q37 [label=" ,\\n,\\t", fontcolor=black];
+    q37 -> q38 [label="\'", fontcolor=black];
+    q37 -> q42 [label="C", fontcolor=black];
+    q38 -> q39 [label="ELSE", fontcolor=black];
+    q39 -> q39 [label="ELSE", fontcolor=black];
+    q39 -> q40 [label="\'", fontcolor=black];
+    q40 -> q40 [label=" ,\\n,\\t", fontcolor=black];
+    q40 -> q41 [label="]", fontcolor=black];
+    q41 -> q0 [label=";", fontcolor=black];
+    q41 -> q13 [label=",", fontcolor=black];
+    q41 -> q41 [label=" ,\\n,\\t", fontcolor=black];
+    q42 -> q42 [label=" ,\\n,\\t", fontcolor=black];
+    q42 -> q43 [label="]", fontcolor=black];
+    q43 -> q43 [label=" ,\\n,\\t", fontcolor=black];
+    q43 -> q0 [label=";", fontcolor=black];
+    q43 -> q13 [label=",", fontcolor=black];
 }
