@@ -420,11 +420,11 @@ mealy_map_node *mealy_add_out(
 5. Fill every node from there to finish with the index.
 
 
-### 2.22 <u>MOORE Set ELSE Transition Output</u>:
+### 2.22 <u>MEALY Set ELSE Transition Output</u>:
 
 ```c
 // mealy/mealy_func/mealy_set_else_out.c
-/* Sets output for given transition. */
+/* Sets ELSE output for given transition. */
 
 bool mealy_set_else_out(
     mealy *target_mealy,                // Target MEALY
@@ -433,6 +433,12 @@ bool mealy_set_else_out(
     bool debug                          // Debugging mode (ON/OFF)
 );
 ```
+
+1. Move to the particular state as per its index number.
+2. Allocate memory to store the ELSE output there.
+3. Copy the supplied output in argument to store it there.
+
+
 
 
 ### 2.23 <u>MEALY Add Correspondant Output</u>:

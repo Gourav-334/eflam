@@ -26,7 +26,7 @@
 /* Adds a node with symbol to the MEALY map. */
 
 mealy_map_node *mealy_add_sym(
-    mealy_map_ll *map,            // Address to MEALY map linked list
+    mealy_map_ll *map,          // Address to MEALY map linked list
     char *sym,                  // Symbol string to add
     bool debug                  // Debugging mode (ON/OFF)
 );
