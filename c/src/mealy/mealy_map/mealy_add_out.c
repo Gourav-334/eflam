@@ -70,6 +70,8 @@ mealy_map_node *mealy_add_out(mealy_map_ll *map, char *output, int out_start, in
                 "ERROR (%s):%d :: malloc() failure for [%d] cur_node->output\n",
                 file, __LINE__, i
             );
+
+            return NULL;
         }
         else if (debug==true)
         {
